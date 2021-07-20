@@ -1,0 +1,34 @@
+pipeline { 
+	agent any
+	 environment {
+	 JAVA = "C:/Program Files/Java/jdk-11.0.11"
+	 NODEJS = "C:/Program Files/nodejs"
+	}
+	stages {
+    stage('Checkout') {
+	steps {
+        checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'e030a2fa-56c2-421e-8de4-83b0981304f6', url: 'https://devnuc@bitbucket.org/devnuc/angular-demo.git']]])
+    }
+	}
+    stage ('Install dependency') {
+	steps {
+        bat "npm install sonar-scanner --save-dev"  
+    } 
+	}
+    stage('Sonar Scanner Coverage') {
+	steps {
+        bat "npm run sonar"			
+    }
+	}
+	stage ('Angular App build') {
+	steps {
+        bat "ng build --prod"      
+	}
+	}
+	stage ('Deploy in Apache') {
+	steps {
+        bat "xcopy C:\\Windows\\System32\\config\\systemprofile\\AppData\\Local\\Jenkins\\.jenkins\\workspace\\angular-demo\\dist C:\\Apache24\\htdocs\\frontend /E/H/C/I"
+	}
+	}
+    }
+}									
