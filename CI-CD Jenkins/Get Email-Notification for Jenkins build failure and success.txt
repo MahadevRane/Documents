@@ -31,6 +31,7 @@ pipeline {
 		   
             }
         catch (err) {
+		currentBuild.result = 'FAILURE'
              emailext (
       subject: "BUILD FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
       body: """<p>FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
