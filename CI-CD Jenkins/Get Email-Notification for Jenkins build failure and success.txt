@@ -1,0 +1,69 @@
+pipeline {
+    agent any
+    environment {
+        JAVA = "C:/Program Files/Java/jdk-11.0.11"
+        MAVEN = "C:/Users/devops/Downloads/apache-maven-3.8.1"
+         
+        }
+       
+    stages {
+              
+              
+        stage ('Clone Repo') {
+            steps {
+                     git credentialsId: 'e030a2fa-56c2-421e-8de4-83b0981304f6', url: 'https://devnuc@bitbucket.org/devnuc/testing.git'
+                       }
+        }
+        
+        stage ('Build') {
+            steps {
+			script {
+			try {
+		
+          bat "mvn clean install"
+		 currentBuild.result = 'SUCCESS'
+            }
+        catch (err) {
+            currentBuild.result = "FAILURE"
+            mail body: "project build error is here: ${env.BUILD_URL}" ,
+            from: 'nucdevops@gmail.com',
+         
+            subject: 'project build failed',
+            to: 'mahadev_rane@nucsoft.in'
+        throw err
+    }}
+        
+        }
+		}
+		
+		stage ('Code Quality Check via SonarQube') {
+
+			steps {
+                    bat "mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=Nucsoft@2021 -Dsonar.host.url=http://192.168.11.173:9000/"
+
+           }
+
+       }
+		
+		stage ('deployment') {
+		steps {
+		
+		deploy adapters: [tomcat9(credentialsId: 'tomcat', path: ' ', url: 'http://192.168.11.173:8082/')], contextPath: 'api', war: '**/*.war'
+		}
+		}
+       
+		stage ('Email'){
+		steps {
+		  //  mail bcc: '', body: 'Deployment has been successfully completed', cc: 'mahadev_rane@nucsoft.in', from: '', replyTo: '', subject: 'Test', to: 'mahadev_rane@nucsoft.in'
+		emailext (
+          subject: "SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+          body: """<p>SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
+            <p>Check console output at &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>&QUOT;</p>""",
+           to: 'mahadev_rane@nucsoft.in'
+        )
+		}    
+		}
+		
+		
+    }
+}
