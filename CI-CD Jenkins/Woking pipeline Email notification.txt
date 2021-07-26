@@ -24,10 +24,14 @@ pipeline {
 		 currentBuild.result = 'SUCCESS'
 		 
 		 emailext (
+		    attachLog: true, compressLog: true,
           subject: "BUILD SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
           body: """<p>SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
-            <p>Check console output at <a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a></p>""",
-           to: 'mahadev_rane@nucsoft.in')
+            <p>Check console output at <a href='${env.BUILD_URL}consoleText for more details'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a></p>""",
+            
+           to: 'mahadev_rane@nucsoft.in'
+           
+        )
 		   
             }
         catch (err) {
@@ -35,9 +39,11 @@ pipeline {
              emailext (
       subject: "BUILD FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
       body: """<p>FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
-        <p>project build error is here: <a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a></p>""",
-       to: 'mahadev_rane@nucsoft.in'
-    )
+        <p>project build error is here: <a href='${env.BUILD_URL}consoleText for more details'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a></p>""",
+         recipientProviders: [[$class: 'CulpritsRecipientProvider'],[$class: 'UpstreamDevelopersRecipientProvider']],
+       to: 'mahadev_rane@nucsoft.in' 
+    ) 
+     
            
         throw err
     }}
@@ -60,11 +66,14 @@ pipeline {
 		deploy adapters: [tomcat9(credentialsId: 'tomcat', path: ' ', url: 'http://192.168.11.173:8082/')], contextPath: 'api', war: '**/*.war'
 		
 		emailext (
+		    
+		    attachLog: true, compressLog: true,
           subject: "DEPLOYMENT SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
           body: """<p>SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
-            <p>Check console output at <a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a></p>""",
+            <p>Check console output at <a href='${env.BUILD_URL}consoleText for more details'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a></p>""",
             
            to: 'mahadev_rane@nucsoft.in'
+           
         )
 		}
 		}
