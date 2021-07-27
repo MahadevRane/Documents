@@ -37,6 +37,7 @@ pipeline {
         catch (err) {
 		currentBuild.result = 'FAILURE'
              emailext (
+                  attachLog: true, compressLog: true,
       subject: "BUILD FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
       body: """<p>FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
         <p>project build error is here: <a href='${env.BUILD_URL}consoleText for more details'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a></p>""",
