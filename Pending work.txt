@@ -1,0 +1,13 @@
+1. Deployment rollback plan (USING GIT PARAMETER PLUGIN OPTION TO ROLLBACK A BUILD)
+2. deployment of DB patches
+3. Unit test and performance test integration (JUnit,Jmeter,selenium)
+
+	JMeter and Selenium are both used for web application testing. 
+	But the main difference is that JMeter is mostly used to test the performance of web applications under load and stress. 
+	On the other hand, Selenium is best suited for automation and cross browser testing of a website.
+	
+4. Codelyzer for angular project (and unit testing using Jasmine and Karma for angular project)
+5. Monitoring tool
+6. Bamboo,Nexus repository
+
+7. RabbitMQ (https://thucnc.medium.com/how-to-use-rabbitmq-4e53ad05cee2)
