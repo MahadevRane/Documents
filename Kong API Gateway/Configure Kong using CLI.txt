@@ -1,0 +1,36 @@
+***********************Add new service***********************
+
+curl -i -X POST \
+--url http://192.168.11.180:8001/services/ \
+--data 'name=example-service' \
+--data 'url=http://mockbin.org'
+
+
+***********************Add a Route for the Service***********************
+
+curl -i -X POST \
+--url http://192.168.11.180:8001/services/example-service/routes \
+--data 'hosts[]=example.com'
+
+
+
+***********************Verify if the requests are forwarded through Kong using the following command***********************
+
+curl -i -X GET \
+--url http://192.168.11.180:8000/ \
+--header 'Host: example.com'
+
+
+***********************Add Rate Limiting Plugin***********************
+
+curl -i -X POST \
+--url http://192.168.11.180:8001/services/example-service/plugins/ \
+--data 'name=rate-limiting' \
+--data 'config.minute=100'
+
+
+***********************Make a Request from consumer***********************
+
+curl -i -X GET \
+--url http://192.168.11.180:8000/ \
+--header 'Host: example.com'
