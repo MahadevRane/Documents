@@ -1,33 +1,45 @@
-Step1:-	docker run --rm \
+Step1:- 
+docker network ls
+
+Step2:- 
+docker network create kong-net
+
+Step3:- 
+docker network ls
+
+Step4:-	
+docker run --rm \
 --network=kong-net \
 -e "KONG_DATABASE=postgres" \
--e "KONG_PG_HOST=192.168.11.162" \
+-e "KONG_PG_HOST=192.168.11.73" \
 -e "KONG_PG_USER=kong" \
 -e "KONG_PG_PASSWORD=kong" \
--e "KONG_CASSANDRA_CONTACT_POINTS=192.168.11.162" \
+-e "KONG_CASSANDRA_CONTACT_POINTS=192.168.11.73" \
 kong:latest kong migrations bootstrap
 
 
 
-Step2:-	docker run -d --name kong \
+Step5:-	
+docker run -d --name kong \
 --network=kong-net \
 -e "KONG_DATABASE=postgres" \
--e "KONG_PG_HOST=192.168.11.162" \
+-e "KONG_PG_HOST=192.168.11.73" \
 -e "KONG_PG_USER=kong" \
 -e "KONG_PG_PASSWORD=kong" \
--e "KONG_CASSANDRA_CONTACT_POINTS=192.168.11.162" \
+-e "KONG_CASSANDRA_CONTACT_POINTS=192.168.11.73" \
 -e "KONG_PROXY_ACCESS_LOG=/dev/stdout" \
 -e "KONG_ADMIN_ACCESS_LOG=/dev/stdout" \
 -e "KONG_PROXY_ERROR_LOG=/dev/stderr" \
 -e "KONG_ADMIN_ERROR_LOG=/dev/stderr" \
 -e "KONG_ADMIN_LISTEN=0.0.0.0:8001, 0.0.0.0:8444 ssl" \
--p 192.168.11.118:8000:8000 \
--p 192.168.11.118:8443:8443 \
--p 192.168.11.118:8001:8001 \
--p 192.168.11.118:8444:8444 \
+-p 192.168.11.73:8000:8000 \
+-p 192.168.11.73:8443:8443 \
+-p 192.168.11.73:8001:8001 \
+-p 192.168.11.73:8444:8444 \
 kong:latest
 
-Step3:- docker run -p 1337:1337 \
+Step6:- 
+docker run -p 1337:1337 \
 --link kong:kong \
 --name konga \
 --network main-link \

@@ -1,0 +1,17 @@
+Kong features:-
+
+1.	Kong as upstream (Virtual group for service), health check and kong load balancer(also refered as ring balancer)
+	Load balancer algorithm
+		1. Weighted round robin algorithm
+		2. Hash based algorithm
+		3. 
+
+2.	Kong Plugins used for
+		1. Authentication:- Oauth2, Jwt
+		2. Security:- Cors
+		3. Traffic Control:- Rate Limiting
+		4. Analytics & Monitoring:- Prometheus
+		5. Transformations:- Request Transformer, Response Transformer
+		6. Logging:- Http Log, Syslog
+		
+3. Kong Consumers group		
