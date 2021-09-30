@@ -45,3 +45,23 @@ docker run -p 1337:1337 \
 --network main-link \
 -e "NODE_ENV=production" \
 pantsel/konga
+
+Step7:- Install KongMap using below commands
+
+export KONG_CLUSTERS='{                              
+"Kong": {                      
+"kong_admin_api_url": "http://192.168.11.118:8001",
+"kong_edit_config": "true",                        
+"kong_ent": "false",                             
+"kong_ent_token": "null",                        
+"kong_ent_token_name": "null",                   
+"kong_ent_manager_url": "null"  }}'
+	
+	
+	
+docker run -d \                                
+-e "KONGMAP_CLUSTERS_JSON=$KONG_CLUSTERS" \  
+-e "KONGMAP_URL=http://192.168.11.118:8100" \
+-p 8100:8100 \                               
+-p 8143:8143 \                               
+yesinteractive/kongmap	
