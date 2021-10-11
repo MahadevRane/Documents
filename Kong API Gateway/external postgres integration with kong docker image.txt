@@ -11,46 +11,58 @@ Step4:-
 docker run --rm \
 --network=kong-net \
 -e "KONG_DATABASE=postgres" \
--e "KONG_PG_HOST=192.168.11.73" \
+-e "KONG_PG_HOST=192.168.11.162" \
 -e "KONG_PG_USER=kong" \
 -e "KONG_PG_PASSWORD=kong" \
--e "KONG_CASSANDRA_CONTACT_POINTS=192.168.11.73" \
+-e "KONG_CASSANDRA_CONTACT_POINTS=192.168.11.162" \
 kong:latest kong migrations bootstrap
 
+Step 5:-
 
+docker volume create kong_data
 
-Step5:-	
+docker volume create konga_data
+
+docker volume create kongamap_data
+
+Step6:-	
 docker run -d --name kong \
 --network=kong-net \
 -e "KONG_DATABASE=postgres" \
--e "KONG_PG_HOST=192.168.11.73" \
+-e "KONG_PG_HOST=192.168.11.162" \
 -e "KONG_PG_USER=kong" \
 -e "KONG_PG_PASSWORD=kong" \
--e "KONG_CASSANDRA_CONTACT_POINTS=192.168.11.73" \
+-e "KONG_CASSANDRA_CONTACT_POINTS=192.168.11.162" \
 -e "KONG_PROXY_ACCESS_LOG=/dev/stdout" \
 -e "KONG_ADMIN_ACCESS_LOG=/dev/stdout" \
 -e "KONG_PROXY_ERROR_LOG=/dev/stderr" \
 -e "KONG_ADMIN_ERROR_LOG=/dev/stderr" \
 -e "KONG_ADMIN_LISTEN=0.0.0.0:8001, 0.0.0.0:8444 ssl" \
--p 192.168.11.73:8000:8000 \
--p 192.168.11.73:8443:8443 \
--p 192.168.11.73:8001:8001 \
--p 192.168.11.73:8444:8444 \
+-p 192.168.11.150:8000:8000 \
+-p 192.168.11.150:8443:8443 \
+-p 192.168.11.150:8001:8001 \
+-p 192.168.11.150:8444:8444 \
+--restart=always \
+-v /var/run/docker.sock:/var/run/docker.sock \
+-v kong_data:/data \
 kong:latest
 
-Step6:- 
+Step7:- 
 docker run -p 1337:1337 \
 --link kong:kong \
 --name konga \
 --network main-link \
--e "NODE_ENV=production" \
+-e "NODE_ENV=development" \
+--restart=always \
+-v /var/run/docker.sock:/var/run/docker.sock \
+-v konga_data:/data \
 pantsel/konga
 
-Step7:- Install KongMap using below commands
+Step8:- Install KongMap using below commands
 
 export KONG_CLUSTERS='{                              
 "Kong": {                      
-"kong_admin_api_url": "http://192.168.11.118:8001",
+"kong_admin_api_url": "http://192.168.11.238:8001",
 "kong_edit_config": "true",                        
 "kong_ent": "false",                             
 "kong_ent_token": "null",                        
@@ -61,7 +73,26 @@ export KONG_CLUSTERS='{
 	
 docker run -d \                                
 -e "KONGMAP_CLUSTERS_JSON=$KONG_CLUSTERS" \  
--e "KONGMAP_URL=http://192.168.11.118:8100" \
+-e "KONGMAP_URL=http://192.168.11.238:8100" \
 -p 8100:8100 \                               
 -p 8143:8143 \                               
 yesinteractive/kongmap	
+
+Step 9:-
+
+docker run -d \
+-e "KONGMAP_CLUSTERS_JSON=$KONG_CLUSTERS" \
+-e "KONGMAP_URL=http://192.168.11.238:8100" \
+-p 8100:8100 \
+-p 8143:8143 \
+--restart=always \
+-v /var/run/docker.sock:/var/run/docker.sock \
+-v kongamap_data:/data \
+yesinteractive/kongmap
+
+  
+docker update --restart unless-stopped fa82ca403fc8  
+  
+  
+Install Portainer...
+
