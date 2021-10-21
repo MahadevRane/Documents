@@ -1,0 +1,8 @@
+http://172.21.0.38:8080/pff-api/services/
+
+
+services/statementRest/statementService/getStatementofAccount
+
+services/statementRest/statementService/getInterestCertificate
+
+http://172.21.0.38:8080/pff-api/services/statementRest/statementService/getRepaymentSchedule

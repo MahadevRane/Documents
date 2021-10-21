@@ -3,22 +3,34 @@ Auxilo Dev environment setup:-
 2. sudo access required for run prometheus and grafana sh file.
 3. if docker daemon restarted or permission issue.
 	sudo chmod 777 /var/run/docker.sock
-	sudo usermod -a -G docker apmdev
+	sudo usermod -a -G docker apmdev (sudo usermod -a -G docker $USER)
 
 4. SOS berlin cockpit setup.sh file execution without root user.
 	./setup.sh -u joc_install.xml
 
 
+three schemas in Postgres database installed by Auxilo IT team.
 
-1. Openjdk version 11 (on ubuntu - IP:- 172.23.10.182 )
-2. Prometheus Community version 2.30 and above(on ubuntu)
+1. kong
+2. sosberlin
+3. services
+
+
+Software installation:-
+
+1. Openjdk version 11 (on ubuntu - IP:- 172.23.10.182 )  -->installed by Auxilo team
+
+2. Prometheus Community version 2.30 and above(on ubuntu) -->installed by Auxilo team
 https://prometheus.io/download/
 
-3. Grafana Community version 8.2.0 and above(on ubuntu)
+3. Grafana Community version 8.2.0 and above(on ubuntu)  -->installed by Auxilo team
 https://grafana.com/docs/grafana/latest/installation/debian/
 
-4. Postman  v8.12.4 or above(on windows)
-5. pgAdmin4 v6.0 (on windows)
+4. Postman  v8.12.4 or above(on windows)  -->installed by Nucsoft team
+https://www.postman.com/downloads/
+
+5. pgAdmin4 v6.0 (on windows)  -->installed by Auxilo team
+https://www.pgadmin.org/download/pgadmin-4-windows/
 
 
 

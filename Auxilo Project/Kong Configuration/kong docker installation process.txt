@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "95e91989-54b6-4e0d-ac1b-be9150ca039b",
+		"name": "Auxilo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "LMS_UAT",
+			"item": [
+				{
+					"name": "LMS_PreProd_getInterestCerificate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dXNlcjpOVUNTT0ZUOkF1eGlsb0AxMjM=",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text"
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getInterestCerificate",
+								"type": "text"
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text"
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text"
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"finReference\": \"100219004391\",\r\n  \"finActiveStatus\": \"A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.21.0.38:8080/pff-api/services/statementRest/statementService/getInterestCerificate",
+							"protocol": "http",
+							"host": [
+								"172",
+								"21",
+								"0",
+								"38"
+							],
+							"port": "8080",
+							"path": [
+								"pff-api",
+								"services",
+								"statementRest",
+								"statementService",
+								"getInterestCerificate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LMS_PreProd_getStatementofAccount",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dXNlcjpOVUNTT0ZUOkF1eGlsb0AxMjM=",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text"
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getStatementofAccount",
+								"type": "text"
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text"
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text"
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"finReference\": \"100219004391\",\r\n  \"finActiveStatus\": \"A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.21.0.38:8080/pff-api/services/statementRest/statementService/getStatementofAccount",
+							"protocol": "http",
+							"host": [
+								"172",
+								"21",
+								"0",
+								"38"
+							],
+							"port": "8080",
+							"path": [
+								"pff-api",
+								"services",
+								"statementRest",
+								"statementService",
+								"getStatementofAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LMS_PreProd_getRepaymentSchedule",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dXNlcjpOVUNTT0ZUOkF1eGlsb0AxMjM=",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text"
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getRepaymentSchedule",
+								"type": "text"
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text"
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text"
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"finReference\": \"100219004391\",\r\n  \"finActiveStatus\": \"A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.21.0.38:8080/pff-api/services/statementRest/statementService/getRepaymentSchedule",
+							"protocol": "http",
+							"host": [
+								"172",
+								"21",
+								"0",
+								"38"
+							],
+							"port": "8080",
+							"path": [
+								"pff-api",
+								"services",
+								"statementRest",
+								"statementService",
+								"getRepaymentSchedule"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
