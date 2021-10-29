@@ -93,6 +93,7 @@ yesinteractive/kongmap
 
   
 docker update --restart unless-stopped fa82ca403fc8  
+docker update --restart unless-stopped $(docker ps -q)
   
   
 Install Portainer...
