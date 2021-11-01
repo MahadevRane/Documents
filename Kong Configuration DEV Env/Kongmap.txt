@@ -1,0 +1,22 @@
+export KONG_CLUSTERS='{
+"Kong": {
+    "kong_admin_api_url": "http://172.23.10.182:8001",
+    "kong_edit_config": "true",
+    "kong_ent": "false",
+    "kong_ent_token": "null",
+    "kong_ent_token_name": "null",
+    "kong_ent_manager_url": "null"
+  }}'
+
+ 
+
+
+docker run -d \
+-e "KONGMAP_CLUSTERS_JSON=$KONG_CLUSTERS" \
+-e "KONGMAP_URL=http://172.23.10.182:8100" \
+-p 8100:8100 \
+-p 8143:8143 \
+--restart=always \
+-v /var/run/docker.sock:/var/run/docker.sock \
+-v kongmap_data:/data \
+yesinteractive/kongmap

@@ -1,0 +1,50 @@
+http://172.21.0.38:8080/pff-api/services/
+
+ 
+
+For testing purpose, you can check below APIs
+
+ 
+
+1. /services/statementRest/statementService/getStatementofAccount
+
+2. /services/statementRest/statementService/getInterestCerificate 
+
+3. /services/statementRest/statementService/getRepaymentSchedule 
+
+
+
+
+http://172.21.0.38:8080/pff-api/services/statementRest/statementService/getStatementofAccount
+
+
+http://172.21.0.38:8080/pff-api/services/statementRest/statementService/getInterestCerificate
+
+http://172.21.0.38:8080/pff-api/services/statementRest/statementService/getRepaymentSchedule
+
+/services/statementRest/statementService/getRepaymentSchedule
+
+
+API Name:  POST        LMS_PreProd_getRepaymentSchedule
+
+Request Headers   (This parameters will remain common for all APIs except ServiceName - which is name of API)
+Authorization:    	dXNlcjpOVUNTT0ZUOkF1eGlsb0AxMjM=
+ENTITYID:    	  	Base link
+SERVICEVERSION:    	1
+SERVICENAME:    	getRepaymentSchedule
+REQUESTTIME:    	2021-10-19T00:00:00
+LANGUAGE:   	 	ENG
+MESSAGEID:    		12451
+
+
+Bodyraw (json)
+
+json
+{
+  "finReference": "100219004391",
+  "finActiveStatus": "A"
+}
+
+Note: in JSON, we can pass finReference or cif, any one value
+
+ 

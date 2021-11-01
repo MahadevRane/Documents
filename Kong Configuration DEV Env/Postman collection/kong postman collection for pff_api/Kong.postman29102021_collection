@@ -1,0 +1,437 @@
+{
+	"info": {
+		"_postman_id": "1ed37f51-70e9-4d67-8002-b90a404a3870",
+		"name": "Kong",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "LMS_UAT",
+			"item": [
+				{
+					"name": "getStatementofAccount",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer gCZLSPLnVbdDj4Yu8RT7QnDJDSmgiTwJ",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getStatementofAccount",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"finReference\": \"100219004391\",\r\n  \"finActiveStatus\": \"A\"\r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/pffapi/api/v1/getStatementofAccount",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"getStatementofAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getStatementofAccount SB",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dXNlcjpOVUNTT0ZUOkF1eGlsb0AxMjM=",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getStatementofAccount",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"finReference\": \"100219004391\",\r\n  \"finActiveStatus\": \"A\"\r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8083/pffapi/api/v1/getStatementofAccount",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8083",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"getStatementofAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getInterestCerificate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 3vLmmRUIIrbcIAcr5NmwBdeBwjf4664N",
+								"type": "text"
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"finReference\": \"100219004391\",\r\n  \"finActiveStatus\": \"A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/pffapi/api/v1/getInterestCerificate",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"getInterestCerificate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getInterestCerificate SB",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dXNlcjpOVUNTT0ZUOkF1eGlsb0AxMjM=",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getInterestCerificate",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"finReference\": \"100219004391\",\r\n  \"finActiveStatus\": \"A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8083/pffapi/api/v1/getInterestCerificate",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8083",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"getInterestCerificate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getRepaymentSchedule",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 3vLmmRUIIrbcIAcr5NmwBdeBwjf4664N",
+								"type": "text"
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"finReference\": \"100219004391\",\r\n  \"finActiveStatus\": \"A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/pffapi/api/v1/getRepaymentSchedule",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"getRepaymentSchedule"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getRepaymentSchedule SB",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dXNlcjpOVUNTT0ZUOkF1eGlsb0AxMjM=",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getRepaymentSchedule",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"finReference\": \"100219004391\",\r\n  \"finActiveStatus\": \"A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8083/pffapi/api/v1/getRepaymentSchedule",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8083",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"getRepaymentSchedule"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
