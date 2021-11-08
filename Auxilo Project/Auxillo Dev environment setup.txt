@@ -1,4 +1,4 @@
-Auxilo Dev environment setup:- 
+Auxilo Dev environment setup requirements:- 
 1. sudo access required for docker installation 
 2. sudo access required for run prometheus and grafana sh file.
 3. if docker daemon restarted or permission issue.
@@ -7,7 +7,8 @@ Auxilo Dev environment setup:-
 
 4. SOS berlin cockpit setup.sh file execution without root user.
 	./setup.sh -u joc_install.xml
-
+	
+5. read/write access to prometheus.yml file
 
 three schemas in Postgres database installed by Auxilo IT team.
 
