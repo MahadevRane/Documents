@@ -1,0 +1,1480 @@
+{
+	"info": {
+		"_postman_id": "1ed37f51-70e9-4d67-8002-b90a404a3870",
+		"name": "Kong",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "LMS_UAT",
+			"item": [
+				{
+					"name": "getStatementofAccount",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer LdOfJiqSu4Z3FZfqrd3gabJsCCbGm3Mo",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getStatementofAccount",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"finReference\": \"100219004391\",\r\n  \"finActiveStatus\": \"A\"\r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/pffapi/api/v1/getStatementofAccount",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"getStatementofAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getStatementofAccount SB",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dXNlcjpOVUNTT0ZUOkF1eGlsb0AxMjM=",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text"
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getStatementofAccount",
+								"type": "text"
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text"
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text"
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text"
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"finReference\": \"100219004391\",\r\n  \"finActiveStatus\": \"A\"\r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8083/pffapi/api/v1/getStatementofAccount",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8083",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"getStatementofAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getInterestCerificate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer LkVi9lWhWSg76yp2mjoAjgsXBBbqSfnA",
+								"type": "text"
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"finReference\": \"100219004391\",\r\n  \"finActiveStatus\": \"A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/pffapi/api/v1/getInterestCerificate",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"getInterestCerificate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getInterestCerificate SB",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dXNlcjpOVUNTT0ZUOkF1eGlsb0AxMjM=",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getInterestCerificate",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"finReference\": \"100219004391\",\r\n  \"finActiveStatus\": \"A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8083/pffapi/api/v1/getInterestCerificate",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8083",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"getInterestCerificate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getRepaymentSchedule",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer LkVi9lWhWSg76yp2mjoAjgsXBBbqSfnA",
+								"type": "text"
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"finReference\": \"100219004391\",\r\n  \"finActiveStatus\": \"A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/pffapi/api/v1/getRepaymentSchedule",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"getRepaymentSchedule"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getRepaymentSchedule SB",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dXNlcjpOVUNTT0ZUOkF1eGlsb0AxMjM=",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getRepaymentSchedule",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"finReference\": \"100219004391\",\r\n  \"finActiveStatus\": \"A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8083/pffapi/api/v1/getRepaymentSchedule",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8083",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"getRepaymentSchedule"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCustomerAddress",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer wWanGOUP4TtxKzJllG0vMCMRSzzq1nn1",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getStatementofAccount",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cif\":\"178\",\r\n    \"address\": \r\n           {\r\n                \"addrType\": \"CURR\",\r\n                \"buildingNo\": \"API test CURR\",\r\n                \"Street\": \"API test CURR \",\r\n                \"addrLine1\": \"API test CURR\",\r\n                \"addrLine2\": \"API test CURR\",\r\n                \"city\": \"HYD\",\r\n                \"state\": \"TL\",\r\n                \"country\": \"IN\",\r\n                \"pinCode\": \"500081\",\r\n                \"priority\": 5,\r\n                \"version\": 1\r\n            }\r\n            }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/pffapi/api/v1/updateCustomerAddress",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"updateCustomerAddress"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCustomerAddress SB",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 5uzJ8MJnS6brSU3LuwyUT5z8NwYvY8w2",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getStatementofAccount",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cif\":\"178\",\r\n    \"address\": \r\n           {\r\n                \"addrType\": \"CURR\",\r\n                \"buildingNo\": \"API test CURR\",\r\n                \"Street\": \"API test CURR \",\r\n                \"addrLine1\": \"API test CURR\",\r\n                \"addrLine2\": \"API test CURR\",\r\n                \"city\": \"HYD\",\r\n                \"state\": \"TL\",\r\n                \"country\": \"IN\",\r\n                \"pinCode\": \"500081\",\r\n                \"priority\": 5,\r\n                \"version\": 1\r\n            }\r\n            }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8083/pffapi/api/v1/updateCustomerAddress",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8083",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"updateCustomerAddress"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCustomerPhoneNumber",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer wWanGOUP4TtxKzJllG0vMCMRSzzq1nn1",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getStatementofAccount",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n   \"cif\":\"178\",\r\n \"phone\": \r\n            {\r\n                \"phoneTypeCode\": \"MOBILE\",\r\n                \"phoneCountryCode\": \"91\",\r\n                \"phoneNumber\": \"8888888888\",\r\n                \"priority\": 5\r\n                \r\n            }\r\n        }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/pffapi/api/v1/updateCustomerPhoneNumber",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"updateCustomerPhoneNumber"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCustomerPhoneNumber SB",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 5uzJ8MJnS6brSU3LuwyUT5z8NwYvY8w2",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getStatementofAccount",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n   \"cif\":\"178\",\r\n \"phone\": \r\n            {\r\n                \"phoneTypeCode\": \"MOBILE\",\r\n                \"phoneCountryCode\": \"91\",\r\n                \"phoneNumber\": \"8888888888\",\r\n                \"priority\": 5\r\n                \r\n            }\r\n        }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8083/pffapi/api/v1/updateCustomerPhoneNumber",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8083",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"updateCustomerPhoneNumber"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCustomerEmail",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer wWanGOUP4TtxKzJllG0vMCMRSzzq1nn1",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getStatementofAccount",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n   \"cif\":\"178\",\r\n \"email\": \r\n            {\r\n                \"custEMailTypeCode\": \"PERSONAL\",\r\n                \"custEMail\": \"testapi@apitest.com\",\r\n                \"custEMailPriority\": 5,\r\n                \"version\": 1\r\n            }}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/pffapi/api/v1/updateCustomerEmail",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"updateCustomerEmail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCustomerEmail SB",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 5uzJ8MJnS6brSU3LuwyUT5z8NwYvY8w2",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getStatementofAccount",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n   \"cif\":\"178\",\r\n \"email\": \r\n            {\r\n                \"custEMailTypeCode\": \"PERSONAL\",\r\n                \"custEMail\": \"testapi@apitest.com\",\r\n                \"custEMailPriority\": 5,\r\n                \"version\": 1\r\n            }}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8083/pffapi/api/v1/updateCustomerEmail",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8083",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"updateCustomerEmail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer Y0NF42mmJgwsMXZ3S7xc6p2j4gwwPJ99",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getStatementofAccount",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cif\":\"178\",\r\n    \"coreBankID\":  \"\",    \r\n\"defaultBranch\": \"0021\",    \r\n\"baseCurrency\": \"INR\",    \r\n\"primaryRelationOfficer\": \"5\",    \r\n\"personalInfo\": {\r\n\"firstName\": \"Meena\",\r\n\"middleName\": \"\",\r\n\"lastName\": \"Sharma\",\r\n\"salutation\": \"MRS\",\r\n\"motherName\": \"kubjadevi \",\r\n\"fatherName\": \"Nand Sharma\",\r\n\"language\": \"EN\",\r\n\"dateofBirth\": \"1970-12-31T00:00:00\",\r\n\"countryofBirth\": \"IN\",\r\n\"nationality\": \"IN\",\r\n\"gender\": \"FEMALE\",\r\n\"maritalStatus\": \"MARRIED\",\r\n\"numofDependents\": \"0\",\r\n\"type\": \"HOME\",\r\n\"sector\":\"99\",\r\n\"industry\":\"999\",\r\n\"groupID\": 0,\r\n\"staff\": false,\r\n\"emiCardEligibilityAmt\": 0,\r\n\"caste\": 0,\r\n\"religion\": 0,\r\n\"version\": 1,\r\n\"marginDeviation\": false,\r\n\"panNumber\": \"CKHPP7101G\"\r\n},\r\n\"employments\": [\r\n        {\r\n            \"employmentId\": 85,\r\n            \"employerId\": 3059,\r\n            \"custEmpType\": \"1000\",\r\n            \"designation\": \"108\",\r\n            \"startDate\": \"2006-11-19T00:00:00\",\r\n            \"version\": 1\r\n        }],\r\n        \"addresses\": [\r\n{\r\n\"addrType\": \"CURR\",\r\n\"buildingNo\": \"Flat No 202\",\r\n\"Street\": \"102/Pheonix marketcity\",\r\n\"addrLine1\": \"Kamani\",\r\n\"addrLine2\": \"Kurla\",\r\n\"city\": \"NM\",\r\n\"state\": \"MH\",\r\n\"country\": \"IN\",\r\n\"pinCode\": \"410206\",\r\n\"priority\": 5\r\n},\r\n{\"addrType\": \"PERM\",\r\n\"buildingNo\": \"Flat No 202\",\r\n\"Street\": \"Building Compaq 2\",\r\n\"addrLine1\": \"Mahalaxmi Nagar\",\r\n\"addrLine2\": \"Sector 03 Panvel Nere Raigarh\",\r\n\"city\": \"NM\",\r\n\"state\": \"MH\",\r\n\"country\": \"IN\",\r\n\"pinCode\": \"410206\",\r\n\"priority\": 4\r\n}],\"phones\": [ \r\n{\r\n\"phoneTypeCode\": \"MOBILE\",\r\n\"phoneCountryCode\": \"91\",\r\n\"phoneNumber\": \"7738496765\",\r\n\"priority\": 5\r\n}], \r\n\"emails\":[\r\n{\r\n\"custEMailTypeCode\": \"PERSONAL\",\r\n\"custEMail\": \"meena.sarma@gmail.com\",\r\n\"custEMailPriority\": 5\r\n}],\r\n\"customersIncome\": [\r\n    {\r\n        \"incomeExpense\":\"Income\",\r\n        \"category\":\"SALARIED\",\r\n        \"custIncomeType\":\"BS\",\r\n        \"custIncome\":\"100000\"\r\n    }\r\n],\r\n\"customersBankInfo\": [{\r\n            \"bankId\": 125,\r\n            \"bankName\": \"229\",\r\n            \"accountNumber\": \"038801508082\",\r\n            \"accountType\": \"SA\",\r\n            \"salaryAccount\": false,\r\n            \"version\": 1,\r\n            \"bankInfoDetails\": [],\r\n            \"addToBenficiary\": false\r\n        }],\r\n\"documents\": [{            \r\n\"docCategory\": \"01\",            \r\n\"custDocTitle\" : \"5580\",            \r\n\"docName\": \"Aadhar.pdf\",            \r\n\"docRefId\": \"123546\",            \r\n\"docFormat\": \"PDF\",            \r\n\"custDocIssuedCountry\" :\"IN\"},{            \r\n\"docCategory\": \"03\",            \r\n\"custDocTitle\" : \"CKHPP7101G\",            \r\n\"docName\": \"PanNo.pdf\",            \r\n\"docRefId\": \"123546\",            \r\n\"docFormat\": \"PDF\",            \r\n\"custDocIssuedCountry\" :\"IN\"}],\r\n\"accountsBehaviour\": [],\r\n\"customerExtLiability\": []}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/pffapi/api/v1/updateCustomer",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"updateCustomer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer SB",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 5uzJ8MJnS6brSU3LuwyUT5z8NwYvY8w2",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getStatementofAccount",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cif\":\"178\",\r\n    \"coreBankID\":  \"\",    \r\n\"defaultBranch\": \"0021\",    \r\n\"baseCurrency\": \"INR\",    \r\n\"primaryRelationOfficer\": \"5\",    \r\n\"personalInfo\": {\r\n\"firstName\": \"Meena\",\r\n\"middleName\": \"\",\r\n\"lastName\": \"Sharma\",\r\n\"salutation\": \"MRS\",\r\n\"motherName\": \"kubjadevi \",\r\n\"fatherName\": \"Nand Sharma\",\r\n\"language\": \"EN\",\r\n\"dateofBirth\": \"1970-12-31T00:00:00\",\r\n\"countryofBirth\": \"IN\",\r\n\"nationality\": \"IN\",\r\n\"gender\": \"FEMALE\",\r\n\"maritalStatus\": \"MARRIED\",\r\n\"numofDependents\": \"0\",\r\n\"type\": \"HOME\",\r\n\"sector\":\"99\",\r\n\"industry\":\"999\",\r\n\"groupID\": 0,\r\n\"staff\": false,\r\n\"emiCardEligibilityAmt\": 0,\r\n\"caste\": 0,\r\n\"religion\": 0,\r\n\"version\": 1,\r\n\"marginDeviation\": false,\r\n\"panNumber\": \"CKHPP7101G\"\r\n},\r\n\"employments\": [\r\n        {\r\n            \"employmentId\": 85,\r\n            \"employerId\": 3059,\r\n            \"custEmpType\": \"1000\",\r\n            \"designation\": \"108\",\r\n            \"startDate\": \"2006-11-19T00:00:00\",\r\n            \"version\": 1\r\n        }],\r\n        \"addresses\": [\r\n{\r\n\"addrType\": \"CURR\",\r\n\"buildingNo\": \"Flat No 202\",\r\n\"Street\": \"102/Pheonix marketcity\",\r\n\"addrLine1\": \"Kamani\",\r\n\"addrLine2\": \"Kurla\",\r\n\"city\": \"NM\",\r\n\"state\": \"MH\",\r\n\"country\": \"IN\",\r\n\"pinCode\": \"410206\",\r\n\"priority\": 5\r\n},\r\n{\"addrType\": \"PERM\",\r\n\"buildingNo\": \"Flat No 202\",\r\n\"Street\": \"Building Compaq 2\",\r\n\"addrLine1\": \"Mahalaxmi Nagar\",\r\n\"addrLine2\": \"Sector 03 Panvel Nere Raigarh\",\r\n\"city\": \"NM\",\r\n\"state\": \"MH\",\r\n\"country\": \"IN\",\r\n\"pinCode\": \"410206\",\r\n\"priority\": 4\r\n}],\"phones\": [ \r\n{\r\n\"phoneTypeCode\": \"MOBILE\",\r\n\"phoneCountryCode\": \"91\",\r\n\"phoneNumber\": \"7738496765\",\r\n\"priority\": 5\r\n}], \r\n\"emails\":[\r\n{\r\n\"custEMailTypeCode\": \"PERSONAL\",\r\n\"custEMail\": \"meena.sarma@gmail.com\",\r\n\"custEMailPriority\": 5\r\n}],\r\n\"customersIncome\": [\r\n    {\r\n        \"incomeExpense\":\"Income\",\r\n        \"category\":\"SALARIED\",\r\n        \"custIncomeType\":\"BS\",\r\n        \"custIncome\":\"100000\"\r\n    }\r\n],\r\n\"customersBankInfo\": [{\r\n            \"bankId\": 125,\r\n            \"bankName\": \"229\",\r\n            \"accountNumber\": \"038801508082\",\r\n            \"accountType\": \"SA\",\r\n            \"salaryAccount\": false,\r\n            \"version\": 1,\r\n            \"bankInfoDetails\": [],\r\n            \"addToBenficiary\": false\r\n        }],\r\n\"documents\": [{            \r\n\"docCategory\": \"01\",            \r\n\"custDocTitle\" : \"5580\",            \r\n\"docName\": \"Aadhar.pdf\",            \r\n\"docRefId\": \"123546\",            \r\n\"docFormat\": \"PDF\",            \r\n\"custDocIssuedCountry\" :\"IN\"},{            \r\n\"docCategory\": \"03\",            \r\n\"custDocTitle\" : \"CKHPP7101G\",            \r\n\"docName\": \"PanNo.pdf\",            \r\n\"docRefId\": \"123546\",            \r\n\"docFormat\": \"PDF\",            \r\n\"custDocIssuedCountry\" :\"IN\"}],\r\n\"accountsBehaviour\": [],\r\n\"customerExtLiability\": []}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8083/pffapi/api/v1/updateCustomer",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8083",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"updateCustomer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCustomerEmployment",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer EkfUgcipyhnsIonnlVGk6VAMgTFQTlXp",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getStatementofAccount",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n   \"cif\":\"178\",\r\n \"email\": \r\n            {\r\n                \"custEMailTypeCode\": \"PERSONAL\",\r\n                \"custEMail\": \"testapi@apitest.com\",\r\n                \"custEMailPriority\": 5,\r\n                \"version\": 1\r\n            }}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/pffapi/api/v1/updateCustomerEmployment",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"updateCustomerEmployment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCustomerEmployment SB",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 5uzJ8MJnS6brSU3LuwyUT5z8NwYvY8w2",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getStatementofAccount",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n   \"cif\":\"178\",\r\n \"email\": \r\n            {\r\n                \"custEMailTypeCode\": \"PERSONAL\",\r\n                \"custEMail\": \"testapi@apitest.com\",\r\n                \"custEMailPriority\": 5,\r\n                \"version\": 1\r\n            }}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8083/pffapi/api/v1/updateCustomerEmployment",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8083",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"updateCustomerEmployment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCustomerDetails",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer EkfUgcipyhnsIonnlVGk6VAMgTFQTlXp",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getStatementofAccount",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://172.23.10.182:8000/pffapi/api/v1/getCustomerDetails?cif=3461",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"getCustomerDetails"
+							],
+							"query": [
+								{
+									"key": "cif",
+									"value": "3461"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCustomerDetails SB",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 5uzJ8MJnS6brSU3LuwyUT5z8NwYvY8w2",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getStatementofAccount",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8083/pffapi/api/v1/getCustomerDetails?cif=3461",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8083",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"getCustomerDetails"
+							],
+							"query": [
+								{
+									"key": "cif",
+									"value": "3461"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "eb12a582-a66f-4239-bb66-a58e1ce5d7eb",
+		"name": "Token API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "token_api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://172.23.10.182:8081/api/abc/xyz/",
+					"protocol": "http",
+					"host": [
+						"172",
+						"23",
+						"10",
+						"182"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"abc",
+						"xyz",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "token_api-kong",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "vmX4HTjxaeoURBSAMa0A0pggV47293qZ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "user3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://172.23.10.182:8000/api/abc/xyz/aaa",
+					"protocol": "http",
+					"host": [
+						"172",
+						"23",
+						"10",
+						"182"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"abc",
+						"xyz",
+						"aaa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "token_api-Get token(password)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"client_id\": \"auxilo-clientid\",\r\n    \"client_secret\": \"auxilo-client-secret\",\r\n    \"authenticated_userid\": \"auxilo\",\r\n    \"grant_type\": \"password\",\r\n    \"provision_key\": \"provisionkey\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://172.23.10.182:8443/api/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"172",
+						"23",
+						"10",
+						"182"
+					],
+					"port": "8443",
+					"path": [
+						"api",
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "token_api-Get token for nuc consumer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"client_id\": \"nuc-clientid\",\r\n    \"client_secret\": \"nuc-clientsecret\",\r\n    \"authenticated_userid\": \"nuc\",\r\n    \"grant_type\": \"password\",\r\n    \"provision_key\": \"provisionkey\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://172.23.10.182:8443/api/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"172",
+						"23",
+						"10",
+						"182"
+					],
+					"port": "8443",
+					"path": [
+						"api",
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "token_api-Get token(refresh)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"grant_type\": \"refresh_token\",\r\n    \"refresh_token\" : \"FUQ8tR1QIxICUSwsWtJmmo7b1C7ZxbQt\",\r\n    \"client_id\" : \"auxilo-clientid\",\r\n    \"client_secret\" : \"auxilo-client-secret\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://172.23.10.182:8443/api/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"172",
+						"23",
+						"10",
+						"182"
+					],
+					"port": "8443",
+					"path": [
+						"api",
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
