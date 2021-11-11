@@ -961,7 +961,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer Y0NF42mmJgwsMXZ3S7xc6p2j4gwwPJ99",
+								"value": "Bearer YFCuLTOpqOD3qarbH90vyghroAIxcbye",
 								"type": "text"
 							},
 							{
@@ -1135,7 +1135,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer EkfUgcipyhnsIonnlVGk6VAMgTFQTlXp",
+								"value": "Bearer YFCuLTOpqOD3qarbH90vyghroAIxcbye",
 								"type": "text"
 							},
 							{
@@ -1182,7 +1182,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{ \r\n   \"cif\":\"178\",\r\n \"email\": \r\n            {\r\n                \"custEMailTypeCode\": \"PERSONAL\",\r\n                \"custEMail\": \"testapi@apitest.com\",\r\n                \"custEMailPriority\": 5,\r\n                \"version\": 1\r\n            }}\r\n",
+							"raw": "{\r\n\"cif\":\"184\",\r\n \"employment\": \r\n        {\r\n            \"employmentId\": 85,\r\n            \"employerId\": 3059,\r\n            \"custEmpType\": \"1001\",\r\n            \"designation\": \"104\",\r\n            \"startDate\": \"2006-11-19T00:00:00\",\r\n            \"version\": 1\r\n        }}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1309,7 +1309,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer EkfUgcipyhnsIonnlVGk6VAMgTFQTlXp",
+								"value": "Bearer 3PwR8XiXcv8Pal6iu6jl2OtQlTmArhHC",
 								"type": "text"
 							},
 							{
@@ -1468,6 +1468,1062 @@
 								{
 									"key": "cif",
 									"value": "3461"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMandates(customer)",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer q9apau6isiQZ9HmSkajh9JE34e4cbBcS",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getStatementofAccount",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://172.23.10.182:8000/pffapi/api/v1/getMandates?cif=3461",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"getMandates"
+							],
+							"query": [
+								{
+									"key": "cif",
+									"value": "3461"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMandates(customer) SB",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 5uzJ8MJnS6brSU3LuwyUT5z8NwYvY8w2",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getStatementofAccount",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8083/pffapi/api/v1/getMandates?cif=3461",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8083",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"getMandates"
+							],
+							"query": [
+								{
+									"key": "cif",
+									"value": "3461"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMandate",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 2xJWPrfwlqXCflW2zm1FDRJ3XYJveN3l",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getStatementofAccount",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://172.23.10.182:8000/pffapi/api/v1/getMandate?mandateID=3461",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"getMandate"
+							],
+							"query": [
+								{
+									"key": "mandateID",
+									"value": "3461"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMandate SB",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 5uzJ8MJnS6brSU3LuwyUT5z8NwYvY8w2",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getStatementofAccount",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8083/pffapi/api/v1/getMandate?mandateID=3461",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8083",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"getMandate"
+							],
+							"query": [
+								{
+									"key": "mandateID",
+									"value": "3461"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createMandate",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer YFCuLTOpqOD3qarbH90vyghroAIxcbye",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getStatementofAccount",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"cif\": \"180\",\r\n        \"finReference\": \"100219000454\",\r\n        \"useExisting\": true,\r\n        \"mandateRef\": \"ABCD0000000004043140\",\r\n        \"mandateType\": \"NACH\",\r\n        \"bankCode\": \"000\",\r\n        \"branchCode\": \"098641\",\r\n        \"ifsc\": \"ABCD0008865\",\r\n        \"micr\": \"281025208\",\r\n        \"accType\": \"11\",\r\n        \"accNumber\": \"990990990990\",\r\n        \"accHolderName\": \"XYZ pvt ltd\",\r\n        \"openMandate\": true,\r\n        \"startDate\": \"2020-02-11T00:00:00\",\r\n        \"maxLimit\": 13427000,\r\n        \"periodicity\": \"M0001\",\r\n        \"status\": \"APPROVED\",\r\n        \"active\": true,\r\n        \"totEMIAmount\": 7016000,\r\n        \"barCodeNumber\": \"123456789A\",\r\n        \"entityCode\": \"3\",\r\n        \"swap\": false,\r\n        \"partnerBankId\": 0,\r\n        \"version\": 1,\r\n        \"defaultMandate\": false,\r\n        \"documentName\": \"test.pdf\",\r\n        \"docRefId\": \"123546\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/pffapi/api/v1/createMandate",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"createMandate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createMandate SB",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 5uzJ8MJnS6brSU3LuwyUT5z8NwYvY8w2",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getStatementofAccount",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"cif\": \"180\",\r\n        \"finReference\": \"100219000454\",\r\n        \"useExisting\": true,\r\n        \"mandateRef\": \"ABCD0000000004043140\",\r\n        \"mandateType\": \"NACH\",\r\n        \"bankCode\": \"000\",\r\n        \"branchCode\": \"098641\",\r\n        \"ifsc\": \"ABCD0008865\",\r\n        \"micr\": \"281025208\",\r\n        \"accType\": \"11\",\r\n        \"accNumber\": \"990990990990\",\r\n        \"accHolderName\": \"XYZ pvt ltd\",\r\n        \"openMandate\": true,\r\n        \"startDate\": \"2020-02-11T00:00:00\",\r\n        \"maxLimit\": 13427000,\r\n        \"periodicity\": \"M0001\",\r\n        \"status\": \"APPROVED\",\r\n        \"active\": true,\r\n        \"totEMIAmount\": 7016000,\r\n        \"barCodeNumber\": \"123456789A\",\r\n        \"entityCode\": \"3\",\r\n        \"swap\": false,\r\n        \"partnerBankId\": 0,\r\n        \"version\": 1,\r\n        \"defaultMandate\": false,\r\n        \"documentName\": \"test.pdf\",\r\n        \"docRefId\": \"123546\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8083/pffapi/api/v1/createMandate",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8083",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"createMandate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateMandate",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer YFCuLTOpqOD3qarbH90vyghroAIxcbye",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getStatementofAccount",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cif\":\"1\",\r\n    \"mandate\": {\r\n        \"cif\": \"1\",\r\n        \"finReference\": \"100219000454\",\r\n        \"useExisting\": true,\r\n        \"mandateID\": 1,\r\n        \"mandateRef\": \"ICIC0000000012953124\",\r\n        \"mandateType\": \"NACH\",\r\n        \"bankCode\": \"229\",\r\n        \"branchCode\": \"038736\",\r\n        \"ifsc\": \"ICIC0006436\",\r\n        \"micr\": \"400229079\",\r\n        \"accType\": \"10\",\r\n        \"accNumber\": \"004001629304\",\r\n        \"accHolderName\": \"Ratan Jain\",\r\n        \"openMandate\": true,\r\n        \"startDate\": \"2021-10-05T00:00:00\",\r\n        \"maxLimit\": 40000000,\r\n        \"periodicity\": \"M0001\",\r\n        \"status\": \"APPROVED\",\r\n        \"active\": true,\r\n        \"totEMIAmount\": 3178900,\r\n        \"entityCode\": \"3\",\r\n        \"swap\": true,\r\n        \"partnerBankId\": 0,\r\n        \"version\": 1,\r\n        \"defaultMandate\": false\r\n    }\r\n            }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/pffapi/api/v1/updateMandate",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"updateMandate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateMandate SB",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 5uzJ8MJnS6brSU3LuwyUT5z8NwYvY8w2",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getStatementofAccount",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cif\":\"1\",\r\n    \"mandate\": {\r\n        \"cif\": \"1\",\r\n        \"finReference\": \"100219000454\",\r\n        \"useExisting\": true,\r\n        \"mandateID\": 1,\r\n        \"mandateRef\": \"ICIC0000000012953124\",\r\n        \"mandateType\": \"NACH\",\r\n        \"bankCode\": \"229\",\r\n        \"branchCode\": \"038736\",\r\n        \"ifsc\": \"ICIC0006436\",\r\n        \"micr\": \"400229079\",\r\n        \"accType\": \"10\",\r\n        \"accNumber\": \"004001629304\",\r\n        \"accHolderName\": \"Ratan Jain\",\r\n        \"openMandate\": true,\r\n        \"startDate\": \"2021-10-05T00:00:00\",\r\n        \"maxLimit\": 40000000,\r\n        \"periodicity\": \"M0001\",\r\n        \"status\": \"APPROVED\",\r\n        \"active\": true,\r\n        \"totEMIAmount\": 3178900,\r\n        \"entityCode\": \"3\",\r\n        \"swap\": true,\r\n        \"partnerBankId\": 0,\r\n        \"version\": 1,\r\n        \"defaultMandate\": false\r\n    }\r\n            }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8083/pffapi/api/v1/updateMandate",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8083",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"updateMandate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loanMandateSwapping",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer YFCuLTOpqOD3qarbH90vyghroAIxcbye",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getStatementofAccount",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"finReference\":\"100119000001\",\r\n\"oldMandateId\":\"1\",\r\n\"newMandateId\":\"665\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/pffapi/api/v1/loanMandateSwapping",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"loanMandateSwapping"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loanMandateSwapping SB",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 5uzJ8MJnS6brSU3LuwyUT5z8NwYvY8w2",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getStatementofAccount",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"finReference\":\"100119000001\",\r\n\"oldMandateId\":\"1\",\r\n\"newMandateId\":\"665\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8083/pffapi/api/v1/loanMandateSwapping",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8083",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"loanMandateSwapping"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getFinance",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer n1Rf3K4qnnU7PlkHz24LxK9OpszbM115",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getStatementofAccount",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://172.23.10.182:8000/pffapi/api/v1/getFinance?finReference=400519007259",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"getFinance"
+							],
+							"query": [
+								{
+									"key": "finReference",
+									"value": "400519007259"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getFinance SB",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 5uzJ8MJnS6brSU3LuwyUT5z8NwYvY8w2",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "Base link",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getStatementofAccount",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "12451",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "userName",
+								"value": "test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8083/pffapi/api/v1/getFinance?finReference=400519007259",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8083",
+							"path": [
+								"pffapi",
+								"api",
+								"v1",
+								"getFinance"
+							],
+							"query": [
+								{
+									"key": "finReference",
+									"value": "400519007259"
 								}
 							]
 						}

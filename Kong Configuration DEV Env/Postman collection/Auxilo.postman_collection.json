@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "95e91989-54b6-4e0d-ac1b-be9150ca039b",
 		"name": "Auxilo",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
@@ -58,7 +58,24 @@
 								}
 							}
 						},
-						"url": "http://172.21.0.38:8080/pff-api/services/statementRest/statementService/getInterestCerificate"
+						"url": {
+							"raw": "http://172.21.0.38:8080/pff-api/services/statementRest/statementService/getInterestCerificate",
+							"protocol": "http",
+							"host": [
+								"172",
+								"21",
+								"0",
+								"38"
+							],
+							"port": "8080",
+							"path": [
+								"pff-api",
+								"services",
+								"statementRest",
+								"statementService",
+								"getInterestCerificate"
+							]
+						}
 					},
 					"response": []
 				},
@@ -112,7 +129,24 @@
 								}
 							}
 						},
-						"url": "http://172.21.0.38:8080/pff-api/services/statementRest/statementService/getStatementofAccount"
+						"url": {
+							"raw": "http://172.21.0.38:8080/pff-api/services/statementRest/statementService/getStatementofAccount",
+							"protocol": "http",
+							"host": [
+								"172",
+								"21",
+								"0",
+								"38"
+							],
+							"port": "8080",
+							"path": [
+								"pff-api",
+								"services",
+								"statementRest",
+								"statementService",
+								"getStatementofAccount"
+							]
+						}
 					},
 					"response": []
 				},
@@ -166,7 +200,934 @@
 								}
 							}
 						},
-						"url": "http://172.21.0.38:8080/pff-api/services/statementRest/statementService/getRepaymentSchedule"
+						"url": {
+							"raw": "http://172.21.0.38:8080/pff-api/services/statementRest/statementService/getRepaymentSchedule",
+							"protocol": "http",
+							"host": [
+								"172",
+								"21",
+								"0",
+								"38"
+							],
+							"port": "8080",
+							"path": [
+								"pff-api",
+								"services",
+								"statementRest",
+								"statementService",
+								"getRepaymentSchedule"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "New APIs",
+			"item": [
+				{
+					"name": "getCustomerDetails",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dXNlcjpOVUNTT0ZUOkF1eGlsb0AxMjM=",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "1001",
+								"type": "text"
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getCustomerDetails",
+								"type": "text"
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text"
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text"
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "2353565as",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://172.21.0.38:8080/pff-api/services/customerRest/customerService/getCustomerDetails/3461",
+							"protocol": "http",
+							"host": [
+								"172",
+								"21",
+								"0",
+								"38"
+							],
+							"port": "8080",
+							"path": [
+								"pff-api",
+								"services",
+								"customerRest",
+								"customerService",
+								"getCustomerDetails",
+								"3461"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer Address",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dXNlcjpOVUNTT0ZUOkF1eGlsb0AxMjM=",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "1001",
+								"type": "text"
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "updateCustomerAddress",
+								"type": "text"
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text"
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text"
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "2353565as",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cif\":\"178\",\r\n    \"address\": \r\n           {\r\n                \"addrType\": \"CURR\",\r\n                \"buildingNo\": \"API test CURR\",\r\n                \"Street\": \"API test CURR \",\r\n                \"addrLine1\": \"API test CURR\",\r\n                \"addrLine2\": \"API test CURR\",\r\n                \"city\": \"HYD\",\r\n                \"state\": \"TL\",\r\n                \"country\": \"IN\",\r\n                \"pinCode\": \"500081\",\r\n                \"priority\": 5,\r\n                \"version\": 1\r\n            }\r\n            }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.21.0.38:8080/pff-api/services/customerRest/customerService/updateCustomerAddress",
+							"protocol": "http",
+							"host": [
+								"172",
+								"21",
+								"0",
+								"38"
+							],
+							"port": "8080",
+							"path": [
+								"pff-api",
+								"services",
+								"customerRest",
+								"customerService",
+								"updateCustomerAddress"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer Phone Number",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dXNlcjpOVUNTT0ZUOkF1eGlsb0AxMjM=",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "1001",
+								"type": "text"
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "updateCustomerPhoneNumber",
+								"type": "text"
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text"
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text"
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "2353565as",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n   \"cif\":\"178\",\r\n \"phone\": \r\n            {\r\n                \"phoneTypeCode\": \"MOBILE\",\r\n                \"phoneCountryCode\": \"91\",\r\n                \"phoneNumber\": \"8888888888\",\r\n                \"priority\": 5\r\n                \r\n            }\r\n        }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.21.0.38:8080/pff-api/services/customerRest/customerService/updateCustomerPhoneNumber",
+							"protocol": "http",
+							"host": [
+								"172",
+								"21",
+								"0",
+								"38"
+							],
+							"port": "8080",
+							"path": [
+								"pff-api",
+								"services",
+								"customerRest",
+								"customerService",
+								"updateCustomerPhoneNumber"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer E-mail",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dXNlcjpOVUNTT0ZUOkF1eGlsb0AxMjM=",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "1001",
+								"type": "text"
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "updateCustomerEmail",
+								"type": "text"
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text"
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text"
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "2353565as",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n   \"cif\":\"178\",\r\n \"email\": \r\n            {\r\n                \"custEMailTypeCode\": \"PERSONAL\",\r\n                \"custEMail\": \"testapi@apitest.com\",\r\n                \"custEMailPriority\": 5,\r\n                \"version\": 1\r\n            }}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.21.0.38:8080/pff-api/services/customerRest/customerService/updateCustomerEmail",
+							"protocol": "http",
+							"host": [
+								"172",
+								"21",
+								"0",
+								"38"
+							],
+							"port": "8080",
+							"path": [
+								"pff-api",
+								"services",
+								"customerRest",
+								"customerService",
+								"updateCustomerEmail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Loan",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dXNlcjpOVUNTT0ZUOkF1eGlsb0AxMjM=",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "1001",
+								"type": "text"
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getFinance",
+								"type": "text"
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text"
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text"
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "2353565as",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://172.21.0.38:8080/pff-api/services/createFinanceRest/finance/getFinance/400519007259",
+							"protocol": "http",
+							"host": [
+								"172",
+								"21",
+								"0",
+								"38"
+							],
+							"port": "8080",
+							"path": [
+								"pff-api",
+								"services",
+								"createFinanceRest",
+								"finance",
+								"getFinance",
+								"400519007259"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCustomer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dXNlcjpOVUNTT0ZUOkF1eGlsb0AxMjM=",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "1001",
+								"type": "text"
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "updateCustomer",
+								"type": "text"
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text"
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text"
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "test_143",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cif\":\"178\",\r\n    \"coreBankID\":  \"\",    \r\n\"defaultBranch\": \"0021\",    \r\n\"baseCurrency\": \"INR\",    \r\n\"primaryRelationOfficer\": \"5\",    \r\n\"personalInfo\": {\r\n\"firstName\": \"Meena\",\r\n\"middleName\": \"\",\r\n\"lastName\": \"Sharma\",\r\n\"salutation\": \"MRS\",\r\n\"motherName\": \"kubjadevi \",\r\n\"fatherName\": \"Nand Sharma\",\r\n\"language\": \"EN\",\r\n\"dateofBirth\": \"1970-12-31T00:00:00\",\r\n\"countryofBirth\": \"IN\",\r\n\"nationality\": \"IN\",\r\n\"gender\": \"FEMALE\",\r\n\"maritalStatus\": \"MARRIED\",\r\n\"numofDependents\": \"0\",\r\n\"type\": \"HOME\",\r\n\"sector\":\"99\",\r\n\"industry\":\"999\",\r\n\"groupID\": 0,\r\n\"staff\": false,\r\n\"emiCardEligibilityAmt\": 0,\r\n\"caste\": 0,\r\n\"religion\": 0,\r\n\"version\": 1,\r\n\"marginDeviation\": false,\r\n\"panNumber\": \"CKHPP7101G\"\r\n},\r\n\"employments\": [\r\n        {\r\n            \"employmentId\": 85,\r\n            \"employerId\": 3059,\r\n            \"custEmpType\": \"1000\",\r\n            \"designation\": \"108\",\r\n            \"startDate\": \"2006-11-19T00:00:00\",\r\n            \"version\": 1\r\n        }],\r\n        \"addresses\": [\r\n{\r\n\"addrType\": \"CURR\",\r\n\"buildingNo\": \"Flat No 202\",\r\n\"Street\": \"102/Pheonix marketcity\",\r\n\"addrLine1\": \"Kamani\",\r\n\"addrLine2\": \"Kurla\",\r\n\"city\": \"NM\",\r\n\"state\": \"MH\",\r\n\"country\": \"IN\",\r\n\"pinCode\": \"410206\",\r\n\"priority\": 5\r\n},\r\n{\"addrType\": \"PERM\",\r\n\"buildingNo\": \"Flat No 202\",\r\n\"Street\": \"Building Compaq 2\",\r\n\"addrLine1\": \"Mahalaxmi Nagar\",\r\n\"addrLine2\": \"Sector 03 Panvel Nere Raigarh\",\r\n\"city\": \"NM\",\r\n\"state\": \"MH\",\r\n\"country\": \"IN\",\r\n\"pinCode\": \"410206\",\r\n\"priority\": 4\r\n}],\"phones\": [ \r\n{\r\n\"phoneTypeCode\": \"MOBILE\",\r\n\"phoneCountryCode\": \"91\",\r\n\"phoneNumber\": \"7738496765\",\r\n\"priority\": 5\r\n}], \r\n\"emails\":[\r\n{\r\n\"custEMailTypeCode\": \"PERSONAL\",\r\n\"custEMail\": \"meena.sarma@gmail.com\",\r\n\"custEMailPriority\": 5\r\n}],\r\n\"customersIncome\": [\r\n    {\r\n        \"incomeExpense\":\"Income\",\r\n        \"category\":\"SALARIED\",\r\n        \"custIncomeType\":\"BS\",\r\n        \"custIncome\":\"100000\"\r\n    }\r\n],\r\n\"customersBankInfo\": [{\r\n            \"bankId\": 125,\r\n            \"bankName\": \"229\",\r\n            \"accountNumber\": \"038801508082\",\r\n            \"accountType\": \"SA\",\r\n            \"salaryAccount\": false,\r\n            \"version\": 1,\r\n            \"bankInfoDetails\": [],\r\n            \"addToBenficiary\": false\r\n        }],\r\n\"documents\": [{            \r\n\"docCategory\": \"01\",            \r\n\"custDocTitle\" : \"5580\",            \r\n\"docName\": \"Aadhar.pdf\",            \r\n\"docRefId\": \"123546\",            \r\n\"docFormat\": \"PDF\",            \r\n\"custDocIssuedCountry\" :\"IN\"},{            \r\n\"docCategory\": \"03\",            \r\n\"custDocTitle\" : \"CKHPP7101G\",            \r\n\"docName\": \"PanNo.pdf\",            \r\n\"docRefId\": \"123546\",            \r\n\"docFormat\": \"PDF\",            \r\n\"custDocIssuedCountry\" :\"IN\"}],\r\n\"accountsBehaviour\": [],\r\n\"customerExtLiability\": []}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.21.0.38:8080/pff-api/services/customerRest/customerService/updateCustomer",
+							"protocol": "http",
+							"host": [
+								"172",
+								"21",
+								"0",
+								"38"
+							],
+							"port": "8080",
+							"path": [
+								"pff-api",
+								"services",
+								"customerRest",
+								"customerService",
+								"updateCustomer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCustomerEmployment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dXNlcjpOVUNTT0ZUOkF1eGlsb0AxMjM=",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "1001",
+								"type": "text"
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "updateCustomerEmployment",
+								"type": "text"
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text"
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text"
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "test_144",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"cif\":\"184\",\r\n \"employment\": \r\n        {\r\n            \"employmentId\": 85,\r\n            \"employerId\": 3059,\r\n            \"custEmpType\": \"1001\",\r\n            \"designation\": \"104\",\r\n            \"startDate\": \"2006-11-19T00:00:00\",\r\n            \"version\": 1\r\n        }}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.21.0.38:8080/pff-api/services/customerRest/customerService/updateCustomerEmployment",
+							"protocol": "http",
+							"host": [
+								"172",
+								"21",
+								"0",
+								"38"
+							],
+							"port": "8080",
+							"path": [
+								"pff-api",
+								"services",
+								"customerRest",
+								"customerService",
+								"updateCustomerEmployment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMandates",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dXNlcjpOVUNTT0ZUOkF1eGlsb0AxMjM=",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "1001",
+								"type": "text"
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getMandate",
+								"type": "text"
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text"
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text"
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "test_146",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.21.0.38:8080/pff-api/services/mandateRest/mandateService/getMandate/1",
+							"protocol": "http",
+							"host": [
+								"172",
+								"21",
+								"0",
+								"38"
+							],
+							"port": "8080",
+							"path": [
+								"pff-api",
+								"services",
+								"mandateRest",
+								"mandateService",
+								"getMandate",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMandate(customer)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dXNlcjpOVUNTT0ZUOkF1eGlsb0AxMjM=",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "1001",
+								"type": "text"
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "getMandate",
+								"type": "text"
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text"
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text"
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "test_151",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.21.0.38:8080/pff-api/services/mandateRest/mandateService/getMandates/180",
+							"protocol": "http",
+							"host": [
+								"172",
+								"21",
+								"0",
+								"38"
+							],
+							"port": "8080",
+							"path": [
+								"pff-api",
+								"services",
+								"mandateRest",
+								"mandateService",
+								"getMandates",
+								"180"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createMandate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dXNlcjpOVUNTT0ZUOkF1eGlsb0AxMjM=",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "1001",
+								"type": "text"
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "createMandate",
+								"type": "text"
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text"
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text"
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "test_150",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"cif\": \"180\",\r\n        \"finReference\": \"100219000454\",\r\n        \"useExisting\": true,\r\n        \"mandateRef\": \"ABCD0000000004043140\",\r\n        \"mandateType\": \"NACH\",\r\n        \"bankCode\": \"000\",\r\n        \"branchCode\": \"098641\",\r\n        \"ifsc\": \"ABCD0008865\",\r\n        \"micr\": \"281025208\",\r\n        \"accType\": \"11\",\r\n        \"accNumber\": \"990990990990\",\r\n        \"accHolderName\": \"XYZ pvt ltd\",\r\n        \"openMandate\": true,\r\n        \"startDate\": \"2020-02-11T00:00:00\",\r\n        \"maxLimit\": 13427000,\r\n        \"periodicity\": \"M0001\",\r\n        \"status\": \"APPROVED\",\r\n        \"active\": true,\r\n        \"totEMIAmount\": 7016000,\r\n        \"barCodeNumber\": \"123456789A\",\r\n        \"entityCode\": \"3\",\r\n        \"swap\": false,\r\n        \"partnerBankId\": 0,\r\n        \"version\": 1,\r\n        \"defaultMandate\": false,\r\n        \"documentName\": \"test.pdf\",\r\n        \"docRefId\": \"123546\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.21.0.38:8080/pff-api/services/mandateRest/mandateService/createMandate",
+							"protocol": "http",
+							"host": [
+								"172",
+								"21",
+								"0",
+								"38"
+							],
+							"port": "8080",
+							"path": [
+								"pff-api",
+								"services",
+								"mandateRest",
+								"mandateService",
+								"createMandate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loanMandateSwapping",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dXNlcjpOVUNTT0ZUOkF1eGlsb0AxMjM=",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "1001",
+								"type": "text"
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "loanMandateSwapping",
+								"type": "text"
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text"
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text"
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "test_149",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"finReference\":\"100119000001\",\r\n\"oldMandateId\":\"1\",\r\n\"newMandateId\":\"665\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.21.0.38:8080/pff-api/services/mandateRest/mandateService/loanMandateSwapping",
+							"protocol": "http",
+							"host": [
+								"172",
+								"21",
+								"0",
+								"38"
+							],
+							"port": "8080",
+							"path": [
+								"pff-api",
+								"services",
+								"mandateRest",
+								"mandateService",
+								"loanMandateSwapping"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateMandate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "dXNlcjpOVUNTT0ZUOkF1eGlsb0AxMjM=",
+								"type": "text"
+							},
+							{
+								"key": "ENTITYID",
+								"value": "1001",
+								"type": "text"
+							},
+							{
+								"key": "SERVICEVERSION",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "SERVICENAME",
+								"value": "updateMandate",
+								"type": "text"
+							},
+							{
+								"key": "REQUESTTIME",
+								"value": "2021-10-19T00:00:00",
+								"type": "text"
+							},
+							{
+								"key": "LANGUAGE",
+								"value": "ENG",
+								"type": "text"
+							},
+							{
+								"key": "MESSAGEID",
+								"value": "test_147",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cif\":\"1\",\r\n    \"mandate\": {\r\n        \"cif\": \"1\",\r\n        \"finReference\": \"100219000454\",\r\n        \"useExisting\": true,\r\n        \"mandateID\": 1,\r\n        \"mandateRef\": \"ICIC0000000012953124\",\r\n        \"mandateType\": \"NACH\",\r\n        \"bankCode\": \"229\",\r\n        \"branchCode\": \"038736\",\r\n        \"ifsc\": \"ICIC0006436\",\r\n        \"micr\": \"400229079\",\r\n        \"accType\": \"10\",\r\n        \"accNumber\": \"004001629304\",\r\n        \"accHolderName\": \"Ratan Jain\",\r\n        \"openMandate\": true,\r\n        \"startDate\": \"2021-10-05T00:00:00\",\r\n        \"maxLimit\": 40000000,\r\n        \"periodicity\": \"M0001\",\r\n        \"status\": \"APPROVED\",\r\n        \"active\": true,\r\n        \"totEMIAmount\": 3178900,\r\n        \"entityCode\": \"3\",\r\n        \"swap\": true,\r\n        \"partnerBankId\": 0,\r\n        \"version\": 1,\r\n        \"defaultMandate\": false\r\n    }\r\n            }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.21.0.38:8080/pff-api/services/mandateRest/mandateService/updateMandate",
+							"protocol": "http",
+							"host": [
+								"172",
+								"21",
+								"0",
+								"38"
+							],
+							"port": "8080",
+							"path": [
+								"pff-api",
+								"services",
+								"mandateRest",
+								"mandateService",
+								"updateMandate"
+							]
+						}
 					},
 					"response": []
 				}
