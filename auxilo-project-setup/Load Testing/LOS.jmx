@@ -1,0 +1,1617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.1">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Authorization</stringProp>
+              <stringProp name="Header.value">Bearer wCX3ZxGxat0xq77LEF5TUvW56kGlZl6w</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="deviation" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{ &#xd;
+    &quot;WI_NAME&quot;:${__UUID()},&#xd;
+    &quot;INSERTION_ID&quot;:6526,&#xd;
+    &quot;DEVIATION_NORM&quot;:&quot;Repayment Type changes from EMI to SI&quot;,&#xd;
+    &quot;DEVIATION_VALUE&quot;:&quot;&quot;,&#xd;
+    &quot;DEVIATION_CRITERIA&quot;:&quot; &quot;,&#xd;
+    &quot;DEVIATION_LEVEL&quot;:5,&#xd;
+    &quot;APP_TYPE&quot;:&quot;Applicant_Priyanka   Sharma&quot;,&#xd;
+    &quot;APP_ORDERID&quot;:&quot; &quot;,&#xd;
+    &quot;DEV_TYPE&quot;:&quot;Auto&quot;,&#xd;
+    &quot;DEV_DECISION&quot;:&quot;Approved&quot;,&#xd;
+    &quot;DEV_COMMENT&quot;:&quot;&quot;,&#xd;
+    &quot;AUTHORITY&quot;:&quot;L5&quot;,&#xd;
+    &quot;DEV_CODE&quot;:&quot;D056&quot;,&#xd;
+    &quot;RANGE_PARAM&quot;:&quot;NA&quot;,&#xd;
+    &quot;REMARKS&quot;:&quot; &quot;,&#xd;
+    &quot;DEVIATION_SPREAD&quot;:0.25,&#xd;
+    &quot;DEV_SPREAD_TYPE&quot;:&quot;NA&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">192.168.11.239</stringProp>
+          <stringProp name="HTTPSampler.port">8000</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/los/api/v1/deviation</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="sanctionCondition" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{ &#xd;
+    &quot;WI_NAME&quot;:${__UUID()},&#xd;
+    &quot;CODE&quot;:&quot;EIL37&quot;,&#xd;
+    &quot;CONDITION_TYPE&quot;:&quot;Others&quot;,&#xd;
+    &quot;SANCTION_CONDITION&quot;:&quot;Disbursement to be availed before 31 dec 2020 &quot;,&#xd;
+    &quot;DESCRIPTION&quot;:&quot; &quot;,&#xd;
+    &quot;TYPE&quot;:&quot; &quot;,&#xd;
+    &quot;TO_BE_PRINTED&quot;:&quot;Yes&quot;,&#xd;
+    &quot;STATUS&quot;:&quot;Received&quot;,&#xd;
+    &quot;APPROVAL_LEVEL&quot;:&quot;L5&quot;,&#xd;
+    &quot;APPROVAL_DECISION&quot;:&quot; &quot;,&#xd;
+    &quot;INSERTION_ID&quot;:5,&#xd;
+    &quot;CRITICAL&quot;:&quot;Yes&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">192.168.11.239</stringProp>
+          <stringProp name="HTTPSampler.port">8000</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/los/api/v1/sanctionCondition</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="recommendation" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{ &#xd;
+    &quot;WI_NAME&quot;:${__UUID()},&#xd;
+    &quot;LEVEL1&quot;:&quot;L2&quot;,&#xd;
+        &quot;LEVEL2&quot;:&quot;L3&quot;,&#xd;
+        &quot;LEVEL3&quot;:&quot;L4&quot;,&#xd;
+        &quot;LEVEL4&quot;:&quot; L5&quot;,&#xd;
+        &quot;FLAG_LVL1&quot;:&quot;Y&quot;,&#xd;
+        &quot;FLAG_LVL2&quot;:&quot;Y&quot;,&#xd;
+        &quot;FLAG_LVL3&quot;:&quot;Y&quot;,&#xd;
+        &quot;FLAG_LVL4&quot;:&quot;Y&quot;,&#xd;
+        &quot;SETUP&quot;:&quot;DELEGATION&quot;,&#xd;
+        &quot;STATUS&quot;:&quot;INACTIVE&quot;,&#xd;
+        &quot;REFER_BACK_FLAG&quot;:&quot;&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">192.168.11.239</stringProp>
+          <stringProp name="HTTPSampler.port">8000</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/los/api/v1/recommendation</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="contactDetail" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{ &#xd;
+    &quot;WI_NAME&quot;:${__UUID()},&#xd;
+    &quot;CURR_IS_IT_CORRESPOND&quot;: &quot;Yes&quot;,&#xd;
+        &quot;CURR_RESI_STATUS&quot;: &quot;Owned&quot;,&#xd;
+        &quot;CURR_RESI_STATUS_OTHER&quot;: &quot;&quot;,&#xd;
+        &quot;CURR_YEAR_STAY&quot;: 5,&#xd;
+        &quot;CURR_RES_ADDRESS1&quot;: &quot;Kali Talavadi&quot;,&#xd;
+        &quot;CURR_RES_ADDRESS2&quot;: &quot;Navi Coloni&quot;,&#xd;
+        &quot;CURR_RES_ADDRESS3&quot;: &quot;Kalitalavadi&quot;,&#xd;
+        &quot;CURR_LANDMARK&quot;: &quot;Anand&quot;,&#xd;
+        &quot;CURR_COUNTRY&quot;: &quot;INDIA&quot;,&#xd;
+        &quot;CURR_PINCODE&quot;: 388170,&#xd;
+        &quot;CURR_PINCODE_OTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;CURR_STATE&quot;: &quot;GUJARAT&quot;,&#xd;
+        &quot;CURR_STATE_OTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;CURR_DISTRICT&quot;: &quot;BANGALORE RURAL&quot;,&#xd;
+        &quot;CURR_DISTRICT_OTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;CURR_TALUKA&quot;: &quot;SAYMA&quot;,&#xd;
+        &quot;CURR_TALUKA_OTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;CURR_CITY&quot;: &quot;NADIAD&quot;,&#xd;
+        &quot;CURR_CITY_OTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;CURR_LOCATION_TYPE&quot;: &quot;&quot;,&#xd;
+        &quot;CURR_VILLAGE&quot;: &quot;&quot;,&#xd;
+        &quot;PER_ADDRESS_SAME_AS&quot;: &quot;Applicant_Sushmitha  Marati&quot;,&#xd;
+        &quot;PER_IS_IT_CORRESPONDANCE&quot;: &quot;Yes&quot;,&#xd;
+        &quot;PER_RESIDENCE_TYPE&quot;: &quot;&quot;,&#xd;
+        &quot;PER_RESIDENCE_TYPE_OTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;PER_RESIDENCE_STAUTS&quot;: &quot;&quot;,&#xd;
+        &quot;PER_RESIDENCE_STATUS_OTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;PER_LOCATION_TYPE&quot;: &quot;&quot;,&#xd;
+        &quot;PER_YEARS_STAY&quot;: 6,&#xd;
+        &quot;PER_RES_ADDRESS1&quot;: &quot;Plot Number 271&quot;,&#xd;
+        &quot;PER_RES_ADDRESS2&quot;: &quot;V S T Colony&quot;,&#xd;
+        &quot;PER_RES_ADDRESS3&quot;: &quot;Medipally&quot;,&#xd;
+        &quot;PER_LANDMARK&quot;: &quot;Medchal&quot;,&#xd;
+        &quot;PER_COUNTRY&quot;: &quot;INDIA&quot;,&#xd;
+        &quot;PER_PINCODE&quot;: 501218,&#xd;
+        &quot;PER_PINCODE_OTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;PER_STATE&quot;: &quot;TELANGANA&quot;,&#xd;
+        &quot;PER_STATE_OTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;PER_DISTRICT&quot;: &quot;&quot;,&#xd;
+        &quot;PER_DISTRICT_OTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;PER_TALUKA&quot;: &quot;GHATKESAR&quot;,&#xd;
+        &quot;PER_TALUKA_OTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;PER_CITY&quot;: &quot;HYDERABAD&quot;,&#xd;
+        &quot;PER_CITY_OTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;PER_VILLAGE&quot;: &quot;&quot;,&#xd;
+        &quot;LANDLINE_NO&quot;: &quot;&quot;,&#xd;
+        &quot;EMAIL_ID&quot;: &quot;sushmitha6324@gmail.com&quot;,&#xd;
+        &quot;MOBILE_NO&quot;: &quot;91-9014461493&quot;,&#xd;
+        &quot;ALTERNATE_NO&quot;: &quot;&quot;,&#xd;
+        &quot;SOCIAL_MEDIA_TYPE1&quot;: &quot;&quot;,&#xd;
+        &quot;SOCIAL_MEDIA_TYPE2&quot;: &quot;&quot;,&#xd;
+        &quot;SOCIAL_MEDIA_TYPE3&quot;: &quot;&quot;,&#xd;
+        &quot;SOCIAL_MEDIA_TYPE4&quot;: &quot;&quot;,&#xd;
+        &quot;ID_VALUE1&quot;: &quot;&quot;,&#xd;
+        &quot;ID_VALUE2&quot;: &quot;&quot;,&#xd;
+        &quot;ID_VALUE3&quot;: &quot;&quot;,&#xd;
+        &quot;ID_VALUE4&quot;: &quot;&quot;,&#xd;
+        &quot;INSERTIONORDER&quot;: 50,&#xd;
+        &quot;PARENT_INSERTION&quot;: 3,&#xd;
+        &quot;ADDRESS_TYPE&quot;: &quot;Permanent&quot;,&#xd;
+        &quot;CURR_ADD_SAME_AS&quot;: &quot;Applicant_Hemil Niteshbhai Gujarati&quot;,&#xd;
+        &quot;CURR_ADDRESS_TYPE&quot;: &quot;Permanent&quot;,&#xd;
+        &quot;PROD_TYPE&quot;: &quot;EL&quot;,&#xd;
+        &quot;EMAILFLAG&quot;: &quot;&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">192.168.11.239</stringProp>
+          <stringProp name="HTTPSampler.port">8000</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/los/api/v1/contactDetail</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="kyc" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{ &#xd;
+	&quot;FIRST_NAME&quot;: &quot;Busa&quot;,&#xd;
+    &quot;WI_NAME&quot;:${__UUID()},&#xd;
+        &quot;CUSTOMERTYPE&quot;: &quot;CoApplicant&quot;,&#xd;
+        &quot;ENTITYTYPE&quot;: &quot;Individual&quot;,&#xd;
+        &quot;EXISTINGCUSTOMER&quot;: &quot;&quot;,&#xd;
+        &quot;TITLE&quot;: &quot;MRS&quot;,&#xd;
+        &quot;LAST_NAME&quot;: &quot;Kavitha&quot;,&#xd;
+        &quot;MIDDLE_NAME&quot;: &quot;&quot;,&#xd;
+        &quot;GENDER&quot;: &quot;Female&quot;,&#xd;
+        &quot;DATE_OF_BIRTH&quot;: &quot;10-12-1979&quot;,&#xd;
+        &quot;AGE&quot;: 42,&#xd;
+        &quot;RETIREMENT_AGE&quot;: 0,&#xd;
+        &quot;KYC_COMPLIED&quot;: &quot;Yes&quot;,&#xd;
+        &quot;PAN_AVAILABLE&quot;: 1,&#xd;
+        &quot;PAN_NO&quot;: &quot;JXWPK7963L&quot;,&#xd;
+        &quot;NAMENSDL&quot;: &quot;BUSA-KAVITHA&quot;,&#xd;
+        &quot;ADHARAVAILABLE&quot;: &quot;YES&quot;,&#xd;
+        &quot;AADHAARNO&quot;: &quot;2078&quot;,&#xd;
+        &quot;PASSPORTNO&quot;: &quot;&quot;,&#xd;
+        &quot;DATEOFEXPIRY&quot;: &quot;10-12-2024&quot;,&#xd;
+        &quot;DRIVINGLICENCENO&quot;: &quot;&quot;,&#xd;
+        &quot;DATEOFEXPIRYLICENCE&quot;: &quot;10-01-2030&quot;,&#xd;
+        &quot;VOTERID&quot;: &quot;&quot;,&#xd;
+        &quot;NATIONALITY&quot;: &quot;IN&quot;,&#xd;
+        &quot;NATIONALITYOTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;RELIGION&quot;: &quot;&quot;,&#xd;
+        &quot;RELIGIONOTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;CAST_CATEGORY&quot;: &quot;&quot;,&#xd;
+        &quot;CAST_CATEGORYOTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;QUALIFICATION&quot;: &quot;SSC&quot;,&#xd;
+        &quot;MARITAL_STATUS&quot;: &quot;MARRIED&quot;,&#xd;
+        &quot;QUALDESC&quot;: &quot;&quot;,&#xd;
+        &quot;FATHER_FIRST_NAME&quot;: &quot;Aga&quot;,&#xd;
+        &quot;FATHER_MIDDLE_NAME&quot;: &quot;&quot;,&#xd;
+        &quot;FATHER_LAST_NAME&quot;: &quot;Reddy&quot;,&#xd;
+        &quot;MOTHER_FIRST_NAME&quot;: &quot;Rajamani&quot;,&#xd;
+        &quot;MOTHER_MIDDLE_NAME&quot;: &quot;&quot;,&#xd;
+        &quot;MOTHER_LAST_NAME&quot;: &quot;&quot;,&#xd;
+        &quot;SPOUSE_FIRST_NAME&quot;: &quot;&quot;,&#xd;
+        &quot;SPOUSE_MIDDLE_NAME&quot;: &quot;&quot;,&#xd;
+        &quot;SPOUSE_LAST_NAME&quot;: &quot;&quot;,&#xd;
+        &quot;OTHERID_TYPE&quot;: &quot;&quot;,&#xd;
+        &quot;OTHERID_NUMBER&quot;: &quot;&quot;,&#xd;
+        &quot;RESI_STATUS&quot;: &quot;Resident Individual&quot;,&#xd;
+        &quot;FINAN_APPLI&quot;: &quot;NO&quot;,&#xd;
+        &quot;REL_WITH_APPLI&quot;: &quot;Mother&quot;,&#xd;
+        &quot;CUST_ID&quot;: &quot;&quot;,&#xd;
+        &quot;INSERTIONORDER&quot;: 2,&#xd;
+        &quot;PROD_TYPE&quot;: &quot;EL&quot;,&#xd;
+        &quot;M_TITLE&quot;: &quot;MRS&quot;,&#xd;
+        &quot;F_TITLE&quot;: &quot;MR&quot;,&#xd;
+        &quot;S_TITLE&quot;: &quot;MRS&quot;,&#xd;
+        &quot;NO_OF_DEPPENDENT&quot;: 0,&#xd;
+        &quot;NREGA&quot;: &quot;&quot;,&#xd;
+        &quot;CKYC_APPLI_TYPE&quot;: &quot;&quot;,&#xd;
+        &quot;CKYC_ACC_TYPE&quot;: &quot;&quot;,&#xd;
+        &quot;CKYC_ACC_NO&quot;: &quot;&quot;,&#xd;
+        &quot;CKYC_ID_PROOF&quot;: &quot;&quot;,&#xd;
+        &quot;CKYC_ADD_PROOF&quot;: &quot;&quot;,&#xd;
+        &quot;PLACE_OF_BIRTH&quot;: &quot;IN&quot;,&#xd;
+        &quot;REL_OTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;SCHOOL_IDCARD&quot;: &quot;&quot;,&#xd;
+        &quot;AGE_MONTHS&quot;: 59,&#xd;
+        &quot;PAN_FLAG&quot;: &quot;&quot;,&#xd;
+        &quot;CKYC_RISK_TYPE&quot;: &quot;Low&quot;,&#xd;
+        &quot;MANUAL_PAN&quot;: 0,&#xd;
+        &quot;REMARKS_PAN&quot;: &quot;&quot;,&#xd;
+        &quot;CKYC_INDV_RELATION&quot;: &quot;&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">192.168.11.239</stringProp>
+          <stringProp name="HTTPSampler.port">8000</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/los/api/v1/kyc</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="obligations" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{ &#xd;
+    &quot;WI_NAME&quot;:${__UUID()},&#xd;
+    &quot;INSERTIONORDER&quot;:89,&#xd;
+    &quot;INSERTIONORDER_ID&quot;:3,&#xd;
+    &quot;BANK_NAME&quot;:&quot;Shiksha Finance&quot;,&#xd;
+    &quot;LOAN_TYPE&quot;:&quot;Business loan&quot;,&#xd;
+    &quot;LOAN_AMOUNT&quot;:900000,&#xd;
+    &quot;LOAN_OUTSTANDING&quot;:678818,&#xd;
+    &quot;MONTHLY_EMI&quot;:28846,&#xd;
+    &quot;ROI&quot;:25,&#xd;
+    &quot;TENURE&quot;:48,&#xd;
+    &quot;TENURE_LEFT&quot;:32,&#xd;
+    &quot;TOTAL&quot;:&quot;26-11-2021&quot;,&#xd;
+    &quot;REMARKS&quot;:&quot;g&quot;,&#xd;
+    &quot;PARENT_INSERTION&quot;:0,&#xd;
+    &quot;INSERTIONORDERID&quot;:30,&#xd;
+    &quot;BT&quot;:&quot;Yes&quot;,&#xd;
+    &quot;OVERDUE&quot;:0,&#xd;
+    &quot;DPD&quot;:0&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">192.168.11.239</stringProp>
+          <stringProp name="HTTPSampler.port">8000</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/los/api/v1/obligations</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="personalDetail" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{ &#xd;
+	&quot;FIRST_NAME&quot;: &quot;Busa&quot;,&#xd;
+    &quot;WI_NAME&quot;:${__UUID()},&#xd;
+    &quot;CUSTOMERTYPE&quot;: &quot;CoApplicant&quot;,&#xd;
+        &quot;ENTITYTYPE&quot;: &quot;Individual&quot;,&#xd;
+        &quot;EXISTINGCUSTOMER&quot;: &quot;&quot;,&#xd;
+        &quot;TITLE&quot;: &quot;MRS&quot;,&#xd;
+        &quot;LAST_NAME&quot;: &quot;Kavitha&quot;,&#xd;
+        &quot;MIDDLE_NAME&quot;: &quot;&quot;,&#xd;
+        &quot;GENDER&quot;: &quot;female&quot;,&#xd;
+        &quot;DATE_OF_BIRTH&quot;:&quot;01-02-2020&quot;,&#xd;
+        &quot;AGE&quot;: 42,&#xd;
+        &quot;RETIREMENT_AGE&quot;: 0,&#xd;
+        &quot;KYC_COMPLIED&quot;: &quot;Yes&quot;,&#xd;
+        &quot;PAN_AVAILABLE&quot;: 1,&#xd;
+        &quot;PAN_NO&quot;: &quot;JXWPK7963L&quot;,&#xd;
+        &quot;NAMENSDL&quot;: &quot;BUSA-KAVITHA&quot;,&#xd;
+        &quot;ADHARAVAILABLE&quot;: &quot;YES&quot;,&#xd;
+        &quot;AADHAARNO&quot;: &quot;2078&quot;,&#xd;
+        &quot;PASSPORTNO&quot;: &quot;&quot;,&#xd;
+        &quot;DATEOFEXPIRY&quot;: &quot;01-02-2020&quot;,&#xd;
+        &quot;DRIVINGLICENCENO&quot;: &quot;&quot;,&#xd;
+        &quot;DATEOFEXPIRYLICENCE&quot;: &quot;01-02-2021&quot;,&#xd;
+        &quot;VOTERID&quot;: &quot;&quot;,&#xd;
+        &quot;NATIONALITY&quot;: &quot;IN&quot;,&#xd;
+        &quot;NATIONALITYOTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;RELIGION&quot;: &quot;&quot;,&#xd;
+        &quot;RELIGIONOTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;CAST_CATEGORY&quot;: &quot;&quot;,&#xd;
+        &quot;CAST_CATEGORYOTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;QUALIFICATION&quot;: &quot;SSC&quot;,&#xd;
+        &quot;MARITAL_STATUS&quot;: &quot;MARRIED&quot;,&#xd;
+        &quot;QUALDESC&quot;: &quot;&quot;,&#xd;
+        &quot;FATHER_FIRST_NAME&quot;: &quot;Aga&quot;,&#xd;
+        &quot;FATHER_MIDDLE_NAME&quot;: &quot;&quot;,&#xd;
+        &quot;FATHER_LAST_NAME&quot;: &quot;Reddy&quot;,&#xd;
+        &quot;MOTHER_FIRST_NAME&quot;: &quot;Rajamani&quot;,&#xd;
+        &quot;MOTHER_MIDDLE_NAME&quot;: &quot;&quot;,&#xd;
+        &quot;MOTHER_LAST_NAME&quot;: &quot;&quot;,&#xd;
+        &quot;SPOUSE_FIRST_NAME&quot;: &quot;&quot;,&#xd;
+        &quot;SPOUSE_MIDDLE_NAME&quot;: &quot;&quot;,&#xd;
+        &quot;SPOUSE_LAST_NAME&quot;: &quot;&quot;,&#xd;
+        &quot;OTHERID_TYPE&quot;: &quot;&quot;,&#xd;
+        &quot;OTHERID_NUMBER&quot;: &quot;&quot;,&#xd;
+        &quot;RESI_STATUS&quot;: &quot;Resident Individual&quot;,&#xd;
+        &quot;FINAN_APPLI&quot;: &quot;NO&quot;,&#xd;
+        &quot;REL_WITH_APPLI&quot;: &quot;Mother&quot;,&#xd;
+        &quot;CUST_ID&quot;: &quot;&quot;,&#xd;
+        &quot;INSERTIONORDER&quot;: 2,&#xd;
+        &quot;PROD_TYPE&quot;: &quot;EL&quot;,&#xd;
+        &quot;M_TITLE&quot;: &quot;MRS&quot;,&#xd;
+        &quot;F_TITLE&quot;: &quot;MR&quot;,&#xd;
+        &quot;S_TITLE&quot;: &quot;MRS&quot;,&#xd;
+        &quot;NO_OF_DEPPENDENT&quot;: 0,&#xd;
+        &quot;NREGA&quot;: &quot;&quot;,&#xd;
+        &quot;CKYC_APPLI_TYPE&quot;: &quot;&quot;,&#xd;
+        &quot;CKYC_ACC_TYPE&quot;: &quot;&quot;,&#xd;
+        &quot;CKYC_ACC_NO&quot;: &quot;&quot;,&#xd;
+        &quot;CKYC_ID_PROOF&quot;: &quot;&quot;,&#xd;
+        &quot;CKYC_ADD_PROOF&quot;: &quot;&quot;,&#xd;
+        &quot;PLACE_OF_BIRTH&quot;: &quot;IN&quot;,&#xd;
+        &quot;REL_OTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;SCHOOL_IDCARD&quot;: &quot;&quot;,&#xd;
+        &quot;AGE_MONTHS&quot;: 1,&#xd;
+        &quot;PAN_FLAG&quot;: &quot;&quot;,&#xd;
+        &quot;CKYC_RISK_TYPE&quot;: &quot;Low&quot;,&#xd;
+        &quot;MANUAL_PAN&quot;: 0,&#xd;
+        &quot;REMARKS_PAN&quot;: &quot;&quot;,&#xd;
+        &quot;CKYC_INDV_RELATION&quot;: &quot;&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">192.168.11.239</stringProp>
+          <stringProp name="HTTPSampler.port">8000</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/los/api/v1/personalDetail</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="addressDetail" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{ &#xd;
+	&quot;FIRST_NAME&quot;: &quot;Busa&quot;,&#xd;
+    &quot;WI_NAME&quot;:${__UUID()},&#xd;
+    &quot;CURR_IS_IT_CORRESPOND&quot;: &quot;No&quot;,&#xd;
+        &quot;CURR_RESI_STATUS&quot;: &quot;&quot;,&#xd;
+        &quot;CURR_RESI_STATUS_OTHER&quot;: &quot;&quot;,&#xd;
+        &quot;CURR_YEAR_STAY&quot;: 5,&#xd;
+        &quot;CURR_RES_ADDRESS1&quot;: &quot;Plot Number 271&quot;,&#xd;
+        &quot;CURR_RES_ADDRESS2&quot;: &quot;V S T Colony&quot;,&#xd;
+        &quot;CURR_RES_ADDRESS3&quot;: &quot;Medipally&quot;,&#xd;
+        &quot;CURR_LANDMARK&quot;: &quot;Medchal&quot;,&#xd;
+        &quot;CURR_COUNTRY&quot;: &quot;INDIA&quot;,&#xd;
+        &quot;CURR_PINCODE&quot;: 410206,&#xd;
+        &quot;CURR_PINCODE_OTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;CURR_STATE&quot;: &quot;TELANGANA&quot;,&#xd;
+        &quot;CURR_STATE_OTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;CURR_DISTRICT&quot;: &quot;BANGALORE RURAL&quot;,&#xd;
+        &quot;CURR_DISTRICT_OTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;CURR_TALUKA&quot;: &quot;GHATKESAR&quot;,&#xd;
+        &quot;CURR_TALUKA_OTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;CURR_CITY&quot;: &quot;HYDERABAD&quot;,&#xd;
+        &quot;CURR_CITY_OTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;CURR_LOCATION_TYPE&quot;: &quot;&quot;,&#xd;
+        &quot;CURR_VILLAGE&quot;: &quot;&quot;,&#xd;
+        &quot;PER_ADDRESS_SAME_AS&quot;: &quot;Applicant_Sushmitha  Marati&quot;,&#xd;
+        &quot;PER_IS_IT_CORRESPONDANCE&quot;: &quot;Yes&quot;,&#xd;
+        &quot;PER_RESIDENCE_TYPE&quot;: &quot;&quot;,&#xd;
+        &quot;PER_RESIDENCE_TYPE_OTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;PER_RESIDENCE_STAUTS&quot;: &quot;&quot;,&#xd;
+        &quot;PER_RESIDENCE_STATUS_OTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;PER_LOCATION_TYPE&quot;: &quot;&quot;,&#xd;
+        &quot;PER_YEARS_STAY&quot;: 6,&#xd;
+        &quot;PER_RES_ADDRESS1&quot;: &quot;Plot Number 271&quot;,&#xd;
+        &quot;PER_RES_ADDRESS2&quot;: &quot;V S T Colony&quot;,&#xd;
+        &quot;PER_RES_ADDRESS3&quot;: &quot;Medipally&quot;,&#xd;
+        &quot;PER_LANDMARK&quot;: &quot;Medchal&quot;,&#xd;
+        &quot;PER_COUNTRY&quot;: &quot;INDIA&quot;,&#xd;
+        &quot;PER_PINCODE&quot;: 501218,&#xd;
+        &quot;PER_PINCODE_OTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;PER_STATE&quot;: &quot;TELANGANA&quot;,&#xd;
+        &quot;PER_STATE_OTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;PER_DISTRICT&quot;: &quot;&quot;,&#xd;
+        &quot;PER_DISTRICT_OTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;PER_TALUKA&quot;: &quot;GHATKESAR&quot;,&#xd;
+        &quot;PER_TALUKA_OTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;PER_CITY&quot;: &quot;HYDERABAD&quot;,&#xd;
+        &quot;PER_CITY_OTHERS&quot;: &quot;&quot;,&#xd;
+        &quot;PER_VILLAGE&quot;: &quot;&quot;,&#xd;
+        &quot;LANDLINE_NO&quot;: &quot;&quot;,&#xd;
+        &quot;EMAIL_ID&quot;: &quot;sushmitha6324@gmail.com&quot;,&#xd;
+        &quot;MOBILE_NO&quot;: &quot;91-9014461493&quot;,&#xd;
+        &quot;ALTERNATE_NO&quot;: &quot;&quot;,&#xd;
+        &quot;SOCIAL_MEDIA_TYPE1&quot;: &quot;&quot;,&#xd;
+        &quot;SOCIAL_MEDIA_TYPE2&quot;: &quot;&quot;,&#xd;
+        &quot;SOCIAL_MEDIA_TYPE3&quot;: &quot;&quot;,&#xd;
+        &quot;SOCIAL_MEDIA_TYPE4&quot;: &quot;&quot;,&#xd;
+        &quot;ID_VALUE1&quot;: &quot;&quot;,&#xd;
+        &quot;ID_VALUE2&quot;: &quot;&quot;,&#xd;
+        &quot;ID_VALUE3&quot;: &quot;&quot;,&#xd;
+        &quot;ID_VALUE4&quot;: &quot;&quot;,&#xd;
+        &quot;INSERTIONORDER&quot;: 22,&#xd;
+        &quot;PARENT_INSERTION&quot;: 3,&#xd;
+        &quot;ADDRESS_TYPE&quot;: &quot;Permanent&quot;,&#xd;
+        &quot;CURR_ADD_SAME_AS&quot;: &quot;Applicant_Sushmitha  Marati&quot;,&#xd;
+        &quot;CURR_ADDRESS_TYPE&quot;: &quot;Permanent&quot;,&#xd;
+        &quot;PROD_TYPE&quot;: &quot;EL&quot;,&#xd;
+        &quot;EMAILFLAG&quot;: &quot;&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">192.168.11.239</stringProp>
+          <stringProp name="HTTPSampler.port">8000</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/los/api/v1/addressDetail</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="bankAccount" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{ &#xd;
+    &quot;WI_NAME&quot;:${__UUID()},&#xd;
+    &quot;BANK_NAME&quot;:&quot;HDFC BANK LTD&quot;,&#xd;
+    &quot;BRANCH_NAME&quot;:&quot;HOSKOTE&quot;,&#xd;
+    &quot;ACC_TYPE&quot;:&quot;Savings Account&quot;,&#xd;
+    &quot;ACC_NUM&quot;:&quot;10377620000014&quot;,&#xd;
+    &quot;OPEN_SINCE&quot;:&quot;9-6-2021&quot;,&#xd;
+    &quot;ACC_BAL&quot;:1904,&#xd;
+    &quot;CUSTOMERTYPE&quot;:&quot; &quot;,&#xd;
+    &quot;INSERTIONORDER&quot;:51,&#xd;
+    &quot;INSERTIONORDER_ID&quot;: 3,&#xd;
+    &quot;PENSION_CREDITED&quot;:&quot; &quot;,&#xd;
+    &quot;OTHER_BANK_NAME&quot;:&quot; &quot;,&#xd;
+    &quot;ADDRESS&quot;:&quot;HOSKOTE&quot;,&#xd;
+    &quot;MICR&quot;:560240053,&#xd;
+    &quot;IFSC_CODE&quot;:&quot;HDFC0001037&quot;,&#xd;
+    &quot;NACH_ECX&quot;:&quot; &quot;,&#xd;
+    &quot;PROD_TYPE&quot;:&quot;EIL&quot;,&#xd;
+    &quot;PARENT_INSERTION&quot;:0,&#xd;
+    &quot;ACCOUNT_HOLDER_NAME&quot;:&quot;RISHIKUL VIDYAPEETA&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">192.168.11.239</stringProp>
+          <stringProp name="HTTPSampler.port">8000</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/los/api/v1/bankAccount</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="gridDetails" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{ &#xd;
+    &quot;WI_NAME&quot;:${__UUID()},&#xd;
+    &quot;CUST_TYPE&quot;:&quot;CoApplicant&quot;,&#xd;
+      &quot;CUST_NAME&quot;:&quot;Busa  Ramanareddy&quot;,&#xd;
+      &quot;EXIST_CUST&quot;:&quot; &quot;,&#xd;
+      &quot;CUST_ID&quot;:&quot;CU0000000000901835701&quot;,&#xd;
+      &quot;PAN_NO&quot;:&quot;AMCPR8197F&quot;,&#xd;
+      &quot;CIBIL_SCORE&quot;:747,&#xd;
+      &quot;INSERTIONORDER&quot;:51,&#xd;
+      &quot;ENTITY_TYPE&quot;:&quot;Individual&quot;,&#xd;
+      &quot;OCC_TYPE&quot;:&quot;SALARIED&quot;,&#xd;
+      &quot;FINAN_APPLI&quot;:&quot;YES&quot;,&#xd;
+      &quot;REL_WITH_APPLI&quot;:&quot;Father&quot;,&#xd;
+      &quot;AGE&quot;:52,&#xd;
+      &quot;MARTIAL_STATUS&quot;:&quot;MARRIED&quot;,&#xd;
+      &quot;FLAG&quot;:1,&#xd;
+      &quot;CIFNO&quot;:13483,&#xd;
+      &quot;CRM_CUST_ID&quot;:&quot;lOW&quot;,&#xd;
+      &quot;EKYC_RISK&quot;:&quot;true&quot;,&#xd;
+      &quot;DEDUPEFLAG&quot;:&quot;&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">192.168.11.239</stringProp>
+          <stringProp name="HTTPSampler.port">8000</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/los/api/v1/gridDetails</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="immovable" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{ &#xd;
+    &quot;WI_NAME&quot;:${__UUID()},&#xd;
+    &quot;COLL_TYPE&quot;: &quot;ECLGS&quot;,&#xd;
+        &quot;COLL_DESC&quot;: &quot;School Land Only&quot;,&#xd;
+        &quot;CHARGE_TYPE&quot;: &quot;1st Charge&quot;,&#xd;
+        &quot;PROP_NAME&quot;: &quot;DEVARAJA  K R&quot;,&#xd;
+        &quot;REL_APPLIC&quot;: &quot;&quot;,&#xd;
+        &quot;LOCATION&quot;: &quot;&quot;,&#xd;
+        &quot;FLATNO&quot;: &quot;Sy. No. 66/6&quot;,&#xd;
+        &quot;DOORNO&quot;: &quot;&quot;,&#xd;
+        &quot;NEAREST_DOORNO&quot;: &quot;&quot;,&#xd;
+        &quot;PROP_ADD1&quot;: null,&#xd;
+        &quot;PRO_ADD2&quot;: null,&#xd;
+        &quot;LANDMARK&quot;: &quot;Sulibele Chikka Aralagere Bus Stand&quot;,&#xd;
+        &quot;COUNTRY&quot;: &quot;INDIA&quot;,&#xd;
+        &quot;STATE&quot;: &quot;KARNATAKA&quot;,&#xd;
+        &quot;CITY&quot;: &quot;BANGALORE&quot;,&#xd;
+        &quot;DISTRICT&quot;: &quot;Bangalore Rural District&quot;,&#xd;
+        &quot;BOUNDARIES&quot;: &quot;&quot;,&#xd;
+        &quot;PLOTNO&quot;: &quot;Old Sy. No. 66/2&quot;,&#xd;
+        &quot;MUNIC_CORP&quot;: &quot;&quot;,&#xd;
+        &quot;UNITAREA&quot;: &quot;Square Feet&quot;,&#xd;
+        &quot;AREA_PROP&quot;: 43560,&#xd;
+        &quot;BUILD_AREA&quot;: 0,&#xd;
+        &quot;CARPET_AREA&quot;: 0,&#xd;
+        &quot;DATE_OF_SALE&quot;:&quot;26-11-2021&quot;,&#xd;
+        &quot;AGEOFPROPERTY&quot;: 0,&#xd;
+        &quot;RESIDUAL_AGE&quot;: 0,&#xd;
+        &quot;REALISABLE_VALUE&quot;: 0,&#xd;
+        &quot;MARKET_VALUE&quot;: 15246000,&#xd;
+        &quot;VAL_NAME&quot;: &quot;&quot;,&#xd;
+        &quot;VAL_DATE&quot;: &quot;26-11-2021&quot;,&#xd;
+        &quot;MARGIN&quot;: 0,&#xd;
+        &quot;ASSET_FREQ&quot;: 0,&#xd;
+        &quot;INSERTIONORDER&quot;: 3,&#xd;
+        &quot;BOUNDARIES_DESCRIPTION&quot;: &quot;&quot;,&#xd;
+        &quot;PINCODE&quot;: &quot;pincode&quot;,&#xd;
+        &quot;REMARKS&quot;: &quot;&quot;,&#xd;
+        &quot;DESC_BOUND_E&quot;: &quot;&quot;,&#xd;
+        &quot;DESC_BOUND_W&quot;: &quot;&quot;,&#xd;
+        &quot;DESC_BOUND_N&quot;: &quot;&quot;,&#xd;
+        &quot;DESC_BOUND_S&quot;: &quot;&quot;,&#xd;
+        &quot;VALUE_TO_CONSIDER&quot;: &quot;&quot;,&#xd;
+        &quot;REG_DATE&quot;: 0,&#xd;
+        &quot;VAL_1&quot;: 0,&#xd;
+        &quot;VALUER_NAME_2&quot;: &quot;&quot;,&#xd;
+        &quot;VAL_DATE_2&quot;: &quot;26-11-2021&quot;,&#xd;
+        &quot;VAL_2&quot;: 0,&#xd;
+        &quot;MARGIN_ADJSTD&quot;: 0,&#xd;
+        &quot;OTHER_PINCODE&quot;: &quot;&quot;,&#xd;
+        &quot;APPRAISED_VAL&quot;: 0,&#xd;
+        &quot;GOVERNMENT_RATE&quot;: 0,&#xd;
+        &quot;SURVEY_NO&quot;: &quot;Sy. No. 66/6&quot;,&#xd;
+        &quot;COUNTRY_DESC&quot;: &quot;&quot;,&#xd;
+        &quot;OWNERS&quot;: &quot;&quot;,&#xd;
+        &quot;RESI_STATE_OTHER&quot;: &quot;&quot;,&#xd;
+        &quot;RESI_DISTRICT_OTHER&quot;: &quot;&quot;,&#xd;
+        &quot;RESI_CITY_OTHER&quot;: &quot;&quot;,&#xd;
+        &quot;COLL_ID&quot;: &quot;ICO000000000090113230&quot;,&#xd;
+        &quot;TALUKA&quot;: &quot;&quot;,&#xd;
+        &quot;TALUKA_OTHER&quot;: &quot;&quot;,&#xd;
+        &quot;MUNCI_CORP_PANCH&quot;: &quot;Panchayat&quot;,&#xd;
+        &quot;TOTAL_VALUE_IMMOV_COLL&quot;: 0,&#xd;
+        &quot;PARENT_INSERTIONORDER&quot;: 0,&#xd;
+        &quot;PROPERTY_HOLDER&quot;: &quot;&quot;,&#xd;
+        &quot;PRO_HOLDER_NAME1&quot;: null,&#xd;
+        &quot;PRO_HOLDER_NAME2&quot;: null,&#xd;
+        &quot;PRO_HOLDER_NAME3&quot;: null,&#xd;
+        &quot;WING&quot;: &quot;&quot;,&#xd;
+        &quot;FLOOR_NO&quot;: &quot;&quot;,&#xd;
+        &quot;LOAN_ACC_NO&quot;: &quot;&quot;,&#xd;
+        &quot;NAME_OF_LANDER&quot;: &quot;&quot;,&#xd;
+        &quot;LOAN_OUT_AMT&quot;: &quot;&quot;,&#xd;
+        &quot;OUT_DATE&quot;:&quot;26-11-2021&quot;,&#xd;
+        &quot;CERSAI_DONE&quot;: &quot;No&quot;,&#xd;
+        &quot;CERSAI_NO&quot;: &quot;&quot;,&#xd;
+        &quot;CERSAI_REMARKS&quot;: &quot;&quot;,&#xd;
+        &quot;PARENT_INSERTION&quot;: 1,&#xd;
+        &quot;HISSANO&quot;: &quot;&quot;,&#xd;
+        &quot;LMSCOLLID&quot;: &quot;CT2004600001&quot;,&#xd;
+        &quot;COLL_USAGE&quot;: &quot;Institute occupied&quot;,&#xd;
+        &quot;COLLLMSID&quot;: &quot;CT2004600001&quot;,&#xd;
+        &quot;COLLPER&quot;: 100&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">192.168.11.239</stringProp>
+          <stringProp name="HTTPSampler.port">8000</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/los/api/v1/immovable</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="movable" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{ &#xd;
+    &quot;WI_NAME&quot;:${__UUID()},&#xd;
+    &quot;COLL_TYPE&quot;:&quot;&quot;,&#xd;
+    &quot;COLL_DESC&quot;:&quot;&quot;,&#xd;
+    &quot;TYPE_OF_FDR&quot;:&quot;&quot;,&#xd;
+    &quot;FDR_NUMBER&quot;:&quot;&quot;,&#xd;
+    &quot;NAME_OF_FDR_HOLDER&quot;:&quot;&quot;,&#xd;
+    &quot;NAME_1&quot;:&quot;&quot;,&#xd;
+    &quot;NAME_2&quot;:&quot;&quot;,&#xd;
+    &quot;INSTITUTION&quot;:&quot;&quot;,&#xd;
+    &quot;FD_AMOUNT&quot;:5,&#xd;
+    &quot;MATURITY_PERIOD_FD_DATE&quot;:&quot;&quot;,&#xd;
+    &quot;MATURITY_DATE&quot;:&quot;07-07-1997&quot;,&#xd;
+    &quot;MATURITY_VALUE&quot;:9,&#xd;
+    &quot;LIENING_MARKING_DATE&quot;:&quot;07-07-1997&quot;,&#xd;
+    &quot;LIENING_MARKING_CANCEL_DATE&quot;:&quot;07-07-1997&quot;,&#xd;
+    &quot;LIENING_MARKING_CANCEL_REMARK&quot;:&quot;&quot;,&#xd;
+    &quot;NAME_OF_POST&quot;:&quot;&quot;,&#xd;
+    &quot;FD_AMOUNT1&quot;:&quot;&quot;,&#xd;
+    &quot;MATURITY_PERIOD&quot;:&quot;&quot;,&#xd;
+    &quot;PREMIUM_FREQUENCY&quot;:&quot;&quot;,&#xd;
+    &quot;DATE_OF_ASSIGNMENT&quot;:&quot;07-09-2021&quot;,&#xd;
+    &quot;ASSIGNMENT_CANCEL_DATE&quot;:&quot;07-07-1997&quot;,&#xd;
+    &quot;ASSIGNMENT_CANCEL_REMARKS&quot;:&quot;&quot;,&#xd;
+    &quot;REMARKS&quot;:&quot;&quot;,&#xd;
+    &quot;INSTITUTE&quot;:&quot;&quot;,&#xd;
+    &quot;POLICY_NUMBER&quot;:&quot;&quot;,&#xd;
+    &quot;PRO_HOLDER&quot;:&quot;&quot;,&#xd;
+    &quot;PRONAME1&quot;:&quot;&quot;,&#xd;
+    &quot;PRONAME2&quot;:&quot;&quot;,&#xd;
+    &quot;SUM_ASSURED&quot;:&quot;&quot;,&#xd;
+    &quot;POLICY_START_DATE&quot;:&quot;09-09-1997&quot;,&#xd;
+    &quot;POLICY_END_DATE&quot;:&quot;09-09-1997&quot;,&#xd;
+    &quot;POLICY_SURR_VALUE&quot;:&quot;&quot;,&#xd;
+    &quot;POLICY_TYPE&quot;:&quot;&quot;,&#xd;
+    &quot;INSTITUTE_NAME&quot;:&quot;&quot;,&#xd;
+    &quot;PER_OF_SECURITY_COVERAGE&quot;:&quot;&quot;,&#xd;
+    &quot;AMOUNT&quot;:&quot;&quot;,&#xd;
+    &quot;RECEVIED_DATE&quot;:&quot;09-09-1997&quot;,&#xd;
+    &quot;TRANSACTION_DATE&quot;:&quot;12-12-2020&quot;,&#xd;
+    &quot;TRANSACTION_REFERENCE&quot;:&quot;&quot;,&#xd;
+    &quot;RELEASE_DATE&quot;:&quot;07-07-1997&quot;,&#xd;
+    &quot;RELEASE_AMOUNT&quot;:&quot;&quot;, &#xd;
+    &quot;INSERTIONORDER&quot;:23,&#xd;
+    &quot;PARENT_INSERTION&quot;:2,&#xd;
+    &quot;DSRA_NUMBER&quot;:&quot;&quot;,&#xd;
+    &quot;ESCROW_NUMBER&quot;:&quot;&quot;,&#xd;
+    &quot;NAME_OF_BANK&quot;:&quot;&quot;,&#xd;
+    &quot;BRANCH_NAME&quot;:&quot;&quot;,&#xd;
+    &quot;ACC_HOLDER_NAME&quot;:&quot;&quot;,&#xd;
+    &quot;DSRA_AMT&quot;:67,&#xd;
+    &quot;DSRA_DATE&quot;:&quot;07-07-1997&quot;,&#xd;
+    &quot;DSRA_MAT_DATE&quot;:&quot;08-08-1997&quot;,&#xd;
+    &quot;NO_OF_INSTALL&quot;:0,&#xd;
+    &quot;NO_OF_INSTALL_AUXILO&quot;:0,&#xd;
+    &quot;ADV_AMT&quot;:78,&#xd;
+    &quot;DATE_OF_DISB_AUXILO&quot;:&quot;20-12-1998&quot;,&#xd;
+    &quot;VEH_NUMBER&quot;:&quot;&quot;,&#xd;
+    &quot;OWNER&quot;:&quot;&quot;,&#xd;
+    &quot;MONTH_OF_PURCHASE&quot;:&quot;7-09-2022&quot;,&#xd;
+    &quot;MODEL_NUMBER&quot;:6789,&#xd;
+    &quot;MAKE_NAME&quot;:&quot;&quot;,&#xd;
+    &quot;REGIS_NUMBER&quot;:&quot;&quot;,&#xd;
+    &quot;PURCHASE_VALUE&quot;:0,&#xd;
+    &quot;INSU_DEC_VALUE&quot;:0,  &#xd;
+    &quot;VEH_OWNER_STATUS&quot;:&quot;&quot;,&#xd;
+    &quot;INSU_VALIDITY&quot;:&quot;12-12-2003&quot;,&#xd;
+    &quot;LIEN_MARK_DATE_VEH&quot;:&quot;07-07-1997&quot;,&#xd;
+    &quot;LIEN_MARK_CANCEL_DATE_VEH&quot;:&quot;07-07-1997&quot;,&#xd;
+    &quot;LIEN_MARK_CANCEL_REM_VEH&quot;:&quot;&quot;,&#xd;
+    &quot;COLL_ID&quot;:&quot;&quot;,&#xd;
+    &quot;LMSCOLLID&quot;:&quot;&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">192.168.11.239</stringProp>
+          <stringProp name="HTTPSampler.port">8000</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/los/api/v1/movable</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="employment" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{ &#xd;
+    &quot;WI_NAME&quot;:${__UUID()},&#xd;
+    &quot;OCCUPATION_TYPE&quot;: &quot;SELF EMPLOYED NON PROFESSIONAL(SENP)&quot;,&#xd;
+        &quot;OCCUPATION_SUBTYPE&quot;: &quot;NGO Trust&quot;,&#xd;
+        &quot;EMPLOYER_NAME&quot;: &quot;&quot;,&#xd;
+        &quot;DESIGNATION&quot;: &quot;&quot;,&#xd;
+        &quot;LANDLINE_NO_EMPLOY&quot;: &quot;&quot;,&#xd;
+        &quot;EXTENSION_NO_EMPLOY&quot;: &quot;null&quot;,&#xd;
+        &quot;OFFICIAL_EMAIL_ID&quot;: &quot;&quot;,&#xd;
+        &quot;RETIREMENT_AGE&quot;: &quot;&quot;,&#xd;
+        &quot;NAME_OF_BUSINESS&quot;: &quot;DEEKSHA CHARITABLE TRUST&quot;,&#xd;
+        &quot;NAME_OF_PROFESSION&quot;: &quot;&quot;,&#xd;
+        &quot;LANDLINE_NO_BUSINESS&quot;: 0,&#xd;
+        &quot;NATURE_OF_BUSINESS&quot;: &quot;OTHER&quot;,&#xd;
+        &quot;NO_OF_YEARS_BUSINESS&quot;: 9,&#xd;
+        &quot;NO_OF_YEARS_CURRENT_BUSINESS&quot;: 0,&#xd;
+        &quot;NO_OF_YEARS_CURRENT_EMPLOYMENT&quot;: 0,&#xd;
+        &quot;NO_OF_YEARS_PROF&quot;: 0,&#xd;
+        &quot;NO_OF_YEARS_CURRENT_PROF&quot;: 0,&#xd;
+        &quot;LANDLINE_NO_HUMAN_RES&quot;: 0,&#xd;
+        &quot;NO_OF_YEARS_SERVICE&quot;: 0,&#xd;
+        &quot;TOT_NO_OF_YEARS_SERVICE&quot;: 0,&#xd;
+        &quot;RETIRED_FROM&quot;: &quot;&quot;,&#xd;
+        &quot;CUSTOMERTYPE&quot;: &quot;&quot;,&#xd;
+        &quot;OTHER&quot;: &quot;&quot;,&#xd;
+        &quot;EMP_ADDRESS_LINE_1&quot;: &quot;&quot;,&#xd;
+        &quot;EMP_ADDRESS_LINE_2&quot;: &quot;&quot;,&#xd;
+        &quot;EMP_ADDRESS_LINE_3&quot;: &quot;&quot;,&#xd;
+        &quot;EMP_PINCODE&quot;: 410206,&#xd;
+        &quot;EMP_CITY&quot;: &quot;&quot;,&#xd;
+        &quot;EMP_STATE&quot;: &quot;&quot;,&#xd;
+        &quot;EMP_COUNTRY&quot;: &quot;&quot;,&#xd;
+        &quot;SE_ADDRESS_LINE_1&quot;: &quot;OLD POST OFFICE ROAD&quot;,&#xd;
+        &quot;SE_ADDRESS_LINE_2&quot;: &quot;SULIBELE&quot;,&#xd;
+        &quot;SE_ADDRESS_LINE_3&quot;: &quot;BANGALORE RURAL&quot;,&#xd;
+        &quot;SE_PINCODE&quot;: 562129,&#xd;
+        &quot;SE_CITY&quot;: &quot;BANGALORE&quot;,&#xd;
+        &quot;SE_STATE&quot;: &quot;KARNATAKA&quot;,&#xd;
+        &quot;SE_COUNTRY&quot;: &quot;INDIA&quot;,&#xd;
+        &quot;PRO_ADDRESS_LINE_1&quot;: &quot;&quot;,&#xd;
+        &quot;PRO_ADDRESS_LINE_2&quot;: &quot;&quot;,&#xd;
+        &quot;PRO_ADDRESS_LINE_3&quot;: &quot;&quot;,&#xd;
+        &quot;PRO_PINCODE&quot;: &quot;&quot;,&#xd;
+        &quot;PRO_CITY&quot;: &quot;&quot;,&#xd;
+        &quot;PRO_STATE&quot;: &quot;&quot;,&#xd;
+        &quot;PRO_COUNTRY&quot;: &quot;&quot;,&#xd;
+        &quot;RE_ADDRESS_LINE_1&quot;: &quot;&quot;,&#xd;
+        &quot;RE_ADDRESS_LINE_2&quot;: &quot;&quot;,&#xd;
+        &quot;RE_ADDRESS_LINE_3&quot;: &quot;&quot;,&#xd;
+        &quot;RE_PINCODE&quot;: &quot;&quot;,&#xd;
+        &quot;RE_CITY&quot;: &quot;&quot;,&#xd;
+        &quot;RE_STATE&quot;: &quot;&quot;,&#xd;
+        &quot;RE_COUNTRY&quot;: &quot;&quot;,&#xd;
+        &quot;EMP_GROSS_MONTHLY_INCOME&quot;: 0,&#xd;
+        &quot;EMP_NET_MONTHLY_INCOME&quot;: 0,&#xd;
+        &quot;EMP_OTHER_MONTHLY_INCOME&quot;: 0,&#xd;
+        &quot;SE_GROSS_MONTHLY_INCOME&quot;: 0,&#xd;
+        &quot;SE_NET_MONTHLY_INCOME&quot;: 0,&#xd;
+        &quot;SE_OTHER_MONTHLY_INCOME&quot;: 0,&#xd;
+        &quot;PRO_GROSS_MONTHLY_INCOME&quot;: 0,&#xd;
+        &quot;PRO_NET_MONTHLY_INCOME&quot;: 0,&#xd;
+        &quot;PRO_OTHER_MONTHLY_INCOME&quot;: 0,&#xd;
+        &quot;RE_GROSS_MONTHLY_INCOME&quot;: 0,&#xd;
+        &quot;RE_NET_MONTHLY_INCOME&quot;: 0,&#xd;
+        &quot;RE_OTHER_MONTHLY_INCOME&quot;: 0,&#xd;
+        &quot;PRO_LANDLINE_PROFESSION&quot;: 0,&#xd;
+        &quot;PRO_BUSINESS_WEBSITE&quot;: &quot;&quot;,&#xd;
+        &quot;SE_BUSINESS_WEBSITE&quot;: &quot;&quot;,&#xd;
+        &quot;PRO_BUSINESS_EMAIL_ID&quot;: &quot;&quot;,&#xd;
+        &quot;SE_BUSINESS_EMAIL_ID&quot;: &quot;&quot;,&#xd;
+        &quot;SE_GSTNO&quot;: 0,&#xd;
+        &quot;PRO_GSTNO&quot;: 0,&#xd;
+        &quot;OTHERS_ADDRESS_LINE_1&quot;: &quot;&quot;,&#xd;
+        &quot;OTHERS_ADDRESS_LINE_2&quot;: &quot;&quot;,&#xd;
+        &quot;OTHERS_ADDRESS_LINE_3&quot;: &quot;&quot;,&#xd;
+        &quot;OTHERS_PINCODE&quot;: &quot;&quot;,&#xd;
+        &quot;OTHERS_CITY&quot;: &quot;&quot;,&#xd;
+        &quot;OTHERS_STATE&quot;: &quot;&quot;,&#xd;
+        &quot;OTHERS_COUNTRY&quot;: &quot;&quot;,&#xd;
+        &quot;OTHERS_LANDLINE_PROFESSION&quot;: 0,&#xd;
+        &quot;OTHERS_GSTNO&quot;: 0,&#xd;
+        &quot;OTHERS_NATURE_OF_PROFESSION&quot;: &quot;&quot;,&#xd;
+        &quot;OTHERS_PROFESSION_WEBSITE&quot;: &quot;&quot;,&#xd;
+        &quot;OTHERS_PROFESSION_EMAIL_ID&quot;: &quot;&quot;,&#xd;
+        &quot;OTHERS_NO_OF_YEARS_PROFESSION&quot;: 0,&#xd;
+        &quot;OTHERS_NO_OF_YR_CUR_PROF&quot;: 0,&#xd;
+        &quot;OTHERS_GROSS_MONTHLY_INCOME&quot;: 0,&#xd;
+        &quot;OTHERS_NET_MONTHLY_INCOME&quot;: 0,&#xd;
+        &quot;OTHERS_OTHER_MONTHLY_INCOME&quot;: 0,&#xd;
+        &quot;INSERTIONORDER&quot;: ${__UUID()},&#xd;
+        &quot;PROD_TYPE&quot;: &quot;EIL&quot;,&#xd;
+        &quot;PARENT_INSERTION&quot;: 544,&#xd;
+        &quot;NATURE_BUSI_PROF1&quot;: &quot;&quot;,&#xd;
+        &quot;NATURE_BUSI_PROF2&quot;: &quot;OTHER&quot;,&#xd;
+        &quot;NATURE_BUSI_PROF3&quot;: &quot;&quot;,&#xd;
+        &quot;NATURE_BUSI_PROF4&quot;: &quot;&quot;,&#xd;
+        &quot;NATURE_BUSI_PROF&quot;: &quot;&quot;,&#xd;
+        &quot;OTHER_EMPLOYER_NAME&quot;: &quot;&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">192.168.11.239</stringProp>
+          <stringProp name="HTTPSampler.port">8000</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/los/api/v1/employment</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="status" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{ &#xd;
+    &quot;WI_NAME&quot;:${__UUID()},&#xd;
+    &quot;ITEMINDEX&quot;:22813,&#xd;
+    &quot;ITEMTYPE&quot;:&quot;F&quot;,&#xd;
+    &quot;DECISION&quot;:&quot;SUCCESS&quot;,&#xd;
+    &quot;REMARKS&quot;:&quot;LMS PUSH SUCCESS&quot;,&#xd;
+    &quot;VENDOR_TYPE&quot;:&quot;&quot;,&#xd;
+    &quot;DEVIATION_LEVEL&quot;:4,&#xd;
+    &quot;DELEGATION_FLAG&quot;:&quot;L4&quot;,&#xd;
+    &quot;DEVIATION_ROUND&quot;:&quot;&quot;,&#xd;
+    &quot;PREVIOUS_WS&quot;:&quot;LMS&quot;,&#xd;
+    &quot;CURRENT_WS&quot;:&quot;HOLD&quot;,&#xd;
+    &quot;EXECUTE_DEV_FLAG&quot;:&quot;TRUE&quot;,&#xd;
+    &quot;APPLICATION_NO&quot;:100719018174,&#xd;
+    &quot;SALES_QUEUE_STATUS&quot;:&quot;&quot;,&#xd;
+    &quot;SALES_APPROVAL_QUEUE_STATUS&quot;:&quot;&quot;,&#xd;
+    &quot;REJECT_SALES_QUEUE_STATUS&quot;:&quot;&quot;,&#xd;
+    &quot;SALES_DISCREPANCY_QUEUE_STATUS&quot;:&quot;&quot;,&#xd;
+    &quot;EIL_HOLD_QUEUE_STATUS&quot;:&quot;&quot;,&#xd;
+    &quot;QUERY_QUEUE_STATUS&quot;:&quot;&quot;,&#xd;
+    &quot;VENDOR_AUTO_FLAG&quot;:&quot;TRUE&quot;,&#xd;
+    &quot;LEADAPI_CALL&quot;:&quot;N&quot;,&#xd;
+    &quot;LEAD_ID&quot;:566641,&#xd;
+    &quot;ROI_LEADAPI_CALL&quot;:&quot;N&quot;,&#xd;
+    &quot;PF_LEADAPI_CALL&quot;:&quot;N&quot;,&#xd;
+    &quot;SALES_LEVEL&quot;:6,&#xd;
+    &quot;SALES_REJECT&quot;:&quot;&quot;,&#xd;
+    &quot;SALES_ROUND&quot;:&quot; &quot;,&#xd;
+    &quot;REJ_REASON&quot;:&quot;&quot;,&#xd;
+    &quot;CUST_PRIORITY&quot;:&quot;&quot;,&#xd;
+    &quot;VERIFICATION_ACCEPTANCE_FLAG&quot;:&quot; &quot;,&#xd;
+    &quot;BRANCHID&quot;:&quot;0071&quot;,&#xd;
+    &quot;SEGMENT&quot;:&quot;&quot;,&#xd;
+    &quot;CASETYPE&quot;:&quot;&quot;,&#xd;
+    &quot;STPFLAG&quot;:&quot;&quot;,&#xd;
+    &quot;STPCASE&quot;:&quot;&quot;,&#xd;
+    &quot;EXECUTE_SCF_DEV_FLAG&quot;:&quot;&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">192.168.11.239</stringProp>
+          <stringProp name="HTTPSampler.port">8000</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/los/api/v1/status</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="coursedetail" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{ &#xd;
+    &quot;WI_NAME&quot;:${__UUID()},&#xd;
+    &quot;ADMISSION_STATUS&quot;: &quot;Confirmed&quot;,&#xd;
+        &quot;COUNTRY&quot;: &quot;UNITED STATES OF AMERICA&quot;,&#xd;
+        &quot;UNIVERSITY_NAME&quot;: &quot;CLEVELAND STATE UNIVERSITY&quot;,&#xd;
+        &quot;CAMPUS&quot;: &quot;NA&quot;,&#xd;
+        &quot;COLLEGE_NAME&quot;: &quot;CLEVELAND STATE UNIVERSITY&quot;,&#xd;
+        &quot;COURSE_NAME&quot;: &quot;MASTER OF COMPUTER SCIENCE&quot;,&#xd;
+        &quot;COURSE_CATEGORY&quot;: &quot;Masters&quot;,&#xd;
+        &quot;OTHER_COURSE_CATEGORY&quot;: &quot;&quot;,&#xd;
+        &quot;COURSE_TYPE&quot;: &quot;Full Time&quot;,&#xd;
+        &quot;OTHER_COURSE_TYPE&quot;: &quot;&quot;,&#xd;
+        &quot;COURSE_STREAM&quot;: &quot;STEM&quot;,&#xd;
+        &quot;OTHER_COURSE_STREAM&quot;: &quot;&quot;,&#xd;
+        &quot;COURSE_START_DATE&quot;: &quot;17-08-21&quot;,&#xd;
+        &quot;COURSE_END_DATE&quot;: &quot;11-08-23&quot;,&#xd;
+        &quot;INSTITUTE_RANKING&quot;: &quot;&quot;,&#xd;
+        &quot;ADD_LINE_1&quot;: &quot;&quot;,&#xd;
+        &quot;ADD_LINE_2&quot;: &quot;&quot;,&#xd;
+        &quot;ADD_LINE_3&quot;: &quot;&quot;,&#xd;
+        &quot;ADD_LINE_4&quot;: &quot;&quot;,&#xd;
+        &quot;CITY&quot;: &quot;&quot;,&#xd;
+        &quot;STATE&quot;: &quot;&quot;,&#xd;
+        &quot;URL_WEB&quot;: &quot;&quot;,&#xd;
+        &quot;REASON_FOR_UNI_SEL&quot;: &quot;&quot;,&#xd;
+        &quot;CONTACT_PERSON_AT_INSTI&quot;: &quot;John P Holcomb&quot;,&#xd;
+        &quot;EMAIL_ID&quot;: &quot;test_test@test.com&quot;,&#xd;
+        &quot;TUITION_FEES&quot;: 1746769,&#xd;
+        &quot;LIVING_EXPENSE_HOSTEL_FOOD&quot;: 1280964,&#xd;
+        &quot;TRAVELLING_EXPENSES&quot;: 39200,&#xd;
+        &quot;OTHER_COST&quot;: 76465,&#xd;
+        &quot;TOTAL_COST&quot;: 3177733,&#xd;
+        &quot;OWN_SOURCE&quot;: 0,&#xd;
+        &quot;SCHOLARSHIP&quot;: 0,&#xd;
+        &quot;OTHERS_FUND&quot;: 0,&#xd;
+        &quot;TOTAL_FUNDS&quot;: 0,&#xd;
+        &quot;EXP_ANN_INC_POST_COMPL&quot;: 0,&#xd;
+        &quot;CONTACT_NUMBER&quot;: 75277,&#xd;
+        &quot;COURSE_DURATION&quot;: 28405,&#xd;
+        &quot;PIN_CODE&quot;: 0,&#xd;
+        &quot;TEL_NO&quot;: &quot;254327543273&quot;,&#xd;
+        &quot;FUTURE_INCOME&quot;: 66233,&#xd;
+        &quot;COURSE_SUB_STREAM&quot;: &quot;Engineering&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">192.168.11.239</stringProp>
+          <stringProp name="HTTPSampler.port">8000</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/los/api/v1/coursedetail</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="academicDetails" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{ &#xd;
+    &quot;WI_NAME&quot;:${__UUID()},&#xd;
+   &quot;ADMISSION_STATUS&quot;: &quot;Confirmed&quot;,&#xd;
+        &quot;COUNTRY&quot;: &quot;CANADA&quot;,&#xd;
+        &quot;UNIVERSITY_NAME&quot;: &quot;NATIONAL COLLEGE OF IRELAND&quot;,&#xd;
+        &quot;CAMPUS&quot;: &quot;NA&quot;,&#xd;
+        &quot;COLLEGE_NAME&quot;: &quot;NATIONAL COLLEGE OF IRELAND&quot;,&#xd;
+        &quot;COURSE_NAME&quot;: &quot;MSC CLOUD COMPUTING&quot;,&#xd;
+        &quot;COURSE_CATEGORY&quot;: &quot;Masters&quot;,&#xd;
+        &quot;OTHER_COURSE_CATEGORY&quot;: &quot;&quot;,&#xd;
+        &quot;COURSE_TYPE&quot;: &quot;Full Time&quot;,&#xd;
+        &quot;OTHER_COURSE_TYPE&quot;: &quot;&quot;,&#xd;
+        &quot;COURSE_STREAM&quot;: &quot;STEM&quot;,&#xd;
+        &quot;OTHER_COURSE_STREAM&quot;: &quot;&quot;,&#xd;
+        &quot;COURSE_START_DATE&quot;: &quot;24-01-22&quot;,&#xd;
+        &quot;COURSE_END_DATE&quot;: &quot;02-01-23&quot;,&#xd;
+        &quot;INSTITUTE_RANKING&quot;: &quot;&quot;,&#xd;
+        &quot;ADD_LINE_1&quot;: &quot;&quot;,&#xd;
+        &quot;ADD_LINE_2&quot;: &quot;&quot;,&#xd;
+        &quot;ADD_LINE_3&quot;: &quot;&quot;,&#xd;
+        &quot;ADD_LINE_4&quot;: &quot;&quot;,&#xd;
+        &quot;CITY&quot;: &quot;&quot;,&#xd;
+        &quot;STATE&quot;: &quot;&quot;,&#xd;
+        &quot;URL_WEB&quot;: &quot;&quot;,&#xd;
+        &quot;REASON_FOR_UNI_SEL&quot;: &quot;&quot;,&#xd;
+        &quot;CONTACT_PERSON_AT_INSTI&quot;: &quot;Test&quot;,&#xd;
+        &quot;EMAIL_ID&quot;: &quot;test_test@test.com&quot;,&#xd;
+        &quot;TUITION_FEES&quot;: 1971660,&#xd;
+        &quot;LIVING_EXPENSE_HOSTEL_FOOD&quot;: 1275780,&#xd;
+        &quot;TRAVELLING_EXPENSES&quot;: 0,&#xd;
+        &quot;OTHER_COST&quot;: 150000,&#xd;
+        &quot;TOTAL_COST&quot;: 3397440,&#xd;
+        &quot;OWN_SOURCE&quot;: 0,&#xd;
+        &quot;SCHOLARSHIP&quot;: 0,&#xd;
+        &quot;OTHERS_FUND&quot;: 0,&#xd;
+        &quot;TOTAL_FUNDS&quot;: 0,&#xd;
+        &quot;EXP_ANN_INC_POST_COMPL&quot;: 0,&#xd;
+        &quot;CONTACT_NUMBER&quot;: 0,&#xd;
+        &quot;COURSE_DURATION&quot;: 28405,&#xd;
+        &quot;PIN_CODE&quot;: 0,&#xd;
+        &quot;TEL_NO&quot;: &quot;254327543273&quot;,&#xd;
+        &quot;FUTURE_INCOME&quot;: 66233,&#xd;
+        &quot;COURSE_SUB_STREAM&quot;: &quot;Management&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">192.168.11.239</stringProp>
+          <stringProp name="HTTPSampler.port">8000</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/los/api/v1/academicDetails</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="leadInfo" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{ &#xd;
+    &quot;WI_NAME&quot;:${__UUID()},&#xd;
+   &quot;APP_DATE&quot;: &quot;04-02-2021&quot;,&#xd;
+		&quot;LEAD_ID&quot;: &quot;6010&quot;,&#xd;
+        &quot;DOM_USRID&quot;: &quot;&quot;,&#xd;
+        &quot;EMP_NAME&quot;: &quot;&quot;,&#xd;
+        &quot;BRCODE&quot;: &quot;&quot;,&#xd;
+        &quot;BRNAME&quot;: &quot;&quot;,&#xd;
+        &quot;SMS&quot;: &quot;&quot;,&#xd;
+        &quot;SMS_LINK_CPC&quot;: &quot;&quot;,&#xd;
+        &quot;REGION&quot;: &quot;&quot;,&#xd;
+        &quot;ZONE&quot;: &quot;&quot;,&#xd;
+        &quot;SRC_BY&quot;: &quot;&quot;,&#xd;
+        &quot;SRC_BY_NAME&quot;: &quot;&quot;,&#xd;
+        &quot;EC_NUM&quot;: &quot;&quot;,&#xd;
+        &quot;SRC_STAFF_NAME&quot;: &quot;&quot;,&#xd;
+        &quot;SRC_STAFF_LOCATION&quot;: &quot;&quot;,&#xd;
+        &quot;DSA_CODE&quot;: &quot;&quot;,&#xd;
+        &quot;DSA_NAME&quot;: &quot;&quot;,&#xd;
+        &quot;PARKING_BRANCH&quot;: &quot;&quot;,&#xd;
+        &quot;LOAN_AMOUNT&quot;: 574,&#xd;
+        &quot;PRODUCT_TYPE&quot;: &quot;&quot;,&#xd;
+        &quot;SCHEME_TYPE&quot;: &quot;&quot;,&#xd;
+        &quot;PARKING_SEARCH_VAL&quot;: &quot;&quot;,&#xd;
+        &quot;PARKING_SEARCH_TYPE&quot;: &quot;&quot;,&#xd;
+        &quot;LOAN_TENURE&quot;: 648,&#xd;
+        &quot;MODEL&quot;: &quot;&quot;,&#xd;
+        &quot;NAME_OF_THE_PROSPECT&quot;: &quot;Excellent Education Society&quot;,&#xd;
+        &quot;NAME_OF_THE_SALES_EXECUTIVE&quot;: &quot;Mahesha K.J&quot;,&#xd;
+        &quot;SOURCE_BRANCH&quot;: &quot;&quot;,&#xd;
+        &quot;SERVICE_BRANCH&quot;: &quot;BENGALURU&quot;,&#xd;
+        &quot;LEAD_GATE&quot;: &quot;Local&quot;,&#xd;
+        &quot;LEAD_SOURCE&quot;: &quot;Referrals&quot;,&#xd;
+        &quot;NAME&quot;: &quot;Employee Referral&quot;,&#xd;
+        &quot;BRANCH&quot;: &quot;Ausha&quot;,&#xd;
+        &quot;PROMO_CODE&quot;: &quot;&quot;,&#xd;
+        &quot;COUPON_CODE&quot;: &quot;&quot;,&#xd;
+        &quot;CUSTOMER_PRIORITY&quot;: &quot;High&quot;,&#xd;
+        &quot;HIGH_PROFILE_CUSTOMER&quot;: &quot;Yes&quot;,&#xd;
+        &quot;SEGMENT&quot;: &quot;EL&quot;,&#xd;
+        &quot;PRODUCT&quot;: &quot;Education Loan&quot;,&#xd;
+        &quot;REQUESTED_LOAN_AMOUNT&quot;: 950000,&#xd;
+        &quot;COUNTRY&quot;: &quot;FRANCE&quot;,&#xd;
+        &quot;UNIVERSITY&quot;: &quot;paris school of business&quot;,&#xd;
+        &quot;INSTITUTE&quot;: &quot;&quot;,&#xd;
+        &quot;COURSE&quot;: &quot;&quot;,&#xd;
+        &quot;SECURITY_TYPE&quot;: &quot;NA&quot;,&#xd;
+        &quot;REPAYMENT_OPTION&quot;: &quot;EMI&quot;,&#xd;
+        &quot;LEAD_TYPE&quot;: &quot;Connectors&quot;,&#xd;
+        &quot;LOAN_TERM&quot;: 48,&#xd;
+        &quot;TYPE_OF_LOAN&quot;: &quot;Fresh&quot;,&#xd;
+        &quot;TYPE_OF_SEC_OFFERED&quot;: &quot;&quot;,&#xd;
+        &quot;HOW_DID_YOU_KNOW&quot;: &quot;internet&quot;,&#xd;
+        &quot;DESCRIPTION&quot;: &quot;&quot;,&#xd;
+        &quot;EXPECTED_DIS_TYPE&quot;: &quot;04-06-1785&quot;,&#xd;
+        &quot;SCHEME&quot;: &quot;&quot;,&#xd;
+        &quot;COLL_TYPE&quot;: &quot;Unsecured&quot;,&#xd;
+        &quot;COLL_VALUE&quot;: &quot;6441600&quot;,&#xd;
+        &quot;REMARKS&quot;: &quot;NA&quot;,&#xd;
+        &quot;NAME_OF_INSTI&quot;: &quot;&quot;,&#xd;
+        &quot;SCHOOL_TIER&quot;: &quot;&quot;,&#xd;
+        &quot;SUBVENTION_TYPE&quot;: &quot;&quot;,&#xd;
+        &quot;LEAD_DATE&quot;: &quot;&quot;,&#xd;
+        &quot;PURPOSE_OF_LOAN&quot;: &quot;Working Capital&quot;,&#xd;
+        &quot;SALES_OWNERID&quot;: &quot;&quot;,&#xd;
+        &quot;SALES_EMAILADDRESS&quot;: &quot;mahesha.k@auxilo.com&quot;,&#xd;
+        &quot;PROSPECTID&quot;: &quot;676351b7-2eb8-4843-b2bd-b4296d750aa4&quot;,&#xd;
+        &quot;LOAN_SUB_SEGMENT&quot;: &quot;AIL&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">192.168.11.239</stringProp>
+          <stringProp name="HTTPSampler.port">8000</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/los/api/v1/leadInfo</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="costDetail" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{ &#xd;
+    &quot;WI_NAME&quot;:${__UUID()},&#xd;
+   &quot;ADMISSION_FEE&quot;: 94893,&#xd;
+        &quot;COURSE_FEE&quot;: 4681,&#xd;
+        &quot;BOOKS&quot;: &quot;deposit&quot;,&#xd;
+        &quot;LAB_FEE&quot;: 82811,&#xd;
+        &quot;SECURITY_DEPOSIT&quot;: 18803,&#xd;
+        &quot;COST_OTHERS&quot;: 87027,&#xd;
+        &quot;TOTAL&quot;: 65670,&#xd;
+        &quot;LOAN_REQUIRED&quot;: 14879,&#xd;
+        &quot;DISBURSEMENT_TRANCHE&quot;: &quot;Granite&quot;,&#xd;
+        &quot;DIS_OTHER&quot;: &quot;Car&quot;,&#xd;
+        &quot;CD_MODE&quot;: &quot;installation&quot;,&#xd;
+        &quot;MODE_OTHERS&quot;: &quot;Latvian&quot;,&#xd;
+        &quot;FEES_TYPE&quot;: &quot;Mali Multi-channelled withdrawal&quot;,&#xd;
+        &quot;TRANSPORTATION_FEES&quot;: 69091,&#xd;
+        &quot;UNIFORM_FEES&quot;: 28875,&#xd;
+        &quot;TEST_PREP_FEES&quot;: 35181,&#xd;
+        &quot;HOSTEL_FEES&quot;: 32180&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">192.168.11.239</stringProp>
+          <stringProp name="HTTPSampler.port">8000</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/los/api/v1/costDetail</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="cartAPI-upload" enabled="true">
+          <elementProp name="HTTPsampler.Files" elementType="HTTPFileArgs">
+            <collectionProp name="HTTPFileArgs.files">
+              <elementProp name="C:\Users\2919.NUCSOFT\Downloads\A64 AML Screening API DOC V1.1.pdf" elementType="HTTPFileArg">
+                <stringProp name="File.path">C:\Users\2919.NUCSOFT\Downloads\A64 AML Screening API DOC V1.1.pdf</stringProp>
+                <stringProp name="File.paramname">file</stringProp>
+                <stringProp name="File.mimetype">application/pdf</stringProp>
+              </elementProp>
+              <elementProp name="metadata" elementType="HTTPFileArg">
+                <stringProp name="File.path">metadata</stringProp>
+                <stringProp name="File.paramname">{&quot;password&quot;: &quot;&quot;,&quot;bank&quot;:&quot;&quot;, &quot;name&quot;:&quot;&quot;}</stringProp>
+                <stringProp name="File.mimetype"></stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">192.168.11.239</stringProp>
+          <stringProp name="HTTPSampler.port">8000</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/cart/api/v1/upload</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="cartAPI-uploadBinary" enabled="true">
+          <elementProp name="HTTPsampler.Files" elementType="HTTPFileArgs">
+            <collectionProp name="HTTPFileArgs.files">
+              <elementProp name="file" elementType="HTTPFileArg">
+                <stringProp name="File.path">file</stringProp>
+                <stringProp name="File.paramname"></stringProp>
+                <stringProp name="File.mimetype"></stringProp>
+              </elementProp>
+              <elementProp name="metadata" elementType="HTTPFileArg">
+                <stringProp name="File.path">metadata</stringProp>
+                <stringProp name="File.paramname">{&quot;password&quot;: &quot;&quot;,&quot;bank&quot;:&quot;&quot;, &quot;name&quot;:&quot;&quot;}</stringProp>
+                <stringProp name="File.mimetype"></stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;file&quot;: &quot;JVBERi0xLjMNCiXi48/TDQoNCjEgMCBvYmoNCjw8DQovVHlwZSAvQ2F0YWxvZw0KL091dGxpbmVzIDIgMCBSDQovUGFnZXMgMyAwIFINCj4+DQplbmRvYmoNCg0KMiAwIG9iag0KPDwNCi9UeXBlIC9PdXRsaW5lcw0KL0NvdW50IDANCj4+DQplbmRvYmoNCg0KMyAwIG9iag0KPDwNCi9UeXBlIC9QYWdlcw0KL0NvdW50IDINCi9LaWRzIFsgNCAwIFIgNiAwIFIgXSANCj4+DQplbmRvYmoNCg0KNCAwIG9iag0KPDwNCi9UeXBlIC9QYWdlDQovUGFyZW50IDMgMCBSDQovUmVzb3VyY2VzIDw8DQovRm9udCA8PA0KL0YxIDkgMCBSIA0KPj4NCi9Qcm9jU2V0IDggMCBSDQo+Pg0KL01lZGlhQm94IFswIDAgNjEyLjAwMDAgNzkyLjAwMDBdDQovQ29udGVudHMgNSAwIFINCj4+DQplbmRvYmoNCg0KNSAwIG9iag0KPDwgL0xlbmd0aCAxMDc0ID4+DQpzdHJlYW0NCjIgSg0KQlQNCjAgMCAwIHJnDQovRjEgMDAyNyBUZg0KNTcuMzc1MCA3MjIuMjgwMCBUZA0KKCBBIFNpbXBsZSBQREYgRmlsZSApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDY4OC42MDgwIFRkDQooIFRoaXMgaXMgYSBzbWFsbCBkZW1vbnN0cmF0aW9uIC5wZGYgZmlsZSAtICkgVGoNCkVUDQpCVA0KL0YxIDAwMTAgVGYNCjY5LjI1MDAgNjY0LjcwNDAgVGQNCigganVzdCBmb3IgdXNlIGluIHRoZSBWaXJ0dWFsIE1lY2hhbmljcyB0dXRvcmlhbHMuIE1vcmUgdGV4dC4gQW5kIG1vcmUgKSBUag0KRVQNCkJUDQovRjEgMDAxMCBUZg0KNjkuMjUwMCA2NTIuNzUyMCBUZA0KKCB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDYyOC44NDgwIFRkDQooIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlICkgVGoNCkVUDQpCVA0KL0YxIDAwMTAgVGYNCjY5LjI1MDAgNjE2Ljg5NjAgVGQNCiggdGV4dC4gQW5kIG1vcmUgdGV4dC4gQm9yaW5nLCB6enp6ei4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kICkgVGoNCkVUDQpCVA0KL0YxIDAwMTAgVGYNCjY5LjI1MDAgNjA0Ljk0NDAgVGQNCiggbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDU5Mi45OTIwIFRkDQooIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlIHRleHQuICkgVGoNCkVUDQpCVA0KL0YxIDAwMTAgVGYNCjY5LjI1MDAgNTY5LjA4ODAgVGQNCiggQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgKSBUag0KRVQNCkJUDQovRjEgMDAxMCBUZg0KNjkuMjUwMCA1NTcuMTM2MCBUZA0KKCB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBFdmVuIG1vcmUuIENvbnRpbnVlZCBvbiBwYWdlIDIgLi4uKSBUag0KRVQNCmVuZHN0cmVhbQ0KZW5kb2JqDQoNCjYgMCBvYmoNCjw8DQovVHlwZSAvUGFnZQ0KL1BhcmVudCAzIDAgUg0KL1Jlc291cmNlcyA8PA0KL0ZvbnQgPDwNCi9GMSA5IDAgUiANCj4+DQovUHJvY1NldCA4IDAgUg0KPj4NCi9NZWRpYUJveCBbMCAwIDYxMi4wMDAwIDc5Mi4wMDAwXQ0KL0NvbnRlbnRzIDcgMCBSDQo+Pg0KZW5kb2JqDQoNCjcgMCBvYmoNCjw8IC9MZW5ndGggNjc2ID4+DQpzdHJlYW0NCjIgSg0KQlQNCjAgMCAwIHJnDQovRjEgMDAyNyBUZg0KNTcuMzc1MCA3MjIuMjgwMCBUZA0KKCBTaW1wbGUgUERGIEZpbGUgMiApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDY4OC42MDgwIFRkDQooIC4uLmNvbnRpbnVlZCBmcm9tIHBhZ2UgMS4gWWV0IG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gKSBUag0KRVQNCkJUDQovRjEgMDAxMCBUZg0KNjkuMjUwMCA2NzYuNjU2MCBUZA0KKCBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDY2NC43MDQwIFRkDQooIHRleHQuIE9oLCBob3cgYm9yaW5nIHR5cGluZyB0aGlzIHN0dWZmLiBCdXQgbm90IGFzIGJvcmluZyBhcyB3YXRjaGluZyApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDY1Mi43NTIwIFRkDQooIHBhaW50IGRyeS4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gKSBUag0KRVQNCkJUDQovRjEgMDAxMCBUZg0KNjkuMjUwMCA2NDAuODAwMCBUZA0KKCBCb3JpbmcuICBNb3JlLCBhIGxpdHRsZSBtb3JlIHRleHQuIFRoZSBlbmQsIGFuZCBqdXN0IGFzIHdlbGwuICkgVGoNCkVUDQplbmRzdHJlYW0NCmVuZG9iag0KDQo4IDAgb2JqDQpbL1BERiAvVGV4dF0NCmVuZG9iag0KDQo5IDAgb2JqDQo8PA0KL1R5cGUgL0ZvbnQNCi9TdWJ0eXBlIC9UeXBlMQ0KL05hbWUgL0YxDQovQmFzZUZvbnQgL0hlbHZldGljYQ0KL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcNCj4+DQplbmRvYmoNCg0KMTAgMCBvYmoNCjw8DQovQ3JlYXRvciAoUmF2ZSBcKGh0dHA6Ly93d3cubmV2cm9uYS5jb20vcmF2ZVwpKQ0KL1Byb2R1Y2VyIChOZXZyb25hIERlc2lnbnMpDQovQ3JlYXRpb25EYXRlIChEOjIwMDYwMzAxMDcyODI2KQ0KPj4NCmVuZG9iag0KDQp4cmVmDQowIDExDQowMDAwMDAwMDAwIDY1NTM1IGYNCjAwMDAwMDAwMTkgMDAwMDAgbg0KMDAwMDAwMDA5MyAwMDAwMCBuDQowMDAwMDAwMTQ3IDAwMDAwIG4NCjAwMDAwMDAyMjIgMDAwMDAgbg0KMDAwMDAwMDM5MCAwMDAwMCBuDQowMDAwMDAxNTIyIDAwMDAwIG4NCjAwMDAwMDE2OTAgMDAwMDAgbg0KMDAwMDAwMjQyMyAwMDAwMCBuDQowMDAwMDAyNDU2IDAwMDAwIG4NCjAwMDAwMDI1NzQgMDAwMDAgbg0KDQp0cmFpbGVyDQo8PA0KL1NpemUgMTENCi9Sb290IDEgMCBSDQovSW5mbyAxMCAwIFINCj4+DQoNCnN0YXJ0eHJlZg0KMjcxNA0KJSVFT0YNCg==&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">192.168.11.239</stringProp>
+          <stringProp name="HTTPSampler.port">8000</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/cart/api/v1/uploadBinary</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="cartAPI-downloadFile" enabled="true">
+          <elementProp name="HTTPsampler.Files" elementType="HTTPFileArgs">
+            <collectionProp name="HTTPFileArgs.files">
+              <elementProp name="file" elementType="HTTPFileArg">
+                <stringProp name="File.path">file</stringProp>
+                <stringProp name="File.paramname"></stringProp>
+                <stringProp name="File.mimetype"></stringProp>
+              </elementProp>
+              <elementProp name="metadata" elementType="HTTPFileArg">
+                <stringProp name="File.path">metadata</stringProp>
+                <stringProp name="File.paramname">{&quot;password&quot;: &quot;&quot;,&quot;bank&quot;:&quot;&quot;, &quot;name&quot;:&quot;&quot;}</stringProp>
+                <stringProp name="File.mimetype"></stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">DOC01424649</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">192.168.11.239</stringProp>
+          <stringProp name="HTTPSampler.port">8000</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/cart/api/v1/downloadFile</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="cartAPI-downloadFileAsExcel" enabled="true">
+          <elementProp name="HTTPsampler.Files" elementType="HTTPFileArgs">
+            <collectionProp name="HTTPFileArgs.files">
+              <elementProp name="file" elementType="HTTPFileArg">
+                <stringProp name="File.path">file</stringProp>
+                <stringProp name="File.paramname"></stringProp>
+                <stringProp name="File.mimetype"></stringProp>
+              </elementProp>
+              <elementProp name="metadata" elementType="HTTPFileArg">
+                <stringProp name="File.path">metadata</stringProp>
+                <stringProp name="File.paramname">{&quot;password&quot;: &quot;&quot;,&quot;bank&quot;:&quot;&quot;, &quot;name&quot;:&quot;&quot;}</stringProp>
+                <stringProp name="File.mimetype"></stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">DOC01424649</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">192.168.11.239</stringProp>
+          <stringProp name="HTTPSampler.port">8000</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/cart/api/v1/d1/downloadFileAsExcel</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="GraphVisualizer" testclass="ResultCollector" testname="Graph Results" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+          <boolProp name="ResultCollector.success_only_logging">true</boolProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

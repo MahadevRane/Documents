@@ -1,0 +1,871 @@
+{
+	"info": {
+		"_postman_id": "4965751c-1817-4848-a3e5-cc89badb27f2",
+		"name": "Kong-LOS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SanctionCondition",
+			"item": [
+				{
+					"name": "sanctionconditions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "oQm2MDFMP0n5ZXm00YU989w3zxvPSASE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"WI_NAME\":\"LOS-90113302911-PROCESS\",\r\n    \"CODE\":\"EIL37\",\r\n    \"CONDITION_TYPE\":\"Others\",\r\n    \"SANCTION_CONDITION\":\"Disbursement to be availed before 31 dec 2020 \",\r\n    \"DESCRIPTION\":\" \",\r\n    \"TYPE\":\" \",\r\n    \"TO_BE_PRINTED\":\"Yes\",\r\n    \"STATUS\":\"Received\",\r\n    \"APPROVAL_LEVEL\":\"L5\",\r\n    \"APPROVAL_DECISION\":\" \",\r\n    \"INSERTION_ID\":26,\r\n    \"CRITICAL\":\"Yes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/los/api/v1/sanctionCondition",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"los",
+								"api",
+								"v1",
+								"sanctionCondition"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Autodev",
+			"item": [
+				{
+					"name": "deviation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "31yH0OkI4miupFWYfWFOlnArOfHpRIBI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"WI_NAME\":\"LOS-9018257026-PROCESS\",\r\n    \"INSERTION_ID\":26,\r\n    \"DEVIATION_NORM\":\"Repayment Type changes from EMI to SI\",\r\n    \"DEVIATION_VALUE\":6,\r\n    \"DEVIATION_CRITERIA\":\"pou\",\r\n    \"DEVIATION_LEVEL\":\"qwe\",\r\n    \"APP_TYPE\":\"Applicant_Priyanka   Sharma\",\r\n    \"APP_ORDERID\":5,\r\n    \"DEV_TYPE\":\"Auto\",\r\n    \"DEV_DECISION\":\"Approved\",\r\n    \"DEV_COMMENT\":\"ghj\",\r\n    \"AUTHORITY\":\"L5\",\r\n    \"DEV_CODE\":\"D056\",\r\n    \"RANGE_PARAM\":\"NA\",\r\n    \"REMARKS\":\"yui\",\r\n    \"DEVIATION_SPREAD\":25,\r\n    \"DEV_SPREAD_TYPE\":\"NA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/los/api/v1/deviation",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"los",
+								"api",
+								"v1",
+								"deviation"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Recommendation",
+			"item": [
+				{
+					"name": "recommendation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "yxtYJlNZW1gPk6xmSwyfTXCVogJGtYfL",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"WI_NAME\":\"LOS-9018-PROCESS\",\r\n        \"LEVEL1\":\"L2\",\r\n        \"LEVEL2\":\"L3\",\r\n        \"LEVEL3\":\"L4\",\r\n        \"LEVEL4\":\" L5\",\r\n        \"FLAG_LVL1\":\"Y\",\r\n        \"FLAG_LVL2\":\"Y\",\r\n        \"FLAG_LVL3\":\"Y\",\r\n        \"FLAG_LVL4\":\"Y\",\r\n        \"SETUP\":\"DELEGATION\",\r\n        \"STATUS\":\"INACTIVE\",\r\n        \"REFER_BACK_FLAG\":\"\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/los/api/v1/recommendation",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"los",
+								"api",
+								"v1",
+								"recommendation"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contact",
+			"item": [
+				{
+					"name": "contactDetail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n       \"WI_NAME\": \"LOS-009018494251121-PROCESS\",\r\n        \"CURR_IS_IT_CORRESPOND\": \"Yes\",\r\n        \"CURR_RESI_STATUS\": \"Owned\",\r\n        \"CURR_RESI_STATUS_OTHER\": \"\",\r\n        \"CURR_YEAR_STAY\": 5,\r\n        \"CURR_RES_ADDRESS1\": \"Kali Talavadi\",\r\n        \"CURR_RES_ADDRESS2\": \"Navi Coloni\",\r\n        \"CURR_RES_ADDRESS3\": \"Kalitalavadi\",\r\n        \"CURR_LANDMARK\": \"Anand\",\r\n        \"CURR_COUNTRY\": \"INDIA\",\r\n        \"CURR_PINCODE\": 388170,\r\n        \"CURR_PINCODE_OTHERS\": \"\",\r\n        \"CURR_STATE\": \"GUJARAT\",\r\n        \"CURR_STATE_OTHERS\": \"\",\r\n        \"CURR_DISTRICT\": \"BANGALORE RURAL\",\r\n        \"CURR_DISTRICT_OTHERS\": \"\",\r\n        \"CURR_TALUKA\": \"SAYMA\",\r\n        \"CURR_TALUKA_OTHERS\": \"\",\r\n        \"CURR_CITY\": \"NADIAD\",\r\n        \"CURR_CITY_OTHERS\": \"\",\r\n        \"CURR_LOCATION_TYPE\": \"\",\r\n        \"CURR_VILLAGE\": \"\",\r\n        \"PER_ADDRESS_SAME_AS\": \"Applicant_Sushmitha  Marati\",\r\n        \"PER_IS_IT_CORRESPONDANCE\": \"Yes\",\r\n        \"PER_RESIDENCE_TYPE\": \"\",\r\n        \"PER_RESIDENCE_TYPE_OTHERS\": \"\",\r\n        \"PER_RESIDENCE_STAUTS\": \"\",\r\n        \"PER_RESIDENCE_STATUS_OTHERS\": \"\",\r\n        \"PER_LOCATION_TYPE\": \"\",\r\n        \"PER_YEARS_STAY\": 6,\r\n        \"PER_RES_ADDRESS1\": \"Plot Number 271\",\r\n        \"PER_RES_ADDRESS2\": \"V S T Colony\",\r\n        \"PER_RES_ADDRESS3\": \"Medipally\",\r\n        \"PER_LANDMARK\": \"Medchal\",\r\n        \"PER_COUNTRY\": \"INDIA\",\r\n        \"PER_PINCODE\": 501218,\r\n        \"PER_PINCODE_OTHERS\": \"\",\r\n        \"PER_STATE\": \"TELANGANA\",\r\n        \"PER_STATE_OTHERS\": \"\",\r\n        \"PER_DISTRICT\": \"\",\r\n        \"PER_DISTRICT_OTHERS\": \"\",\r\n        \"PER_TALUKA\": \"GHATKESAR\",\r\n        \"PER_TALUKA_OTHERS\": \"\",\r\n        \"PER_CITY\": \"HYDERABAD\",\r\n        \"PER_CITY_OTHERS\": \"\",\r\n        \"PER_VILLAGE\": \"\",\r\n        \"LANDLINE_NO\": \"\",\r\n        \"EMAIL_ID\": \"sushmitha6324@gmail.com\",\r\n        \"MOBILE_NO\": \"91-9014461493\",\r\n        \"ALTERNATE_NO\": \"\",\r\n        \"SOCIAL_MEDIA_TYPE1\": \"\",\r\n        \"SOCIAL_MEDIA_TYPE2\": \"\",\r\n        \"SOCIAL_MEDIA_TYPE3\": \"\",\r\n        \"SOCIAL_MEDIA_TYPE4\": \"\",\r\n        \"ID_VALUE1\": \"\",\r\n        \"ID_VALUE2\": \"\",\r\n        \"ID_VALUE3\": \"\",\r\n        \"ID_VALUE4\": \"\",\r\n        \"INSERTIONORDER\": 251121,\r\n        \"PARENT_INSERTION\": 3,\r\n        \"ADDRESS_TYPE\": \"Permanent\",\r\n        \"CURR_ADD_SAME_AS\": \"Applicant_Hemil Niteshbhai Gujarati\",\r\n        \"CURR_ADDRESS_TYPE\": \"Permanent\",\r\n        \"PROD_TYPE\": \"EL\",\r\n        \"EMAILFLAG\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/los/api/v1/contactDetail",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"los",
+								"api",
+								"v1",
+								"contactDetail"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "KYC",
+			"item": [
+				{
+					"name": "post_details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "C3fTA659MF88DXEUqAQniePhO86LphiN",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n         \"FIRST_NAME\": \"Busa\",\r\n        \"WI_NAME\": \"LOS-00990942711-PROCESS\",\r\n        \"CUSTOMERTYPE\": \"CoApplicant\",\r\n        \"ENTITYTYPE\": \"Individual\",\r\n        \"EXISTINGCUSTOMER\": \"\",\r\n        \"TITLE\": \"MRS\",\r\n        \"LAST_NAME\": \"Kavitha\",\r\n        \"MIDDLE_NAME\": \"\",\r\n        \"GENDER\": \"female\",\r\n        \"DATE_OF_BIRTH\":\"01-02-2020\",\r\n        \"AGE\": 42,\r\n        \"RETIREMENT_AGE\": 0,\r\n        \"KYC_COMPLIED\": \"Yes\",\r\n        \"PAN_AVAILABLE\": 1,\r\n        \"PAN_NO\": \"JXWPK7963L\",\r\n        \"NAMENSDL\": \"BUSA-KAVITHA\",\r\n        \"ADHARAVAILABLE\": \"YES\",\r\n        \"AADHAARNO\": \"2078\",\r\n        \"PASSPORTNO\": \"\",\r\n        \"DATEOFEXPIRY\": \"01-02-2020\",\r\n        \"DRIVINGLICENCENO\": \"\",\r\n        \"DATEOFEXPIRYLICENCE\": \"01-02-2021\",\r\n        \"VOTERID\": \"\",\r\n        \"NATIONALITY\": \"IN\",\r\n        \"NATIONALITYOTHERS\": \"\",\r\n        \"RELIGION\": \"\",\r\n        \"RELIGIONOTHERS\": \"\",\r\n        \"CAST_CATEGORY\": \"\",\r\n        \"CAST_CATEGORYOTHERS\": \"\",\r\n        \"QUALIFICATION\": \"SSC\",\r\n        \"MARITAL_STATUS\": \"MARRIED\",\r\n        \"QUALDESC\": \"\",\r\n        \"FATHER_FIRST_NAME\": \"Aga\",\r\n        \"FATHER_MIDDLE_NAME\": \"\",\r\n        \"FATHER_LAST_NAME\": \"Reddy\",\r\n        \"MOTHER_FIRST_NAME\": \"Rajamani\",\r\n        \"MOTHER_MIDDLE_NAME\": \"\",\r\n        \"MOTHER_LAST_NAME\": \"\",\r\n        \"SPOUSE_FIRST_NAME\": \"\",\r\n        \"SPOUSE_MIDDLE_NAME\": \"\",\r\n        \"SPOUSE_LAST_NAME\": \"\",\r\n        \"OTHERID_TYPE\": \"\",\r\n        \"OTHERID_NUMBER\": \"\",\r\n        \"RESI_STATUS\": \"Resident Individual\",\r\n        \"FINAN_APPLI\": \"NO\",\r\n        \"REL_WITH_APPLI\": \"Mother\",\r\n        \"CUST_ID\": \"\",\r\n        \"INSERTIONORDER\": 2711,\r\n        \"PROD_TYPE\": \"EL\",\r\n        \"M_TITLE\": \"MRS\",\r\n        \"F_TITLE\": \"MR\",\r\n        \"S_TITLE\": \"MRS\",\r\n        \"NO_OF_DEPPENDENT\": 0,\r\n        \"NREGA\": \"\",\r\n        \"CKYC_APPLI_TYPE\": \"\",\r\n        \"CKYC_ACC_TYPE\": \"\",\r\n        \"CKYC_ACC_NO\": \"\",\r\n        \"CKYC_ID_PROOF\": \"\",\r\n        \"CKYC_ADD_PROOF\": \"\",\r\n        \"PLACE_OF_BIRTH\": \"IN\",\r\n        \"REL_OTHERS\": \"\",\r\n        \"SCHOOL_IDCARD\": \"\",\r\n        \"AGE_MONTHS\": 1,\r\n        \"PAN_FLAG\": \"\",\r\n        \"CKYC_RISK_TYPE\": \"Low\",\r\n        \"MANUAL_PAN\": 0,\r\n        \"REMARKS_PAN\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/los/api/v1/kyc",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"los",
+								"api",
+								"v1",
+								"kyc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Obligation",
+			"item": [
+				{
+					"name": "post_details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "zZmorWZFY14pJjYFkabrtXDZKOTAYRns",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"WI_NAME\":\"LOS-00000009011325-PROCESS\",\r\n    \"INSERTIONORDER\":0,\r\n    \"INSERTIONORDER_ID\":25,\r\n    \"BANK_NAME\":\"Shiksha Finance\",\r\n    \"LOAN_TYPE\":\"Business loan\",\r\n    \"LOAN_AMOUNT\":900000,\r\n    \"LOAN_OUTSTANDING\":678818,\r\n    \"MONTHLY_EMI\":28846,\r\n    \"ROI\":25,\r\n    \"TENURE\":48,\r\n    \"TENURE_LEFT\":32,\r\n    \"TOTAL\":500,\r\n    \"REMARKS\":\" \",\r\n    \"PARENT_INSERTION\":0,\r\n    \"INSERTIONORDERID\":30,\r\n    \"BT\":\"Yes\",\r\n    \"OVERDUE\":0,\r\n    \"DPD\":0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/los/api/v1/obligations",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"los",
+								"api",
+								"v1",
+								"obligations"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Personal",
+			"item": [
+				{
+					"name": "post_details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "oQm2MDFMP0n5ZXm00YU989w3zxvPSASE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n         \"FIRST_NAME\": \"Busa\",\r\n        \"WI_NAME\": \"LOS-00909426-PROCESS\",\r\n        \"CUSTOMERTYPE\": \"CoApplicant\",\r\n        \"ENTITYTYPE\": \"Individual\",\r\n        \"EXISTINGCUSTOMER\": \"\",\r\n        \"TITLE\": \"MRS\",\r\n        \"LAST_NAME\": \"Kavitha\",\r\n        \"MIDDLE_NAME\": \"\",\r\n        \"GENDER\": \"female\",\r\n        \"DATE_OF_BIRTH\":\"01-02-2020\",\r\n        \"AGE\": 42,\r\n        \"RETIREMENT_AGE\": 0,\r\n        \"KYC_COMPLIED\": \"Yes\",\r\n        \"PAN_AVAILABLE\": 1,\r\n        \"PAN_NO\": \"JXWPK7963L\",\r\n        \"NAMENSDL\": \"BUSA-KAVITHA\",\r\n        \"ADHARAVAILABLE\": \"YES\",\r\n        \"AADHAARNO\": \"2078\",\r\n        \"PASSPORTNO\": \"\",\r\n        \"DATEOFEXPIRY\": \"01-02-2020\",\r\n        \"DRIVINGLICENCENO\": \"\",\r\n        \"DATEOFEXPIRYLICENCE\": \"01-02-2021\",\r\n        \"VOTERID\": \"\",\r\n        \"NATIONALITY\": \"IN\",\r\n        \"NATIONALITYOTHERS\": \"\",\r\n        \"RELIGION\": \"\",\r\n        \"RELIGIONOTHERS\": \"\",\r\n        \"CAST_CATEGORY\": \"\",\r\n        \"CAST_CATEGORYOTHERS\": \"\",\r\n        \"QUALIFICATION\": \"SSC\",\r\n        \"MARITAL_STATUS\": \"MARRIED\",\r\n        \"QUALDESC\": \"\",\r\n        \"FATHER_FIRST_NAME\": \"Aga\",\r\n        \"FATHER_MIDDLE_NAME\": \"\",\r\n        \"FATHER_LAST_NAME\": \"Reddy\",\r\n        \"MOTHER_FIRST_NAME\": \"Rajamani\",\r\n        \"MOTHER_MIDDLE_NAME\": \"\",\r\n        \"MOTHER_LAST_NAME\": \"\",\r\n        \"SPOUSE_FIRST_NAME\": \"\",\r\n        \"SPOUSE_MIDDLE_NAME\": \"\",\r\n        \"SPOUSE_LAST_NAME\": \"\",\r\n        \"OTHERID_TYPE\": \"\",\r\n        \"OTHERID_NUMBER\": \"\",\r\n        \"RESI_STATUS\": \"Resident Individual\",\r\n        \"FINAN_APPLI\": \"NO\",\r\n        \"REL_WITH_APPLI\": \"Mother\",\r\n        \"CUST_ID\": \"\",\r\n        \"INSERTIONORDER\": 27,\r\n        \"PROD_TYPE\": \"EL\",\r\n        \"M_TITLE\": \"MRS\",\r\n        \"F_TITLE\": \"MR\",\r\n        \"S_TITLE\": \"MRS\",\r\n        \"NO_OF_DEPPENDENT\": 0,\r\n        \"NREGA\": \"\",\r\n        \"CKYC_APPLI_TYPE\": \"\",\r\n        \"CKYC_ACC_TYPE\": \"\",\r\n        \"CKYC_ACC_NO\": \"\",\r\n        \"CKYC_ID_PROOF\": \"\",\r\n        \"CKYC_ADD_PROOF\": \"\",\r\n        \"PLACE_OF_BIRTH\": \"IN\",\r\n        \"REL_OTHERS\": \"\",\r\n        \"SCHOOL_IDCARD\": \"\",\r\n        \"AGE_MONTHS\": 1,\r\n        \"PAN_FLAG\": \"\",\r\n        \"CKYC_RISK_TYPE\": \"Low\",\r\n        \"MANUAL_PAN\": 0,\r\n        \"REMARKS_PAN\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/los/api/v1/personalDetail",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"los",
+								"api",
+								"v1",
+								"personalDetail"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Address",
+			"item": [
+				{
+					"name": "addressDetail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "lempC1tFmHXQKApseElnNSWkr8GAuYtr",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {   \"WI_NAME\": \"LOS-00000000182526-PROCESS\",\r\n        \"CURR_IS_IT_CORRESPOND\": \"No\",\r\n        \"CURR_RESI_STATUS\": \"\",\r\n        \"CURR_RESI_STATUS_OTHER\": \"\",\r\n        \"CURR_YEAR_STAY\": 5,\r\n        \"CURR_RES_ADDRESS1\": \"Plot Number 271\",\r\n        \"CURR_RES_ADDRESS2\": \"V S T Colony\",\r\n        \"CURR_RES_ADDRESS3\": \"Medipally\",\r\n        \"CURR_LANDMARK\": \"Medchal\",\r\n        \"CURR_COUNTRY\": \"INDIA\",\r\n        \"CURR_PINCODE\": 410206,\r\n        \"CURR_PINCODE_OTHERS\": \"\",\r\n        \"CURR_STATE\": \"TELANGANA\",\r\n        \"CURR_STATE_OTHERS\": \"\",\r\n        \"CURR_DISTRICT\": \"BANGALORE RURAL\",\r\n        \"CURR_DISTRICT_OTHERS\": \"\",\r\n        \"CURR_TALUKA\": \"GHATKESAR\",\r\n        \"CURR_TALUKA_OTHERS\": \"\",\r\n        \"CURR_CITY\": \"HYDERABAD\",\r\n        \"CURR_CITY_OTHERS\": \"\",\r\n        \"CURR_LOCATION_TYPE\": \"\",\r\n        \"CURR_VILLAGE\": \"\",\r\n        \"PER_ADDRESS_SAME_AS\": \"Applicant_Sushmitha  Marati\",\r\n        \"PER_IS_IT_CORRESPONDANCE\": \"Yes\",\r\n        \"PER_RESIDENCE_TYPE\": \"\",\r\n        \"PER_RESIDENCE_TYPE_OTHERS\": \"\",\r\n        \"PER_RESIDENCE_STAUTS\": \"\",\r\n        \"PER_RESIDENCE_STATUS_OTHERS\": \"\",\r\n        \"PER_LOCATION_TYPE\": \"\",\r\n        \"PER_YEARS_STAY\": 6,\r\n        \"PER_RES_ADDRESS1\": \"Plot Number 271\",\r\n        \"PER_RES_ADDRESS2\": \"V S T Colony\",\r\n        \"PER_RES_ADDRESS3\": \"Medipally\",\r\n        \"PER_LANDMARK\": \"Medchal\",\r\n        \"PER_COUNTRY\": \"INDIA\",\r\n        \"PER_PINCODE\": 501218,\r\n        \"PER_PINCODE_OTHERS\": \"\",\r\n        \"PER_STATE\": \"TELANGANA\",\r\n        \"PER_STATE_OTHERS\": \"\",\r\n        \"PER_DISTRICT\": \"\",\r\n        \"PER_DISTRICT_OTHERS\": \"\",\r\n        \"PER_TALUKA\": \"GHATKESAR\",\r\n        \"PER_TALUKA_OTHERS\": \"\",\r\n        \"PER_CITY\": \"HYDERABAD\",\r\n        \"PER_CITY_OTHERS\": \"\",\r\n        \"PER_VILLAGE\": \"\",\r\n        \"LANDLINE_NO\": \"\",\r\n        \"EMAIL_ID\": \"sushmitha6324@gmail.com\",\r\n        \"MOBILE_NO\": \"91-9014461493\",\r\n        \"ALTERNATE_NO\": \"\",\r\n        \"SOCIAL_MEDIA_TYPE1\": \"\",\r\n        \"SOCIAL_MEDIA_TYPE2\": \"\",\r\n        \"SOCIAL_MEDIA_TYPE3\": \"\",\r\n        \"SOCIAL_MEDIA_TYPE4\": \"\",\r\n        \"ID_VALUE1\": \"\",\r\n        \"ID_VALUE2\": \"\",\r\n        \"ID_VALUE3\": \"\",\r\n        \"ID_VALUE4\": \"\",\r\n        \"INSERTIONORDER\": 2526,\r\n        \"PARENT_INSERTION\": 3,\r\n        \"ADDRESS_TYPE\": \"Permanent\",\r\n        \"CURR_ADD_SAME_AS\": \"Applicant_Sushmitha  Marati\",\r\n        \"CURR_ADDRESS_TYPE\": \"Permanent\",\r\n        \"PROD_TYPE\": \"EL\",\r\n        \"EMAILFLAG\": \"\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/los/api/v1/addressDetail",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"los",
+								"api",
+								"v1",
+								"addressDetail"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ExistBankAccount",
+			"item": [
+				{
+					"name": "post_details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "6WGVlV5UdARz2A8QD9hECHCXjczyCDxp",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"WI_NAME\":\"LOS-90113232611-PROCESS\",\r\n    \"BANK_NAME\":\"HDFC BANK LTD\",\r\n    \"BRANCH_NAME\":\"HOSKOTE\",\r\n    \"ACC_TYPE\":\"Savings Account\",\r\n    \"ACC_NUM\":\"10377620000014\",\r\n    \"OPEN_SINCE\":\"9-6-2021\",\r\n    \"ACC_BAL\":1904,\r\n    \"CUSTOMERTYPE\":\" \",\r\n    \"INSERTIONORDER\":51,\r\n    \"INSERTIONORDER_ID\": 2611,\r\n    \"PENSION_CREDITED\":\" \",\r\n    \"OTHER_BANK_NAME\":\" \",\r\n    \"ADDRESS\":\"HOSKOTE\",\r\n    \"MICR\":560240053,\r\n    \"IFSC_CODE\":\"HDFC0001037\",\r\n    \"NACH_ECX\":\" \",\r\n    \"PROD_TYPE\":\"EIL\",\r\n    \"PARENT_INSERTION\":0,\r\n    \"ACCOUNT_HOLDER_NAME\":\"RISHIKUL VIDYAPEETA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/los/api/v1/bankAccount",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"los",
+								"api",
+								"v1",
+								"bankAccount"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CreditBureau",
+			"item": [
+				{
+					"name": "post_details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "95LvNp4lFqWKcfPdgWDFgE2RjIJaKOX2",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"WI_NAME\":\"LOS-390251121-PROCESS\",\r\n      \"CUST_TYPE\":\"CoApplicant\",\r\n      \"CUST_NAME\":\"Busa  Ramanareddy\",\r\n      \"EXIST_CUST\":\" \",\r\n      \"CUST_ID\":\"CU0000000000901835701\",\r\n      \"PAN_NO\":\"AMCPR8197F\",\r\n      \"CIBIL_SCORE\":747,\r\n      \"INSERTIONORDER\":2511,\r\n      \"ENTITY_TYPE\":\"Individual\",\r\n      \"OCC_TYPE\":\"SALARIED\",\r\n      \"FINAN_APPLI\":\"YES\",\r\n      \"REL_WITH_APPLI\":\"Father\",\r\n      \"AGE\":52,\r\n      \"MARTIAL_STATUS\":\"MARRIED\",\r\n      \"FLAG\":1,\r\n      \"CIFNO\":13483,\r\n      \"CRM_CUST_ID\":\"lOW\",\r\n      \"EKYC_RISK\":\"true\",\r\n      \"DEDUPEFLAG\":\"\"   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/los/api/v1/gridDetails",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"los",
+								"api",
+								"v1",
+								"gridDetails"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ImmoveableCollateral",
+			"item": [
+				{
+					"name": "post_details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "vN7f4H3BNrxO47C3Y9Yo2NcOxUuHFD9X",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"WI_NAME\": \"LOS-0000000901132326-PROCESS\", \r\n        \"COLL_TYPE\": \"ECLGS\",\r\n        \"COLL_DESC\": \"School Land Only\",\r\n        \"CHARGE_TYPE\": \"1st Charge\",\r\n        \"PROP_NAME\": \"DEVARAJA  K R\",\r\n        \"REL_APPLIC\": \"\",\r\n        \"LOCATION\": \"\",\r\n        \"FLATNO\": \"Sy. No. 66/6\",\r\n        \"DOORNO\": \"\",\r\n        \"NEAREST_DOORNO\": \"\",\r\n        \"PROP_ADD1\": null,\r\n        \"PRO_ADD2\": null,\r\n        \"LANDMARK\": \"Sulibele Chikka Aralagere Bus Stand\",\r\n        \"COUNTRY\": \"INDIA\",\r\n        \"STATE\": \"KARNATAKA\",\r\n        \"CITY\": \"BANGALORE\",\r\n        \"DISTRICT\": \"Bangalore Rural District\",\r\n        \"BOUNDARIES\": \"\",\r\n        \"PLOTNO\": \"Old Sy. No. 66/2\",\r\n        \"MUNIC_CORP\": \"\",\r\n        \"UNITAREA\": \"Square Feet\",\r\n        \"AREA_PROP\": 43560,\r\n        \"BUILD_AREA\": 0,\r\n        \"CARPET_AREA\": 0,\r\n        \"DATE_OF_SALE\": \"09-09-1998\",\r\n        \"AGEOFPROPERTY\": 0,\r\n        \"RESIDUAL_AGE\": 0,\r\n        \"REALISABLE_VALUE\": 0,\r\n        \"MARKET_VALUE\": 15246000,\r\n        \"VAL_NAME\": \"\",\r\n        \"VAL_DATE\": \"09-09-1998\",\r\n        \"MARGIN\": 0,\r\n        \"ASSET_FREQ\": 0,\r\n        \"INSERTIONORDER\": 3,\r\n        \"BOUNDARIES_DESCRIPTION\": \"\",\r\n        \"PINCODE\": \"pincode\",\r\n        \"REMARKS\": \"\",\r\n        \"DESC_BOUND_E\": \"\",\r\n        \"DESC_BOUND_W\": \"\",\r\n        \"DESC_BOUND_N\": \"\",\r\n        \"DESC_BOUND_S\": \"\",\r\n        \"VALUE_TO_CONSIDER\": \"\",\r\n        \"REG_DATE\": 0,\r\n        \"VAL_1\": 0,\r\n        \"VALUER_NAME_2\": \"\",\r\n        \"VAL_DATE_2\":\"09-09-1998\",\r\n        \"VAL_2\": 0,\r\n        \"MARGIN_ADJSTD\": 0,\r\n        \"OTHER_PINCODE\": \"\",\r\n        \"APPRAISED_VAL\": 0,\r\n        \"GOVERNMENT_RATE\": 0,\r\n        \"SURVEY_NO\": \"Sy. No. 66/6\",\r\n        \"COUNTRY_DESC\": \"\",\r\n        \"OWNERS\": \"\",\r\n        \"RESI_STATE_OTHER\": \"\",\r\n        \"RESI_DISTRICT_OTHER\": \"\",\r\n        \"RESI_CITY_OTHER\": \"\",\r\n        \"COLL_ID\": \"ICO000000000090113230\",\r\n        \"TALUKA\": \"\",\r\n        \"TALUKA_OTHER\": \"\",\r\n        \"MUNCI_CORP_PANCH\": \"Panchayat\",\r\n        \"TOTAL_VALUE_IMMOV_COLL\": 0,\r\n        \"PARENT_INSERTIONORDER\": 0,\r\n        \"PROPERTY_HOLDER\": \"\",\r\n        \"PRO_HOLDER_NAME1\": null,\r\n        \"PRO_HOLDER_NAME2\": null,\r\n        \"PRO_HOLDER_NAME3\": null,\r\n        \"WING\": \"\",\r\n        \"FLOOR_NO\": \"\",\r\n        \"LOAN_ACC_NO\": \"\",\r\n        \"NAME_OF_LANDER\": \"\",\r\n        \"LOAN_OUT_AMT\": \"\",\r\n        \"OUT_DATE\": \"09-09-1998\",\r\n        \"CERSAI_DONE\": \"No\",\r\n        \"CERSAI_NO\": \"\",\r\n        \"CERSAI_REMARKS\": \"\",\r\n        \"PARENT_INSERTION\": 1,\r\n        \"HISSANO\": \"\",\r\n        \"LMSCOLLID\": \"CT2004600001\",\r\n        \"COLL_USAGE\": \"Institute occupied\",\r\n        \"COLLLMSID\": \"CT2004600001\",\r\n        \"COLLPER\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/los/api/v1/immovable",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"los",
+								"api",
+								"v1",
+								"immovable"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MoveableCollateral",
+			"item": [
+				{
+					"name": "post_details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"WI_NAME\":\"LOS-9017069125-PROCESS\",\r\n    \"COLL_TYPE\":\"\",\r\n    \"COLL_DESC\":\"\",\r\n    \"TYPE_OF_FDR\":\"\",\r\n    \"FDR_NUMBER\":\"\",\r\n    \"NAME_OF_FDR_HOLDER\":\"\",\r\n    \"NAME_1\":\"\",\r\n    \"NAME_2\":\"\",\r\n    \"INSTITUTION\":\"\",\r\n    \"FD_AMOUNT\":5,\r\n    \"MATURITY_PERIOD_FD_DATE\":\"\",\r\n    \"MATURITY_DATE\":\"07-07-1997\",\r\n    \"MATURITY_VALUE\":9,\r\n    \"LIENING_MARKING_DATE\":\"07-07-1997\",\r\n    \"LIENING_MARKING_CANCEL_DATE\":\"07-07-1997\",\r\n    \"LIENING_MARKING_CANCEL_REMARK\":\"\",\r\n    \"NAME_OF_POST\":\"\",\r\n    \"FD_AMOUNT1\":\"\",\r\n    \"MATURITY_PERIOD\":\"\",\r\n    \"PREMIUM_FREQUENCY\":\"\",\r\n    \"DATE_OF_ASSIGNMENT\":\"07-09-2021\",\r\n    \"ASSIGNMENT_CANCEL_DATE\":\"07-07-1997\",\r\n    \"ASSIGNMENT_CANCEL_REMARKS\":\"\",\r\n    \"REMARKS\":\"\",\r\n    \"INSTITUTE\":\"\",\r\n    \"POLICY_NUMBER\":\"\",\r\n    \"PRO_HOLDER\":\"\",\r\n    \"PRONAME1\":\"\",\r\n    \"PRONAME2\":\"\",\r\n    \"SUM_ASSURED\":\"\",\r\n    \"POLICY_START_DATE\":\"09-09-1997\",\r\n    \"POLICY_END_DATE\":\"09-09-1997\",\r\n    \"POLICY_SURR_VALUE\":\"\",\r\n    \"POLICY_TYPE\":\"\",\r\n    \"INSTITUTE_NAME\":\"\",\r\n    \"PER_OF_SECURITY_COVERAGE\":\"\",\r\n    \"AMOUNT\":\"\",\r\n    \"RECEVIED_DATE\":\"09-09-1997\",\r\n    \"TRANSACTION_DATE\":\"12-12-2020\",\r\n    \"TRANSACTION_REFERENCE\":\"\",\r\n    \"RELEASE_DATE\":\"07-07-1997\",\r\n    \"RELEASE_AMOUNT\":\"\", \r\n    \"INSERTIONORDER\":25,\r\n    \"PARENT_INSERTION\":2,\r\n    \"DSRA_NUMBER\":\"\",\r\n    \"ESCROW_NUMBER\":\"\",\r\n    \"NAME_OF_BANK\":\"\",\r\n    \"BRANCH_NAME\":\"\",\r\n    \"ACC_HOLDER_NAME\":\"\",\r\n    \"DSRA_AMT\":67,\r\n    \"DSRA_DATE\":\"07-07-1997\",\r\n    \"DSRA_MAT_DATE\":\"08-08-1997\",\r\n    \"NO_OF_INSTALL\":0,\r\n    \"NO_OF_INSTALL_AUXILO\":0,\r\n    \"ADV_AMT\":78,\r\n    \"DATE_OF_DISB_AUXILO\":\"20-12-1998\",\r\n    \"VEH_NUMBER\":\"\",\r\n    \"OWNER\":\"\",\r\n    \"MONTH_OF_PURCHASE\":\"7-09-2022\",\r\n    \"MODEL_NUMBER\":6789,\r\n    \"MAKE_NAME\":\"\",\r\n    \"REGIS_NUMBER\":\"\",\r\n    \"PURCHASE_VALUE\":0,\r\n    \"INSU_DEC_VALUE\":0,  \r\n    \"VEH_OWNER_STATUS\":\"\",\r\n    \"INSU_VALIDITY\":\"12-12-2003\",\r\n    \"LIEN_MARK_DATE_VEH\":\"07-07-1997\",\r\n    \"LIEN_MARK_CANCEL_DATE_VEH\":\"07-07-1997\",\r\n    \"LIEN_MARK_CANCEL_REM_VEH\":\"\",\r\n    \"COLL_ID\":\"\",\r\n    \"LMSCOLLID\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8084/los/api/v1/movable",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8084",
+							"path": [
+								"los",
+								"api",
+								"v1",
+								"movable"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Employment",
+			"item": [
+				{
+					"name": "post_details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "ATYa4EiLZo5eNunXSatQIIIg4Br2OhFn",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n        \"WI_NAME\": \"LOS-9018261121-PROCESS\",\r\n        \"OCCUPATION_TYPE\": \"SELF EMPLOYED NON PROFESSIONAL(SENP)\",\r\n        \"OCCUPATION_SUBTYPE\": \"NGO Trust\",\r\n        \"EMPLOYER_NAME\": \"df\",\r\n        \"DESIGNATION\": \"qw\",\r\n        \"LANDLINE_NO_EMPLOY\": 56,\r\n        \"EXTENSION_NO_EMPLOY\": 65,\r\n        \"OFFICIAL_EMAIL_ID\": \"\",\r\n        \"RETIREMENT_AGE\": \"\",\r\n        \"NAME_OF_BUSINESS\": \"DEEKSHA CHARITABLE TRUST\",\r\n        \"NAME_OF_PROFESSION\": \"\",\r\n        \"LANDLINE_NO_BUSINESS\": 0,\r\n        \"NATURE_OF_BUSINESS\": \"OTHER\",\r\n        \"NO_OF_YEARS_BUSINESS\": 9,\r\n        \"NO_OF_YEARS_CURRENT_BUSINESS\": 0,\r\n        \"NO_OF_YEARS_CURRENT_EMPLOYMENT\": 0,\r\n        \"NO_OF_YEARS_PROF\": 0,\r\n        \"NO_OF_YEARS_CURRENT_PROF\": 0,\r\n        \"LANDLINE_NO_HUMAN_RES\": 0,\r\n        \"NO_OF_YEARS_SERVICE\": 0,\r\n        \"TOT_NO_OF_YEARS_SERVICE\": 0,\r\n        \"RETIRED_FROM\": \"\",\r\n        \"CUSTOMERTYPE\": \"\",\r\n        \"OTHER\": \"\",\r\n        \"EMP_ADDRESS_LINE_1\": \"\",\r\n        \"EMP_ADDRESS_LINE_2\": \"\",\r\n        \"EMP_ADDRESS_LINE_3\": \"\",\r\n        \"EMP_PINCODE\": 410206,\r\n        \"EMP_CITY\": \"\",\r\n        \"EMP_STATE\": \"\",\r\n        \"EMP_COUNTRY\": \"\",\r\n        \"SE_ADDRESS_LINE_1\": \"OLD POST OFFICE ROAD\",\r\n        \"SE_ADDRESS_LINE_2\": \"SULIBELE\",\r\n        \"SE_ADDRESS_LINE_3\": \"BANGALORE RURAL\",\r\n        \"SE_PINCODE\": 562129,\r\n        \"SE_CITY\": \"BANGALORE\",\r\n        \"SE_STATE\": \"KARNATAKA\",\r\n        \"SE_COUNTRY\": \"INDIA\",\r\n        \"PRO_ADDRESS_LINE_1\": \"\",\r\n        \"PRO_ADDRESS_LINE_2\": \"\",\r\n        \"PRO_ADDRESS_LINE_3\": \"\",\r\n        \"PRO_PINCODE\": \"\",\r\n        \"PRO_CITY\": \"\",\r\n        \"PRO_STATE\": \"\",\r\n        \"PRO_COUNTRY\": \"\",\r\n        \"RE_ADDRESS_LINE_1\": \"\",\r\n        \"RE_ADDRESS_LINE_2\": \"\",\r\n        \"RE_ADDRESS_LINE_3\": \"\",\r\n        \"RE_PINCODE\": \"\",\r\n        \"RE_CITY\": \"\",\r\n        \"RE_STATE\": \"\",\r\n        \"RE_COUNTRY\": \"\",\r\n        \"EMP_GROSS_MONTHLY_INCOME\": 0,\r\n        \"EMP_NET_MONTHLY_INCOME\": 0,\r\n        \"EMP_OTHER_MONTHLY_INCOME\": 0,\r\n        \"SE_GROSS_MONTHLY_INCOME\": 0,\r\n        \"SE_NET_MONTHLY_INCOME\": 0,\r\n        \"SE_OTHER_MONTHLY_INCOME\": 0,\r\n        \"PRO_GROSS_MONTHLY_INCOME\": 0,\r\n        \"PRO_NET_MONTHLY_INCOME\": 0,\r\n        \"PRO_OTHER_MONTHLY_INCOME\": 0,\r\n        \"RE_GROSS_MONTHLY_INCOME\": 0,\r\n        \"RE_NET_MONTHLY_INCOME\": 0,\r\n        \"RE_OTHER_MONTHLY_INCOME\": 0,\r\n        \"PRO_LANDLINE_PROFESSION\": 0,\r\n        \"PRO_BUSINESS_WEBSITE\": \"\",\r\n        \"SE_BUSINESS_WEBSITE\": \"\",\r\n        \"PRO_BUSINESS_EMAIL_ID\": \"\",\r\n        \"SE_BUSINESS_EMAIL_ID\": \"\",\r\n        \"SE_GSTNO\": 0,\r\n        \"PRO_GSTNO\": 0,\r\n        \"OTHERS_ADDRESS_LINE_1\": \"\",\r\n        \"OTHERS_ADDRESS_LINE_2\": \"\",\r\n        \"OTHERS_ADDRESS_LINE_3\": \"\",\r\n        \"OTHERS_PINCODE\": \"\",\r\n        \"OTHERS_CITY\": \"\",\r\n        \"OTHERS_STATE\": \"\",\r\n        \"OTHERS_COUNTRY\": \"\",\r\n        \"OTHERS_LANDLINE_PROFESSION\": 0,\r\n        \"OTHERS_GSTNO\": 0,\r\n        \"OTHERS_NATURE_OF_PROFESSION\": \"\",\r\n        \"OTHERS_PROFESSION_WEBSITE\": \"\",\r\n        \"OTHERS_PROFESSION_EMAIL_ID\": \"\",\r\n        \"OTHERS_NO_OF_YEARS_PROFESSION\": 0,\r\n        \"OTHERS_NO_OF_YR_CUR_PROF\": 0,\r\n        \"OTHERS_GROSS_MONTHLY_INCOME\": 0,\r\n        \"OTHERS_NET_MONTHLY_INCOME\": 0,\r\n        \"OTHERS_OTHER_MONTHLY_INCOME\": 0,\r\n        \"INSERTIONORDER\": 51,\r\n        \"PROD_TYPE\": \"EIL\",\r\n        \"PARENT_INSERTION\": 544,\r\n        \"NATURE_BUSI_PROF1\": \"\",\r\n        \"NATURE_BUSI_PROF2\": \"OTHER\",\r\n        \"NATURE_BUSI_PROF3\": \"\",\r\n        \"NATURE_BUSI_PROF4\": \"\",\r\n        \"NATURE_BUSI_PROF\": \"\",\r\n        \"OTHER_EMPLOYER_NAME\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/los/api/v1/employment",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"los",
+								"api",
+								"v1",
+								"employment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Currentstatusfile",
+			"item": [
+				{
+					"name": "post_details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "wIuToKedzvI7wgvBEAhK7hRVEBw9O6nx",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"WI_NAME\":\"LOS-90184351-PROCESS\",\r\n    \"ITEMINDEX\":22813,\r\n    \"ITEMTYPE\":\"F\",\r\n    \"DECISION\":\"SUCCESS\",\r\n    \"REMARKS\":\"LMS PUSH SUCCESS\",\r\n    \"VENDOR_TYPE\":\"\",\r\n    \"DEVIATION_LEVEL\":4,\r\n    \"DELEGATION_FLAG\":\"L4\",\r\n    \"DEVIATION_ROUND\":\"\",\r\n    \"PREVIOUS_WS\":\"LMS\",\r\n    \"CURRENT_WS\":\"HOLD\",\r\n    \"EXECUTE_DEV_FLAG\":\"TRUE\",\r\n    \"APPLICATION_NO\":100719018174,\r\n    \"SALES_QUEUE_STATUS\":\"\",\r\n    \"SALES_APPROVAL_QUEUE_STATUS\":\"\",\r\n    \"REJECT_SALES_QUEUE_STATUS\":\"\",\r\n    \"SALES_DISCREPANCY_QUEUE_STATUS\":\"\",\r\n    \"EIL_HOLD_QUEUE_STATUS\":\"\",\r\n    \"QUERY_QUEUE_STATUS\":\"\",\r\n    \"VENDOR_AUTO_FLAG\":\"TRUE\",\r\n    \"LEADAPI_CALL\":\"N\",\r\n    \"LEAD_ID\":566641,\r\n    \"ROI_LEADAPI_CALL\":\"N\",\r\n    \"PF_LEADAPI_CALL\":\"N\",\r\n    \"SALES_LEVEL\":6,\r\n    \"SALES_REJECT\":\"\",\r\n    \"SALES_ROUND\":\" \",\r\n    \"REJ_REASON\":\"\",\r\n    \"CUST_PRIORITY\":\"\",\r\n    \"VERIFICATION_ACCEPTANCE_FLAG\":\" \",\r\n    \"BRANCHID\":\"0071\",\r\n    \"SEGMENT\":\"\",\r\n    \"CASETYPE\":\"\",\r\n    \"STPFLAG\":\"\",\r\n    \"STPCASE\":\"\",\r\n    \"EXECUTE_SCF_DEV_FLAG\":\"\"\r\n}\r\n    \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/los/api/v1/status",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"los",
+								"api",
+								"v1",
+								"status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "leadInfo",
+			"item": [
+				{
+					"name": "Leadinfo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "RAxdUWCuUSaa2vhMXiEciITJtshe0SJN",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"WI_NAME\": \"LOS-419525-PROCESS\",           \r\n        \"APP_DATE\": \"04-02-2021\",\r\n\t\t\"LEAD_ID\": \"6010\",\r\n        \"DOM_USRID\": \"\",\r\n        \"EMP_NAME\": \"\",\r\n        \"BRCODE\": \"\",\r\n        \"BRNAME\": \"\",\r\n        \"SMS\": \"\",\r\n        \"SMS_LINK_CPC\": \"\",\r\n        \"REGION\": \"\",\r\n        \"ZONE\": \"\",\r\n        \"SRC_BY\": \"\",\r\n        \"SRC_BY_NAME\": \"\",\r\n        \"EC_NUM\": \"\",\r\n        \"SRC_STAFF_NAME\": \"\",\r\n        \"SRC_STAFF_LOCATION\": \"\",\r\n        \"DSA_CODE\": \"\",\r\n        \"DSA_NAME\": \"\",\r\n        \"PARKING_BRANCH\": \"\",\r\n        \"LOAN_AMOUNT\": 574,\r\n        \"PRODUCT_TYPE\": \"\",\r\n        \"SCHEME_TYPE\": \"\",\r\n        \"PARKING_SEARCH_VAL\": \"\",\r\n        \"PARKING_SEARCH_TYPE\": \"\",\r\n        \"LOAN_TENURE\": 648,\r\n        \"MODEL\": \"\",\r\n        \"NAME_OF_THE_PROSPECT\": \"Excellent Education Society\",\r\n        \"NAME_OF_THE_SALES_EXECUTIVE\": \"Mahesha K.J\",\r\n        \"SOURCE_BRANCH\": \"\",\r\n        \"SERVICE_BRANCH\": \"BENGALURU\",\r\n        \"LEAD_GATE\": \"Local\",\r\n        \"LEAD_SOURCE\": \"Referrals\",\r\n        \"NAME\": \"Employee Referral\",\r\n        \"BRANCH\": \"Ausha\",\r\n        \"PROMO_CODE\": \"\",\r\n        \"COUPON_CODE\": \"\",\r\n        \"CUSTOMER_PRIORITY\": \"High\",\r\n        \"HIGH_PROFILE_CUSTOMER\": \"Yes\",\r\n        \"SEGMENT\": \"EL\",\r\n        \"PRODUCT\": \"Education Loan\",\r\n        \"REQUESTED_LOAN_AMOUNT\": 950000,\r\n        \"COUNTRY\": \"FRANCE\",\r\n        \"UNIVERSITY\": \"paris school of business\",\r\n        \"INSTITUTE\": \"\",\r\n        \"COURSE\": \"\",\r\n        \"SECURITY_TYPE\": \"NA\",\r\n        \"REPAYMENT_OPTION\": \"EMI\",\r\n        \"LEAD_TYPE\": \"Connectors\",\r\n        \"LOAN_TERM\": 48,\r\n        \"TYPE_OF_LOAN\": \"Fresh\",\r\n        \"TYPE_OF_SEC_OFFERED\": \"\",\r\n        \"HOW_DID_YOU_KNOW\": \"internet\",\r\n        \"DESCRIPTION\": \"\",\r\n        \"EXPECTED_DIS_TYPE\": \"04-06-1785\",\r\n        \"SCHEME\": \"\",\r\n        \"COLL_TYPE\": \"Unsecured\",\r\n        \"COLL_VALUE\": \"6441600\",\r\n        \"REMARKS\": \"NA\",\r\n        \"NAME_OF_INSTI\": \"\",\r\n        \"SCHOOL_TIER\": \"\",\r\n        \"SUBVENTION_TYPE\": \"\",\r\n        \"LEAD_DATE\": \"\",\r\n        \"PURPOSE_OF_LOAN\": \"Working Capital\",\r\n        \"SALES_OWNERID\": \"\",\r\n        \"SALES_EMAILADDRESS\": \"mahesha.k@auxilo.com\",\r\n        \"PROSPECTID\": \"676351b7-2eb8-4843-b2bd-b4296d750aa4\",\r\n        \"LOAN_SUB_SEGMENT\": \"AIL\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/los/api/v1/leadInfo",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"los",
+								"api",
+								"v1",
+								"leadInfo"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "academicDetails",
+			"item": [
+				{
+					"name": "Academicdetails",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "ekOoPzGDjIDNB1pKqg8Y0WPdAylbEeVt",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\t\"WI_NAME\": \"LOS-90184692611-PROCESS\",\r\n        \"ADMISSION_STATUS\": \"Confirmed\",\r\n        \"COUNTRY\": \"CANADA\",\r\n        \"UNIVERSITY_NAME\": \"NATIONAL COLLEGE OF IRELAND\",\r\n        \"CAMPUS\": \"NA\",\r\n        \"COLLEGE_NAME\": \"NATIONAL COLLEGE OF IRELAND\",\r\n        \"COURSE_NAME\": \"MSC CLOUD COMPUTING\",\r\n        \"COURSE_CATEGORY\": \"Masters\",\r\n        \"OTHER_COURSE_CATEGORY\": \"\",\r\n        \"COURSE_TYPE\": \"Full Time\",\r\n        \"OTHER_COURSE_TYPE\": \"\",\r\n        \"COURSE_STREAM\": \"STEM\",\r\n        \"OTHER_COURSE_STREAM\": \"\",\r\n        \"COURSE_START_DATE\": \"24-01-2022\",\r\n        \"COURSE_END_DATE\": \"02-01-2023\",\r\n        \"INSTITUTE_RANKING\": \"\",\r\n        \"ADD_LINE_1\": \"\",\r\n        \"ADD_LINE_2\": \"\",\r\n        \"ADD_LINE_3\": \"\",\r\n        \"ADD_LINE_4\": \"\",\r\n        \"CITY\": \"\",\r\n        \"STATE\": \"\",\r\n        \"URL_WEB\": \"\",\r\n        \"REASON_FOR_UNI_SEL\": \"\",\r\n        \"CONTACT_PERSON_AT_INSTI\": \"Test\",\r\n        \"EMAIL_ID\": \"test_test@test.com\",\r\n        \"TUITION_FEES\": 1971660,\r\n        \"LIVING_EXPENSE_HOSTEL_FOOD\": 1275780,\r\n        \"TRAVELLING_EXPENSES\": 0,\r\n        \"OTHER_COST\": 150000,\r\n        \"TOTAL_COST\": 3397440,\r\n        \"OWN_SOURCE\": 0,\r\n        \"SCHOLARSHIP\": 0,\r\n        \"OTHERS_FUND\": 0,\r\n        \"TOTAL_FUNDS\": 0,\r\n        \"EXP_ANN_INC_POST_COMPL\": 0,\r\n        \"CONTACT_NUMBER\": 0,\r\n        \"COURSE_DURATION\": 28405,\r\n        \"PIN_CODE\": 0,\r\n        \"TEL_NO\": \"254327543273\",\r\n        \"FUTURE_INCOME\": 66233,\r\n        \"COURSE_SUB_STREAM\": \"Management\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/los/api/v1/academicDetails",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"los",
+								"api",
+								"v1",
+								"academicDetails"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "costDetails",
+			"item": [
+				{
+					"name": "Costdetail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "DT6gPoKtrKHVGaWphSCi4dzOXHNXBdIT",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"WI_NAME\": \"LOS-901132426-PROCESS\",\r\n        \"ADMISSION_FEE\": 94893,\r\n        \"COURSE_FEE\": 4681,\r\n        \"BOOKS\": \"deposit\",\r\n        \"LAB_FEE\": 82811,\r\n        \"SECURITY_DEPOSIT\": 18803,\r\n        \"COST_OTHERS\": 87027,\r\n        \"TOTAL\": 65670,\r\n        \"LOAN_REQUIRED\": 14879,\r\n        \"DISBURSEMENT_TRANCHE\": \"Granite\",\r\n        \"DIS_OTHER\": \"Car\",\r\n        \"CD_MODE\": \"installation\",\r\n        \"MODE_OTHERS\": \"Latvian\",\r\n        \"FEES_TYPE\": \"Mali Multi-channelled withdrawal\",\r\n        \"TRANSPORTATION_FEES\": 69091,\r\n        \"UNIFORM_FEES\": 28875,\r\n        \"TEST_PREP_FEES\": 35181,\r\n        \"HOSTEL_FEES\": 32180\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/los/api/v1/costDetail",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"los",
+								"api",
+								"v1",
+								"costDetail"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "courseDetail",
+			"item": [
+				{
+					"name": "Coursedetail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "ekOoPzGDjIDNB1pKqg8Y0WPdAylbEeVt",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\t\"WI_NAME\": \"LOS-90185995625-PROCESS\",\r\n        \"ADMISSION_STATUS\": \"Confirmed\",\r\n        \"COUNTRY\": \"UNITED STATES OF AMERICA\",\r\n        \"UNIVERSITY_NAME\": \"CLEVELAND STATE UNIVERSITY\",\r\n        \"CAMPUS\": \"NA\",\r\n        \"COLLEGE_NAME\": \"CLEVELAND STATE UNIVERSITY\",\r\n        \"COURSE_NAME\": \"MASTER OF COMPUTER SCIENCE\",\r\n        \"COURSE_CATEGORY\": \"Masters\",\r\n        \"OTHER_COURSE_CATEGORY\": \"\",\r\n        \"COURSE_TYPE\": \"Full Time\",\r\n        \"OTHER_COURSE_TYPE\": \"\",\r\n        \"COURSE_STREAM\": \"STEM\",\r\n        \"OTHER_COURSE_STREAM\": \"\",\r\n        \"COURSE_START_DATE\": \"17-08-2021\",\r\n        \"COURSE_END_DATE\": \"11-08-2023\",\r\n        \"INSTITUTE_RANKING\": \"\",\r\n        \"ADD_LINE_1\": \"\",\r\n        \"ADD_LINE_2\": \"\",\r\n        \"ADD_LINE_3\": \"\",\r\n        \"ADD_LINE_4\": \"\",\r\n        \"CITY\": \"\",\r\n        \"STATE\": \"\",\r\n        \"URL_WEB\": \"\",\r\n        \"REASON_FOR_UNI_SEL\": \"\",\r\n        \"CONTACT_PERSON_AT_INSTI\": \"John P Holcomb\",\r\n        \"EMAIL_ID\": \"test_test@test.com\",\r\n        \"TUITION_FEES\": 1746769,\r\n        \"LIVING_EXPENSE_HOSTEL_FOOD\": 1280964,\r\n        \"TRAVELLING_EXPENSES\": 39200,\r\n        \"OTHER_COST\": 76465,\r\n        \"TOTAL_COST\": 3177733,\r\n        \"OWN_SOURCE\": 0,\r\n        \"SCHOLARSHIP\": 0,\r\n        \"OTHERS_FUND\": 0,\r\n        \"TOTAL_FUNDS\": 0,\r\n        \"EXP_ANN_INC_POST_COMPL\": 0,\r\n        \"CONTACT_NUMBER\": 75277,\r\n        \"COURSE_DURATION\": 28405,\r\n        \"PIN_CODE\": 0,\r\n        \"TEL_NO\": \"254327543273\",\r\n        \"FUTURE_INCOME\": 66233,\r\n        \"COURSE_SUB_STREAM\": \"Engineering\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.23.10.182:8000/los/api/v1/courseDetail",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"10",
+								"182"
+							],
+							"port": "8000",
+							"path": [
+								"los",
+								"api",
+								"v1",
+								"courseDetail"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
